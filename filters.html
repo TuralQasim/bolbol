@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html class="no-js" lang="az">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <title>Bolbol</title>
+        <meta name="description" content="" />
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=3.0, initial-scale=1.0" />
+        <meta name="theme-color" content="#013F44" />
+
+        <link rel="stylesheet" type="text/css" href="assets/libs/normalize.css/normalize.css" />
+
+        <!-- jQuery library -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="assets/libs/bootstrap/bootstrap.min.css" />
+
+        <link rel="stylesheet" type="text/css" href="assets/libs/lightslider/lightslider.min.css" />
+
+        <link rel="stylesheet" type="text/css" href="assets/libs/sumogallery/sumogallery.css" />
+
+        <link rel="stylesheet" type="text/css" href="assets/libs/bootstrap-select/bootstrap-select.min.css" />
+
+        <link rel="stylesheet" href="assets/libs/bootstrap-datetimepicker/tempusdominus-bootstrap-4.css" />
+
+        <link rel="stylesheet" href="assets/css/main/main.min.css" />
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">
+                You are using an <strong>outdated</strong> browser. Please
+                <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.
+            </p>
+        <![endif]-->
+
+        <main class="pt-0">
+            <form action="">
+                <section class="filterHeading">
+                    <a href=""><img src="assets/img/back-icon.svg" alt="" /></a>
+                    <div class="filterHeading__title">Filtrlər</div>
+                    <button type="reset" class="btn btn--transparent justify-content-end">Sıfırla</button>
+                </section>
+                <section class="customFilter mb-10">
+                    <div class="form-group form-material">
+                        <label>Şəhər</label>
+                        <select class="selectpicker" title=" " id="cities-select">
+                            <option value="">Şəhər</option>
+                            <option value="">Şəhər2</option>
+                            <option value="">Şəhər3</option>
+                        </select>
+                    </div>
+                    <div class="selectBox" id="cities-selectBox">
+                        <div class="selectBox__heading">
+                            <a href="" class="selectBox__close"><img src="assets/img/back-icon.svg" alt="" /></a>
+                            <div class="selectBox__title">Şəhər</div>
+                            <div></div>
+                        </div>
+                        <div class="search search--live">
+                            <div class="input-group search__group">
+                                <input type="text" class="form-control search__input" id="" />
+                                <div class="input-group-append search__append">
+                                    <button class="search__btn" type="button"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="selectBox__list">
+                            <li>
+                                <a href="">City1</a>
+                            </li>
+                            <li>
+                                <a href="">City2</a>
+                            </li>
+                            <li>
+                                <a href="">City3</a>
+                            </li>
+                            <li>
+                                <a href="">City4</a>
+                            </li>
+                            <li>
+                                <a href="">City5</a>
+                            </li>
+                            <li>
+                                <a href="">City6</a>
+                            </li>
+                            <li>
+                                <a href="">City7</a>
+                            </li>
+                            <li>
+                                <a href="">City1</a>
+                            </li>
+                            <li>
+                                <a href="">City2</a>
+                            </li>
+                            <li>
+                                <a href="">City3</a>
+                            </li>
+                            <li>
+                                <a href="">City4</a>
+                            </li>
+                            <li>
+                                <a href="">City5</a>
+                            </li>
+                            <li>
+                                <a href="">City6</a>
+                            </li>
+                            <li>
+                                <a href="">City7</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="brands mb-30">
+                    <p>Marka və model</p>
+                    <div class="brands__grid brands__grid--4">
+                        <div class="brands__item brands__item--small">
+                            <img
+                                src="https://turbo.azstatic.com/uploads/makelogo/2021%2F05%2F18%2F16%2F53%2F52%2Fc0231997-84f3-4e49-8a46-15d634db7502%2Fmercedes-benz-9%4054x.png"
+                                alt=""
+                            />
+                            <span>Mercedes</span>
+                        </div>
+                        <div class="brands__item brands__item--small">
+                            <img
+                                src="https://turbo.azstatic.com/uploads/makelogo/2021%2F05%2F18%2F16%2F53%2F52%2Fc0231997-84f3-4e49-8a46-15d634db7502%2Fmercedes-benz-9%4054x.png"
+                                alt=""
+                            />
+                            <span>Mercedes</span>
+                        </div>
+                        <div class="brands__item brands__item--small">
+                            <img
+                                src="https://turbo.azstatic.com/uploads/makelogo/2021%2F05%2F18%2F16%2F53%2F52%2Fc0231997-84f3-4e49-8a46-15d634db7502%2Fmercedes-benz-9%4054x.png"
+                                alt=""
+                            />
+                            <span>Mercedes</span>
+                        </div>
+                        <div class="brands__item brands__item--small">
+                            <img
+                                src="https://turbo.azstatic.com/uploads/makelogo/2021%2F05%2F18%2F16%2F53%2F52%2Fc0231997-84f3-4e49-8a46-15d634db7502%2Fmercedes-benz-9%4054x.png"
+                                alt=""
+                            />
+                            <span>Mercedes</span>
+                        </div>
+                        <div class="brands__item brands__item--small">
+                            <img
+                                src="https://turbo.azstatic.com/uploads/makelogo/2021%2F05%2F18%2F16%2F53%2F52%2Fc0231997-84f3-4e49-8a46-15d634db7502%2Fmercedes-benz-9%4054x.png"
+                                alt=""
+                            />
+                            <span>Mercedes</span>
+                        </div>
+                        <div class="brands__item brands__item--small">
+                            <img
+                                src="https://turbo.azstatic.com/uploads/makelogo/2021%2F05%2F18%2F16%2F53%2F52%2Fc0231997-84f3-4e49-8a46-15d634db7502%2Fmercedes-benz-9%4054x.png"
+                                alt=""
+                            />
+                            <span>Mercedes</span>
+                        </div>
+                        <div class="brands__item brands__item--small">
+                            <img
+                                src="https://turbo.azstatic.com/uploads/makelogo/2021%2F05%2F18%2F16%2F53%2F52%2Fc0231997-84f3-4e49-8a46-15d634db7502%2Fmercedes-benz-9%4054x.png"
+                                alt=""
+                            />
+                            <span>Mercedes</span>
+                        </div>
+                        <div class="brands__item brands__item--small">
+                            <img
+                                src="https://turbo.azstatic.com/uploads/makelogo/2021%2F05%2F18%2F16%2F53%2F52%2Fc0231997-84f3-4e49-8a46-15d634db7502%2Fmercedes-benz-9%4054x.png"
+                                alt=""
+                            />
+                            <span>Mercedes</span>
+                        </div>
+                    </div>
+                    <button class="btn btn--more w-100" id="brands-select">Bütün markaları göstər</button>
+                    <div class="selectBox" id="brands-selectBox">
+                        <div class="selectBox__heading">
+                            <a href="" class="selectBox__close"><img src="assets/img/back-icon.svg" alt="" /></a>
+                            <div class="selectBox__title">Marka</div>
+                            <div></div>
+                        </div>
+                        <div class="search search--live">
+                            <div class="input-group search__group">
+                                <input type="text" class="form-control search__input" id="" />
+                                <div class="input-group-append search__append">
+                                    <button class="search__btn" type="button"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="selectBox__list">
+                            <li>
+                                <a href="">
+                                    <img
+                                        src="https://turbo.azstatic.com/uploads/makelogo/2021%2F05%2F18%2F16%2F53%2F52%2Fc0231997-84f3-4e49-8a46-15d634db7502%2Fmercedes-benz-9%4054x.png"
+                                        alt=""
+                                    />
+                                    Marka1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">Marka2</a>
+                            </li>
+                            <li>
+                                <a href="">Marka3</a>
+                            </li>
+                            <li>
+                                <a href="">Marka4</a>
+                            </li>
+                            <li>
+                                <a href="">Marka5</a>
+                            </li>
+                            <li>
+                                <a href="">Marka6</a>
+                            </li>
+                            <li>
+                                <a href="">Marka7</a>
+                            </li>
+                            <li>
+                                <a href="">Marka1</a>
+                            </li>
+                            <li>
+                                <a href="">Marka2</a>
+                            </li>
+                            <li>
+                                <a href="">Marka3</a>
+                            </li>
+                            <li>
+                                <a href="">Marka4</a>
+                            </li>
+                            <li>
+                                <a href="">Marka5</a>
+                            </li>
+                            <li>
+                                <a href="">Marka6</a>
+                            </li>
+                            <li>
+                                <a href="">Marka7</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="selectBox" id="model-selectBox">
+                        <div class="selectBox__heading">
+                            <a href="" class="selectBox__close"><img src="assets/img/back-icon.svg" alt="" /></a>
+                            <div class="selectBox__title">Model</div>
+                            <div></div>
+                        </div>
+                        <div class="search search--live">
+                            <div class="input-group search__group">
+                                <input type="text" class="form-control search__input" id="" />
+                                <div class="input-group-append search__append">
+                                    <button class="search__btn" type="button"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="selectBox__list">
+                            <li>
+                                <a href="">Model1</a>
+                            </li>
+                            <li>
+                                <a href="">Model2</a>
+                            </li>
+                            <li>
+                                <a href="">Model3</a>
+                            </li>
+                            <li>
+                                <a href="">Model4</a>
+                            </li>
+                            <li>
+                                <a href="">Model5</a>
+                            </li>
+                            <li>
+                                <a href="">Model6</a>
+                            </li>
+                            <li>
+                                <a href="">Model7</a>
+                            </li>
+                            <li>
+                                <a href="">Model1</a>
+                            </li>
+                            <li>
+                                <a href="">Model2</a>
+                            </li>
+                            <li>
+                                <a href="">Model3</a>
+                            </li>
+                            <li>
+                                <a href="">Model4</a>
+                            </li>
+                            <li>
+                                <a href="">Model5</a>
+                            </li>
+                            <li>
+                                <a href="">Model6</a>
+                            </li>
+                            <li>
+                                <a href="">Model7</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <div class="container">
+                        <div class="btn-group nav nav-pills" role="tablist">
+                            <a
+                                href=""
+                                class="btn"
+                                id="pills-all-tab"
+                                data-toggle="pill"
+                                data-target="#pills-all"
+                                type="button"
+                                role="tab"
+                                aria-controls="pills-all"
+                                aria-selected="true"
+                                >Hamısı</a
+                            >
+                            <a
+                                href=""
+                                class="btn btn--white"
+                                id="pills-new-tab"
+                                data-toggle="pill"
+                                data-target="#pills-new"
+                                type="button"
+                                role="tab"
+                                aria-controls="pills-new"
+                                aria-selected="false"
+                                >Yeni</a
+                            >
+                            <a
+                                href=""
+                                class="btn btn--white"
+                                id="pills-used-tab"
+                                data-toggle="pill"
+                                data-target="#pills-used"
+                                type="button"
+                                role="tab"
+                                aria-controls="pills-used"
+                                aria-selected="false"
+                                >Sürülmüş</a
+                            >
+                        </div>
+                    </div>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div
+                            class="tab-pane fade show active"
+                            id="pills-all"
+                            role="tabpanel"
+                            aria-labelledby="pills-all-tab"
+                        >
+                            <div class="customFilter mb-10">
+                                <div class="form-group form-material">
+                                    <label>Ban növü</label>
+                                    <select class="selectpicker" title=" ">
+                                        <option value="">Marka</option>
+                                        <option value="">Marka2</option>
+                                        <option value="">Marka3</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="form-label">Yürüş (km)</label>
+                                    <div class="form-joint">
+                                        <div class="form-group form-material">
+                                            <select class="selectpicker" title="min">
+                                                <option value="">Min</option>
+                                                <option value="">Min2</option>
+                                                <option value="">Min3</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group form-material">
+                                            <select class="selectpicker" title="max">
+                                                <option value="">Max</option>
+                                                <option value="">Max2</option>
+                                                <option value="">Max3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="form-label">İl</label>
+                                    <div class="form-joint">
+                                        <div class="form-group form-material">
+                                            <select class="selectpicker" title="min">
+                                                <option value="">min.</option>
+                                                <option value="">min.2</option>
+                                                <option value="">min.3</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group form-material">
+                                            <select class="selectpicker" title="max">
+                                                <option value="">maks.</option>
+                                                <option value="">maks.2</option>
+                                                <option value="">maks.3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="form-label">Həcm (sm<sup>3</sup>)</label>
+                                    <div class="form-joint">
+                                        <div class="form-group form-material">
+                                            <select class="selectpicker" title="min">
+                                                <option value="">min.</option>
+                                                <option value="">min.2</option>
+                                                <option value="">min.3</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group form-material">
+                                            <select class="selectpicker" title="max">
+                                                <option value="">maks.</option>
+                                                <option value="">maks.2</option>
+                                                <option value="">maks.3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group form-material">
+                                    <label>Rəng</label>
+                                    <select class="selectpicker" title=" ">
+                                        <option
+                                            value=""
+                                            data-content="<span class='form-color' style='background-color: red'></span> Red"
+                                        ></option>
+                                        <option value="">Rəng2</option>
+                                        <option value="">Rəng3</option>
+                                    </select>
+                                </div>
+                                <div class="form-group form-material">
+                                    <label>Hansı bazar</label>
+                                    <select class="selectpicker" title=" ">
+                                        <option value="">Option</option>
+                                        <option value="">Option2</option>
+                                        <option value="">Option3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="customFilter mb-10">
+                                <div>
+                                    <label class="form-label">Qiymet</label>
+                                    <div class="form-joint form-joint--large">
+                                        <div class="form-group form-material">
+                                            <select class="selectpicker" title="min">
+                                                <option value="">Min</option>
+                                                <option value="">Min2</option>
+                                                <option value="">Min3</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group form-material">
+                                            <select class="selectpicker" title="max">
+                                                <option value="">Max</option>
+                                                <option value="">Max2</option>
+                                                <option value="">Max3</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group form-material">
+                                            <select class="selectpicker" title="AZN">
+                                                <option value="">AZN</option>
+                                                <option value="">Max2</option>
+                                                <option value="">Max3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customFilter__checkbox">
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" id="check1" checked />
+                                        <label for="check1">Kredit</label>
+                                    </div>
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" id="check2" />
+                                        <label for="check2">Barter</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-new" role="tabpanel" aria-labelledby="pills-new-tab">
+                            2
+                        </div>
+                        <div class="tab-pane fade" id="pills-used" role="tabpanel" aria-labelledby="pills-used-tab">
+                            3
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="container">
+                        <div class="btn-group nav nav-pills" role="tablist">
+                            <a
+                                href=""
+                                class="btn"
+                                id="pills-all2-tab"
+                                data-toggle="pill"
+                                data-target="#pills-all2"
+                                type="button"
+                                role="tab"
+                                aria-controls="pills-all2"
+                                aria-selected="true"
+                                >Hamısı</a
+                            >
+                            <a
+                                href=""
+                                class="btn btn--white"
+                                id="pills-salon-tab"
+                                data-toggle="pill"
+                                data-target="#pills-salon"
+                                type="button"
+                                role="tab"
+                                aria-controls="pills-salon"
+                                aria-selected="false"
+                                >Avtosalonlar</a
+                            >
+                            <a
+                                href=""
+                                class="btn btn--white"
+                                id="pills-personal-tab"
+                                data-toggle="pill"
+                                data-target="#pills-personal"
+                                type="button"
+                                role="tab"
+                                aria-controls="pills-personal"
+                                aria-selected="false"
+                                >Şəxsi</a
+                            >
+                        </div>
+                    </div>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div
+                            class="tab-pane fade show active"
+                            id="pills-all2"
+                            role="tabpanel"
+                            aria-labelledby="pills-all2-tab"
+                        >
+                            <div class="customFilter mb-10">
+                                <p>Yanacaq növü</p>
+                                <div class="customFilter__checkbox">
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" id="check1" checked />
+                                        <label for="check1">Vacib deyil</label>
+                                    </div>
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" id="check2" />
+                                        <label for="check2">Benzin</label>
+                                    </div>
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" id="check3" />
+                                        <label for="check3">Dizel</label>
+                                    </div>
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" id="check4" />
+                                        <label for="check4">Qaz</label>
+                                    </div>
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" id="check5" />
+                                        <label for="check5">Elektro</label>
+                                    </div>
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" id="check6" />
+                                        <label for="check6">Hibrid</label>
+                                    </div>
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" id="check7" />
+                                        <label for="check7">Plug-in Hibrid</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="customFilter mb-10">
+                                <p>Ötürücü</p>
+                                <div class="customFilter__checkbox">
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" id="check8" checked />
+                                        <label for="check8">Vacib deyil</label>
+                                    </div>
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" id="check9" />
+                                        <label for="check9">Arxa</label>
+                                    </div>
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" id="check10" />
+                                        <label for="check10">Ön</label>
+                                    </div>
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" id="check11" />
+                                        <label for="check11">Tam</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="customFilter mb-10">
+                                <p>Qəzalı və ya ehtiyat hissələr üçün</p>
+                                <p class="description mb-0 mt-15">
+                                    Təmirə ehtiyacı var və ya ümumiyyətlə yararsız vəziyyətdədir.
+                                </p>
+                            </div>
+                            <div class="customFilter mb-10">
+                                <p>Sahiblərinin sayı</p>
+                                <div class="customFilter__checkbox">
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" id="check12" />
+                                        <label for="check12">1</label>
+                                    </div>
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" id="check13" />
+                                        <label for="check13">2</label>
+                                    </div>
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" id="check14" />
+                                        <label for="check14">3</label>
+                                    </div>
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" id="check15" />
+                                        <label for="check15">4 və daha çox</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-salon" role="tabpanel" aria-labelledby="pills-salon-tab">
+                            2
+                        </div>
+                        <div
+                            class="tab-pane fade"
+                            id="pills-personal"
+                            role="tabpanel"
+                            aria-labelledby="pills-personal-tab"
+                        >
+                            3
+                        </div>
+                    </div>
+                </section>
+                <button class="btn form-btn" type="submit">Axtar</button>
+            </form>
+        </main>
+
+        <script>
+            window.jQuery || document.write('<script src="assets/libs/jquery/jquery-3.5.1.min.js"><\/script>');
+        </script>
+
+        <script src="assets/libs/popper.js/popper.min.js" type="text/javascript"></script>
+
+        <script src="assets/libs/bootstrap/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+
+        <script type="text/javascript" src="assets/libs/sorttable/sorttable.js"></script>
+
+        <script type="text/javascript" src="assets/libs/lightslider/lightslider.js"></script>
+
+        <script type="text/javascript" src="assets/libs/zoom/zoom.js"></script>
+
+        <script type="text/javascript" src="assets/libs/sumogallery/jquery.sumogallery.js"></script>
+
+        <script type="text/javascript" src="assets/libs/bootstrap-select/bootstrap-select.min.js"></script>
+
+        <script type="text/javascript" src="assets/libs/moment.js/moment.js"></script>
+
+        <script
+            type="text/javascript"
+            src="assets/libs/bootstrap-datetimepicker/tempusdominus-bootstrap-4.min.js"
+        ></script>
+
+        <script type="text/javascript" src="assets/libs/jquery-ui/jquery-ui.min.js"></script>
+
+        <script src="assets/js/all.js" type="text/javascript"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. 
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>-->
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    </body>
+</html>
