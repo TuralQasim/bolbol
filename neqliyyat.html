@@ -24,8 +24,8 @@
  
          <link rel="stylesheet" href="assets/libs/bootstrap-datetimepicker/tempusdominus-bootstrap-4.css">
          
-         <link rel="stylesheet" href="assets/css/main/main.min.css">
- 
+         <link rel="stylesheet" href="assets/css/main/main.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
      </head>
      <body>
          <!--[if lte IE 9]>
@@ -33,182 +33,135 @@
          <![endif]-->
  
          <header class="header">
-             <div class="header__topbar">
-                 <div class="contact">
-                     <a href="" class="contact__network facebook"></a>
-                     <a href="" class="contact__network instagram"></a>
-                     <span class="contact__tel">
-                         Dəstək: 
-                         <a href="tel:">051 123 45 67</a>
-                     </span>
-                     <a href="" class="contact__network whatsapp"></a>
-                     <a href="" class="contact__network telegram"></a>
-                 </div>
-                 <div>
-                     <a href="">Saytda reklam</a>
-                 </div>
-             </div>
- 
-             <nav class="navbar navbar-expand-md">
-                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation"></button>
-                 <a class="navbar-brand" href="#">
-                     <img src="assets/img/logo.svg" alt="logo">
-                 </a>
-                 <div class="collapse navbar-collapse" id="navbarToggler">
+            <div class="main_container">
+              <div class="header__topbar">
+                <div class="contact">
+                  <a href="" class="contact__network facebook"></a>
+                  <a href="" class="contact__network instagram"></a>
+                  <span class="contact__tel">
+                    Dəstək:
+                    <a href="tel:">051 123 45 67</a>
+                  </span>
+                  <a href="" class="contact__network whatsapp"></a>
+                  <a href="" class="contact__network telegram"></a>
+                </div>
+                <div>
+                  <a href="">Saytda reklam</a>
+                </div>
+              </div>
+            </div>
+            <div class="navbar_bg">
+              <div class="main_container">
+                <nav class="navbar navbar-expand-md">
+                  <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarToggler"
+                    aria-controls="navbarToggler"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                  ></button>
+                  <a class="navbar-brand" href="#">
+                    <img src="assets/img/logo.svg" alt="logo" />
+                  </a>
+                  <div class="collapse navbar-collapse" id="navbarToggler">
                     <div class="header__links">
-                         <a href="" class="header__link header__link--favorites">Seçdiklərim</a>
-                         <a href="" class="header__link header__link--login" data-toggle="modal" data-target="#loginModal">Daxil ol</a>
-                         <!-- <a href="" class="header__link header__link--login">Şəxsi kabinet</a> -->
-                         <!-- <a href="" class="header__link header__link--logout">Çıxış et</a> -->
-                    </div> 
-                 </div>
-                 <a href="" class="btn header__btn"><span>Elan yerləşdir</span></a>
-             </nav>
-         </header>
+                      <a href="" class="header__link header__link--favorites"
+                        >Seçdiklərim</a
+                      >
+                      <a
+                        href=""
+                        class="header__link header__link--login"
+                        data-toggle="modal"
+                        data-target="#loginModal"
+                        >Daxil ol</a
+                      >
+                      <!-- <a href="" class="header__link header__link--login">Şəxsi kabinet</a> -->
+                      <!-- <a href="" class="header__link header__link--logout">Çıxış et</a> -->
+                    </div>
+                  </div>
+                  <a href="" class="btn header__btn"><span>Elan yerləşdir</span></a>
+                </nav>
+              </div>
+            </div>
+          </header>
 
         <main>
-            
+
             <section class="d-md-block d-none">
-                <div class="container-fluid">
-                    <h1>Neqliyyat</h1>
-                    <div class="customFilter">
-                        <form action="">
-                            <div>
-                                <div class="customFilter__grid">
-                                    <div class="form-group form-material">
-                                        <label>Marka</label>
-                                        <select class="selectpicker" title=" ">
-                                            <option value="">Marka</option>
-                                            <option value="">Marka2</option>
-                                            <option value="">Marka3</option>
-                                        </select>
+                <div class="main_container">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-5 col-md-9 mx-auto">
+                              <div class="search">
+                                <form action="">
+                                  <div class="input-group search__group">
+                                    <input
+                                      type="text"
+                                      class="form-control search__input typed"
+                                      id=""
+                                    />
+                                    <div class="input-group-append search__append">
+                                      <button class="search__btn" type="button"></button>
                                     </div>
-                                    <div class="form-group form-material">
-                                        <label>Model</label>
-                                        <select class="selectpicker" title=" " multiple>
-                                            <option value="">Model</option>
-                                            <option value="">Model2</option>
-                                            <option value="">Model3</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-joint">
-                                        <div class="form-group form-material">
-                                            <label>Qiymət, min.</label>
-                                            <input type="text" class="form-control">
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        <h1>Neqliyyat</h1>
+                        <div id="none767" class="customFilter">
+                            <form action="">
+                                <div>
+                                    <div class="filter_row">
+                                        <div class="form-group first_inp form-material">
+                                            <label>Marka</label>
+                                            <select class="selectpicker" id="carMarks" title=" "></select>
                                         </div>
-                                        <div class="form-group form-material">
-                                            <label>maks.</label>
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="form-group form-material">
-                                        <label>Rəng</label>
-                                        <select class="selectpicker" title=" " multiple>
-                                            <option value="">Rəng</option>
-                                            <option value="">Rəng2</option>
-                                            <option value="">Rəng3</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group form-material">
-                                        <label>Yanacaq növü</label>
-                                        <select class="selectpicker" title=" " multiple>
-                                            <option value="">Yanacaq növü</option>
-                                            <option value="">Yanacaq növü2</option>
-                                            <option value="">Yanacaq növü3</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group form-material">
-                                        <label>Ban növü</label>
-                                        <select class="selectpicker" title=" " multiple>
-                                            <option value="">Ban növü</option>
-                                            <option value="">Ban növü2</option>
-                                            <option value="">Ban növü3</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-joint">
-                                        <div class="form-group form-material">
-                                            <label>İl, min.</label>
-                                            <select class="selectpicker" title=" ">
-                                                <option value="">İl, min.</option>
-                                                <option value="">İl, min.2</option>
-                                                <option value="">İl, min.3</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group form-material">
-                                            <label>maks.</label>
-                                            <select class="selectpicker" title=" ">
-                                                <option value="">maks.</option>
-                                                <option value="">maks.2</option>
-                                                <option value="">maks.3</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-joint">
-                                        <div class="form-group form-material">
-                                            <label>Həcm (sm<sup>3</sup>), min</label>
-                                            <select class="selectpicker" title=" ">
-                                                <option value="">Həcm (sm<sup>3</sup>), min</option>
-                                                <option value="">Həcm (sm<sup>3</sup>), min2</option>
-                                                <option value="">Həcm (sm<sup>3</sup>), min3</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group form-material">
-                                            <label>maks.</label>
-                                            <select class="selectpicker" title=" ">
-                                                <option value="">maks.</option>
-                                                <option value="">maks.2</option>
-                                                <option value="">maks.3</option>
-                                            </select>
-                                        </div>
-                                    </div>        
-                                </div>
-                                <div class="customFilter__collapse">
-                                    <div class="customFilter__grid">
-                                            <div class="form-group form-material">
-                                                <label>Süretler qutusu</label>
-                                                <select class="selectpicker" title=" " multiple>
-                                                    <option value="">Süretler qutusu</option>
-                                                    <option value="">Süretler qutusu2</option>
-                                                    <option value="">Süretler qutusu3</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-joint">
-                                                <div class="form-group form-material">
-                                                    <label>Yürüş (km), min.</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                                <div class="form-group form-material">
-                                                    <label>maks.</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                            </div>
-                                            <div class="form-group form-material">
-                                                <label>AAAAAAAAAAAa</label>
-                                                <select class="selectpicker" title=" ">
-                                                    <option value="">AAAAAAAAAAAa</option>
-                                                    <option value="">AAAAAAAAAAAa2</option>
-                                                    <option value="">AAAAAAAAAAAa3</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group form-material">
-                                                <label>Şəhər</label>
-                                                <select class="selectpicker" title=" " multiple>
-                                                    <option value="">Şəhər</option>
-                                                    <option value="">Şəhər2</option>
-                                                    <option value="">Şəhər3</option>
-                                                </select>
-                                            </div>
-                                        <div class="form-group form-material">
-                                            <label>Ötürücü</label>
+                                        <div class="form-group second_inp form-material">
+                                            <label>Model</label>
                                             <select class="selectpicker" title=" " multiple>
-                                                <option value="">Ötürücü</option>
-                                                <option value="">Ötürücü2</option>
-                                                <option value="">Ötürücü3</option>
+                                                <option value="">Model</option>
+                                                <option value="">Model2</option>
+                                                <option value="">Model3</option>
                                             </select>
                                         </div>
-                                        <div class="form-joint">
+                                        <div class="form-group third_inp form-material">
+                                            <label>Rəng</label>
+                                            <select class="selectpicker" title=" " multiple>
+                                                <option value="">Yaş Asfalt</option>
+                                                <option value="">Qara</option>
+                                                <option value="">Gümüşü</option>
+                                                <option value="">Ağ</option>
+                                                <option value="">Bej</option>
+                                                <option value="">Tünd qırmızı</option>
+                                                <option value="">Qırmızı</option>
+                                                <option value="">Çəhrayı</option>
+                                                <option value="">Narıncı</option>
+                                                <option value="">Qızılı</option>
+                                                <option value="">Sarı</option>
+                                                <option value="">Yaşıl</option>
+                                                <option value="">Mavi</option>
+                                                <option value="">Göy</option>
+                                                <option value="">Bənövşəyi</option>
+                                                <option value="">Qəhvəyi</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group four_inp form-material">
+                                            <label>Yanacaq növü</label>
+                                            <select class="selectpicker" id="oilSelect" title=" " multiple>
+                                                <option value="">Benzin</option>
+                                                <option value="">Dizel</option>
+                                                <option value="">Qaz</option>
+                                                <option value="">Elektro</option>
+                                                <option value="">Hibrid</option>
+                                                <option value="">Plug-in Hibrid</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-joint five_inp">
                                             <div class="form-group form-material">
-                                                <label>Güc (a. g.), min.</label>
+                                                <label>Qiymət, min.</label>
                                                 <input type="text" class="form-control">
                                             </div>
                                             <div class="form-group form-material">
@@ -216,123 +169,724 @@
                                                 <input type="text" class="form-control">
                                             </div>
                                         </div>
-                                        <div class="form-group form-material">
-                                            <label>Yerlerin sayı</label>
+                                    </div>
+                                    <div class="filter_row">
+                                        <div class="form-group first_inp form-material">
+                                            <label>Ban növü</label>
                                             <select class="selectpicker" title=" " multiple>
-                                                <option value="">Yerlerin sayı</option>
-                                                <option value="">Yerlerin sayı2</option>
-                                                <option value="">Yerlerin sayı3</option>
+                                                <option value="">Avtobus</option>
+                                                <option value="">Dartqı</option>
+                                                <option value="">Furqon</option>
+                                                <option value="">Hetçbek</option>
+                                                <option value="">Kabriolet</option>
+                                                <option value="">Karvan</option>
+                                                <option value="">Kupe</option>
+                                                <option value="">Kvadrosikl</option>
+                                                <option value="">Liftbek</option>
+                                                <option value="">Mikroavtobus</option>
+                                                <option value="">Minivan</option>
+                                                <option value="">Moped</option>
+                                                <option value="">Motosiklet</option>
+                                                <option value="">Offroader / SUV</option>
+                                                <option value="">Pikap</option>
+                                                <option value="">Qolfkar</option>
+                                                <option value="">Rodster</option>
+                                                <option value="">Sedan</option>
+                                                <option value="">Universal</option>
+                                                <option value="">Van</option>
+                                                <option value="">Yük maşını</option>
                                             </select>
                                         </div>
+                                        <div class="form-joint second_inp">
+                                            <div class="form-group form-material">
+                                                <label>İl, min.</label>
+                                                <select class="selectpicker" title=" ">
+                                                    <option value="">2023</option>
+                                                    <option value="">2022</option>
+                                                    <option value="">2021</option>
+                                                    <option value="">2020</option>
+                                                    <option value="">2019</option>
+                                                    <option value="">2018</option>
+                                                    <option value="">2017</option>
+                                                    <option value="">2016</option>
+                                                    <option value="">2015</option>
+                                                    <option value="">2014</option>
+                                                    <option value="">2013</option>
+                                                    <option value="">2012</option>
+                                                    <option value="">2011</option>
+                                                    <option value="">2010</option>
+                                                    <option value="">2009</option>
+                                                    <option value="">2008</option>
+                                                    <option value="">2007</option>
+                                                    <option value="">2006</option>
+                                                    <option value="">2005</option>
+                                                    <option value="">2004</option>
+                                                    <option value="">2003</option>
+                                                    <option value="">2002</option>
+                                                    <option value="">2001</option>
+                                                    <option value="">2000</option>
+                                                    <option value="">1999</option>
+                                                    <option value="">1998</option>
+                                                    <option value="">1997</option>
+                                                    <option value="">1996</option>
+                                                    <option value="">1995</option>
+                                                    <option value="">1994</option>
+                                                    <option value="">1993</option>
+                                                    <option value="">1992</option>
+                                                    <option value="">1991</option>
+                                                    <option value="">1990</option>
+                                                    <option value="">1989</option>
+                                                    <option value="">1988</option>
+                                                    <option value="">1987</option>
+                                                    <option value="">1986</option>
+                                                    <option value="">1985</option>
+                                                    <option value="">1984</option>
+                                                    <option value="">1983</option>
+                                                    <option value="">1982</option>
+                                                    <option value="">1981</option>
+                                                    <option value="">1980</option>
+                                                    <option value="">1979</option>
+                                                    <option value="">1978</option>
+                                                    <option value="">1977</option>
+                                                    <option value="">1976</option>
+                                                    <option value="">1975</option>
+                                                    <option value="">1974</option>
+                                                    <option value="">1973</option>
+                                                    <option value="">1972</option>
+                                                    <option value="">1971</option>
+                                                    <option value="">1970</option>
+                                                    <option value="">1969</option>
+                                                    <option value="">1968</option>
+                                                    <option value="">1967</option>
+                                                    <option value="">1966</option>
+                                                    <option value="">1965</option>
+                                                    <option value="">1964</option>
+                                                    <option value="">1963</option>
+                                                    <option value="">1962</option>
+                                                    <option value="">1961</option>
+                                                    <option value="">1960</option>
+                                                    <option value="">1959</option>
+                                                    <option value="">1958</option>
+                                                    <option value="">1957</option>
+                                                    <option value="">1956</option>
+                                                    <option value="">1955</option>
+                                                    <option value="">1954</option>
+                                                    <option value="">1953</option>
+                                                    <option value="">1952</option>
+                                                    <option value="">1951</option>
+                                                    <option value="">1950</option>
+                                                    <option value="">1949</option>
+                                                    <option value="">1948</option>
+                                                    <option value="">1947</option>
+                                                    <option value="">1946</option>
+                                                    <option value="">1945</option>
+                                                    <option value="">1944</option>
+                                                    <option value="">1943</option>
+                                                    <option value="">1942</option>
+                                                    <option value="">1941</option>
+                                                    <option value="">1940</option>
+                                                    <option value="">1939</option>
+                                                    <option value="">1938</option>
+                                                    <option value="">1937</option>
+                                                    <option value="">1936</option>
+                                                    <option value="">1935</option>
+                                                    <option value="">1934</option>
+                                                    <option value="">1933</option>
+                                                    <option value="">1932</option>
+                                                    <option value="">1931</option>
+                                                    <option value="">1930</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group form-material">
+                                                <label>maks.</label>
+                                                <select class="selectpicker" title=" ">
+                                                    <option value="">2023</option>
+                                                    <option value="">2022</option>
+                                                    <option value="">2021</option>
+                                                    <option value="">2020</option>
+                                                    <option value="">2019</option>
+                                                    <option value="">2018</option>
+                                                    <option value="">2017</option>
+                                                    <option value="">2016</option>
+                                                    <option value="">2015</option>
+                                                    <option value="">2014</option>
+                                                    <option value="">2013</option>
+                                                    <option value="">2012</option>
+                                                    <option value="">2011</option>
+                                                    <option value="">2010</option>
+                                                    <option value="">2009</option>
+                                                    <option value="">2008</option>
+                                                    <option value="">2007</option>
+                                                    <option value="">2006</option>
+                                                    <option value="">2005</option>
+                                                    <option value="">2004</option>
+                                                    <option value="">2003</option>
+                                                    <option value="">2002</option>
+                                                    <option value="">2001</option>
+                                                    <option value="">2000</option>
+                                                    <option value="">1999</option>
+                                                    <option value="">1998</option>
+                                                    <option value="">1997</option>
+                                                    <option value="">1996</option>
+                                                    <option value="">1995</option>
+                                                    <option value="">1994</option>
+                                                    <option value="">1993</option>
+                                                    <option value="">1992</option>
+                                                    <option value="">1991</option>
+                                                    <option value="">1990</option>
+                                                    <option value="">1989</option>
+                                                    <option value="">1988</option>
+                                                    <option value="">1987</option>
+                                                    <option value="">1986</option>
+                                                    <option value="">1985</option>
+                                                    <option value="">1984</option>
+                                                    <option value="">1983</option>
+                                                    <option value="">1982</option>
+                                                    <option value="">1981</option>
+                                                    <option value="">1980</option>
+                                                    <option value="">1979</option>
+                                                    <option value="">1978</option>
+                                                    <option value="">1977</option>
+                                                    <option value="">1976</option>
+                                                    <option value="">1975</option>
+                                                    <option value="">1974</option>
+                                                    <option value="">1973</option>
+                                                    <option value="">1972</option>
+                                                    <option value="">1971</option>
+                                                    <option value="">1970</option>
+                                                    <option value="">1969</option>
+                                                    <option value="">1968</option>
+                                                    <option value="">1967</option>
+                                                    <option value="">1966</option>
+                                                    <option value="">1965</option>
+                                                    <option value="">1964</option>
+                                                    <option value="">1963</option>
+                                                    <option value="">1962</option>
+                                                    <option value="">1961</option>
+                                                    <option value="">1960</option>
+                                                    <option value="">1959</option>
+                                                    <option value="">1958</option>
+                                                    <option value="">1957</option>
+                                                    <option value="">1956</option>
+                                                    <option value="">1955</option>
+                                                    <option value="">1954</option>
+                                                    <option value="">1953</option>
+                                                    <option value="">1952</option>
+                                                    <option value="">1951</option>
+                                                    <option value="">1950</option>
+                                                    <option value="">1949</option>
+                                                    <option value="">1948</option>
+                                                    <option value="">1947</option>
+                                                    <option value="">1946</option>
+                                                    <option value="">1945</option>
+                                                    <option value="">1944</option>
+                                                    <option value="">1943</option>
+                                                    <option value="">1942</option>
+                                                    <option value="">1941</option>
+                                                    <option value="">1940</option>
+                                                    <option value="">1939</option>
+                                                    <option value="">1938</option>
+                                                    <option value="">1937</option>
+                                                    <option value="">1936</option>
+                                                    <option value="">1935</option>
+                                                    <option value="">1934</option>
+                                                    <option value="">1933</option>
+                                                    <option value="">1932</option>
+                                                    <option value="">1931</option>
+                                                    <option value="">1930</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group third_inp form-material">
+                                            <label>Süretler qutusu</label>
+                                            <select class="selectpicker" title=" " multiple>
+                                                <option value="">Mexaniki</option>
+                                                <option value="">Avtomat</option>
+                                                <option value="">Robotlaşdırılmış</option>
+                                                <option value="">Variator</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group four_inp form-material">
+                                            <label>Şəhər</label>
+                                            <select class="selectpicker" title=" " multiple>
+                                                <option value="">Ağcabədi</option>
+                                                <option value="">Ağdam</option>
+                                                <option value="">Ağdaş</option>
+                                                <option value="">Ağstafa</option>
+                                                <option value="">Ağsu</option>
+                                                <option value="">Astara</option>
+                                                <option value="">Babək</option>
+                                                <option value="">Bakı</option>
+                                                <option value="">Balakən</option>
+                                                <option value="">Beyləqan</option>
+                                                <option value="">Bərdə</option>
+                                                <option value="">Biləsuvar</option>
+                                                <option value="">Cəbrayıl</option>
+                                                <option value="">Cəlilabad</option>
+                                                <option value="">Culfa</option>
+                                                <option value="">Daşkəsən</option>
+                                                <option value="">Dəliməmmədli</option>
+                                                <option value="">Füzuli</option>
+                                                <option value="">Gədəbəy</option>
+                                                <option value="">Gəncə</option>
+                                                <option value="">Goranboy</option>
+                                                <option value="">Göyçay</option>
+                                                <option value="">Göygöl</option>
+                                                <option value="">Göytəpə</option>
+                                                <option value="">Hacıqabul</option>
+                                                <option value="">Horadiz</option>
+                                                <option value="">İmişli</option>
+                                                <option value="">İsmayıllı</option>
+                                                <option value="">Kürdəmir</option>
+                                                <option value="">Laçın</option>
+                                                <option value="">Lerik</option>
+                                                <option value="">Lənkəran</option>
+                                                <option value="">Liman</option>
+                                                <option value="">Masallı</option>
+                                                <option value="">Mingəçevir</option>
+                                                <option value="">Naftalan</option>
+                                                <option value="">Naxçıvan</option>
+                                                <option value="">Neftçala</option>
+                                                <option value="">Oğuz</option>
+                                                <option value="">Ordubad</option>
+                                                <option value="">Qax</option>
+                                                <option value="">Qazax</option>
+                                                <option value="">Qəbələ</option>
+                                                <option value="">Qobustan</option>
+                                                <option value="">Quba</option>
+                                                <option value="">Qusar</option>
+                                                <option value="">Saatlı</option>
+                                                <option value="">Sabirabad</option>
+                                                <option value="">Şabran</option>
+                                                <option value="">Şahbuz</option>
+                                                <option value="">Salyan</option>
+                                                <option value="">Şamaxı</option>
+                                                <option value="">Samux</option>
+                                                <option value="">Şəki</option>
+                                                <option value="">Şəmkir</option>
+                                                <option value="">Şərur</option>
+                                                <option value="">Şirvan</option>
+                                                <option value="">Siyəzən</option>
+                                                <option value="">Sumqayıt</option>
+                                                <option value="">Şuşa</option>
+                                                <option value="">Tərtər</option>
+                                                <option value="">Tovuz</option>
+                                                <option value="">Ucar</option>
+                                                <option value="">Xaçmaz</option>
+                                                <option value="">Xırdalan</option>
+                                                <option value="">Xızı</option>
+                                                <option value="">Xudat</option>
+                                                <option value="">Yardımlı</option>
+                                                <option value="">Yevlax</option>
+                                                <option value="">Zaqatala</option>
+                                                <option value="">Zərdab</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-joint five_inp">
+                                            <div class="form-group form-material">
+                                                <label>Yürüş(km), min.</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                            <div class="form-group form-material">
+                                                <label>maks.</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div> 
                                     </div>
-                                    <p>Avtomobilin təchizatı</p>
-                                    <div class="customFilter__checkbox">
-                                        <div class="form-group form-check">
-                                            <input type="checkbox" id="check1">
-                                            <label for="check1">Yüngül lehimli diskler</label>
+                                    <div class="customFilter__collapse">
+                                        <div class="filter_row">
+                                            <div class="form-group first_inp form-material">
+                                                <label>Yerlerin sayı</label>
+                                                <select class="selectpicker" title=" " multiple>
+                                                    <option value="">1</option>
+                                                    <option value="">2</option>
+                                                    <option value="">3</option>
+                                                    <option value="">4</option>
+                                                    <option value="">5</option>
+                                                    <option value="">8+</option>
+                                                </select>
+                                            </div>  
+                                            <div class="form-joint second_inp ">
+                                                <div class="form-group form-material">
+                                                    <label>Güc (a. g.), min.</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                                <div class="form-group form-material">
+                                                    <label>maks.</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="form-group third_inp form-material">
+                                                <label>Ötürücü</label>
+                                                <select class="selectpicker" title=" " multiple>
+                                                    <option value="">Arxa</option>
+                                                    <option value="">Ön</option>
+                                                    <option value="">Tam</option>
+                                                </select>
+                                            </div>
+                                            <div class="for_car">
+                                                <div class="old_car">
+                                                    <input type="radio" checked name="ggg">
+                                                    <label>Sürülmüş</label>
+                                                </div>
+                                                <div class="new_car">
+                                                    <input type="radio" name="ggg">
+                                                    <label>Yeni</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-joint max_inp">
+                                                <div class="form-group form-material">
+                                                    <label>Həcm (sm<sup>3</sup>), min</label>
+                                                    <select class="selectpicker" title=" ">
+                                                        <option value="">0</option>
+                                                        <option value="">100</option>
+                                                        <option value="">200</option>
+                                                        <option value="">300</option>
+                                                        <option value="">400</option>
+                                                        <option value="">500</option>
+                                                        <option value="">600</option>
+                                                        <option value="">700</option>
+                                                        <option value="">800</option>
+                                                        <option value="">900</option>
+                                                        <option value="">1000</option>
+                                                        <option value="">1100</option>
+                                                        <option value="">1200</option>
+                                                        <option value="">1300</option>
+                                                        <option value="">1400</option>
+                                                        <option value="">1500</option>
+                                                        <option value="">1600</option>
+                                                        <option value="">1700</option>
+                                                        <option value="">1800</option>
+                                                        <option value="">1900</option>
+                                                        <option value="">2000</option>
+                                                        <option value="">2100</option>
+                                                        <option value="">2200</option>
+                                                        <option value="">2300</option>
+                                                        <option value="">2400</option>
+                                                        <option value="">2500</option>
+                                                        <option value="">2600</option>
+                                                        <option value="">2700</option>
+                                                        <option value="">2800</option>
+                                                        <option value="">2900</option>
+                                                        <option value="">3000</option>
+                                                        <option value="">3100</option>
+                                                        <option value="">3200</option>
+                                                        <option value="">3300</option>
+                                                        <option value="">3400</option>
+                                                        <option value="">3500</option>
+                                                        <option value="">3600</option>
+                                                        <option value="">3700</option>
+                                                        <option value="">3800</option>
+                                                        <option value="">3900</option>
+                                                        <option value="">4000</option>
+                                                        <option value="">4100</option>
+                                                        <option value="">4200</option>
+                                                        <option value="">4300</option>
+                                                        <option value="">4400</option>
+                                                        <option value="">4500</option>
+                                                        <option value="">4600</option>
+                                                        <option value="">4700</option>
+                                                        <option value="">4800</option>
+                                                        <option value="">4900</option>
+                                                        <option value="">5000</option>
+                                                        <option value="">5100</option>
+                                                        <option value="">5200</option>
+                                                        <option value="">5300</option>
+                                                        <option value="">5400</option>
+                                                        <option value="">5500</option>
+                                                        <option value="">5600</option>
+                                                        <option value="">5700</option>
+                                                        <option value="">5800</option>
+                                                        <option value="">5900</option>
+                                                        <option value="">6000</option>
+                                                        <option value="">6100</option>
+                                                        <option value="">6200</option>
+                                                        <option value="">6300</option>
+                                                        <option value="">6400</option>
+                                                        <option value="">6500</option>
+                                                        <option value="">7000</option>
+                                                        <option value="">7500</option>
+                                                        <option value="">8000</option>
+                                                        <option value="">8500</option>
+                                                        <option value="">9000</option>
+                                                        <option value="">9500</option>
+                                                        <option value="">10000</option>
+                                                        <option value="">11000</option>
+                                                        <option value="">12000</option>
+                                                        <option value="">13000</option>
+                                                        <option value="">14000</option>
+                                                        <option value="">15000</option>
+                                                        <option value="">16000</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group form-material">
+                                                    <label>maks.</label>
+                                                    <select class="selectpicker" title=" ">
+                                                        <option value="">0</option>
+                                                        <option value="">100</option>
+                                                        <option value="">200</option>
+                                                        <option value="">300</option>
+                                                        <option value="">400</option>
+                                                        <option value="">500</option>
+                                                        <option value="">600</option>
+                                                        <option value="">700</option>
+                                                        <option value="">800</option>
+                                                        <option value="">900</option>
+                                                        <option value="">1000</option>
+                                                        <option value="">1100</option>
+                                                        <option value="">1200</option>
+                                                        <option value="">1300</option>
+                                                        <option value="">1400</option>
+                                                        <option value="">1500</option>
+                                                        <option value="">1600</option>
+                                                        <option value="">1700</option>
+                                                        <option value="">1800</option>
+                                                        <option value="">1900</option>
+                                                        <option value="">2000</option>
+                                                        <option value="">2100</option>
+                                                        <option value="">2200</option>
+                                                        <option value="">2300</option>
+                                                        <option value="">2400</option>
+                                                        <option value="">2500</option>
+                                                        <option value="">2600</option>
+                                                        <option value="">2700</option>
+                                                        <option value="">2800</option>
+                                                        <option value="">2900</option>
+                                                        <option value="">3000</option>
+                                                        <option value="">3100</option>
+                                                        <option value="">3200</option>
+                                                        <option value="">3300</option>
+                                                        <option value="">3400</option>
+                                                        <option value="">3500</option>
+                                                        <option value="">3600</option>
+                                                        <option value="">3700</option>
+                                                        <option value="">3800</option>
+                                                        <option value="">3900</option>
+                                                        <option value="">4000</option>
+                                                        <option value="">4100</option>
+                                                        <option value="">4200</option>
+                                                        <option value="">4300</option>
+                                                        <option value="">4400</option>
+                                                        <option value="">4500</option>
+                                                        <option value="">4600</option>
+                                                        <option value="">4700</option>
+                                                        <option value="">4800</option>
+                                                        <option value="">4900</option>
+                                                        <option value="">5000</option>
+                                                        <option value="">5100</option>
+                                                        <option value="">5200</option>
+                                                        <option value="">5300</option>
+                                                        <option value="">5400</option>
+                                                        <option value="">5500</option>
+                                                        <option value="">5600</option>
+                                                        <option value="">5700</option>
+                                                        <option value="">5800</option>
+                                                        <option value="">5900</option>
+                                                        <option value="">6000</option>
+                                                        <option value="">6100</option>
+                                                        <option value="">6200</option>
+                                                        <option value="">6300</option>
+                                                        <option value="">6400</option>
+                                                        <option value="">6500</option>
+                                                        <option value="">7000</option>
+                                                        <option value="">7500</option>
+                                                        <option value="">8000</option>
+                                                        <option value="">8500</option>
+                                                        <option value="">9000</option>
+                                                        <option value="">9500</option>
+                                                        <option value="">10000</option>
+                                                        <option value="">11000</option>
+                                                        <option value="">12000</option>
+                                                        <option value="">13000</option>
+                                                        <option value="">14000</option>
+                                                        <option value="">15000</option>
+                                                        <option value="">16000</option>
+                                                    </select>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="form-group form-check">
-                                            <input type="checkbox" id="check2">
-                                            <label for="check2">ABS</label>
+                                        <p>Avtomobilin təchizatı</p>
+                                        <div class="customFilter__checkbox">
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" id="check1">
+                                                <label for="check1">Yüngül lehimli diskler</label>
+                                            </div>
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" id="check2">
+                                                <label for="check2">ABS</label>
+                                            </div>
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" id="check3">
+                                                <label for="check3">Lyuk</label>
+                                            </div>
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" id="check4">
+                                                <label for="check4">Yağış sensoru</label>
+                                            </div>
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" id="check5">
+                                                <label for="check5">Merkezi qapanma</label>
+                                            </div>
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" id="check6">
+                                                <label for="check6">Park radarı</label>
+                                            </div>
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" id="check7">
+                                                <label for="check7">Kondisioner</label>
+                                            </div>
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" id="check8">
+                                                <label for="check8">Oturacaqların isidilmesi</label>
+                                            </div>
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" id="check9">
+                                                <label for="check9">Dəri salon</label>
+                                            </div>
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" id="check10">
+                                                <label for="check10">Ksenon lampalar</label>
+                                            </div>
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" id="check11">
+                                                <label for="check11">Arxa görüntü kamerası</label>
+                                            </div>
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" id="check12">
+                                                <label for="check12">Yan pərdələr</label>
+                                            </div>
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" id="check13">
+                                                <label for="check13">Oturacaqların ventilyasiyası</label>
+                                            </div>
                                         </div>
-                                        <div class="form-group form-check">
-                                            <input type="checkbox" id="check3">
-                                            <label for="check3">Lyuk</label>
-                                        </div>
-                                        <div class="form-group form-check">
-                                            <input type="checkbox" id="check4">
-                                            <label for="check4">Yağış sensoru</label>
-                                        </div>
-                                        <div class="form-group form-check">
-                                            <input type="checkbox" id="check5">
-                                            <label for="check5">Merkezi qapanma</label>
-                                        </div>
-                                        <div class="form-group form-check">
-                                            <input type="checkbox" id="check6">
-                                            <label for="check6">Park radarı</label>
-                                        </div>
-                                        <div class="form-group form-check">
-                                            <input type="checkbox" id="check7">
-                                            <label for="check7">Kondisioner</label>
-                                        </div>
-                                        <div class="form-group form-check">
-                                            <input type="checkbox" id="check8">
-                                            <label for="check8">Oturacaqların isidilmesi</label>
-                                        </div>
-                                        <div class="form-group form-check">
-                                            <input type="checkbox" id="check9">
-                                            <label for="check9">Dəri salon</label>
-                                        </div>
-                                        <div class="form-group form-check">
-                                            <input type="checkbox" id="check10">
-                                            <label for="check10">Ksenon lampalar</label>
-                                        </div>
-                                        <div class="form-group form-check">
-                                            <input type="checkbox" id="check11">
-                                            <label for="check11">Arxa görüntü kamerası</label>
-                                        </div>
-                                        <div class="form-group form-check">
-                                            <input type="checkbox" id="check12">
-                                            <label for="check12">Yan pərdələr</label>
-                                        </div>
-                                        <div class="form-group form-check">
-                                            <input type="checkbox" id="check13">
-                                            <label for="check13">Oturacaqların ventilyasiyası</label>
-                                        </div>
+                                    </div>
+                                <div class="customFilter__actions">
+                                    <!-- <p class="mb-0">Bu gün: <a href="">1275 yeni elan</a></p> -->
+                                    <div class="d-flex align-items-center">
+                                        <button type="reset" class="btn btn--transparent">Reset</button>
+                                        <button class="btn btn--more ml-30 customFilter__more">Daha çox filtr</button>
+                                        <button class="btn ml-20">Elanları göstər</button>
                                     </div>
                                 </div>
-                            <div class="customFilter__actions">
-                                <p class="mb-0">Bu gün: <a href="">1275 yeni elan</a></p>
-                                <div class="d-flex align-items-center">
-                                    <button type="reset" class="btn btn--transparent">Reset</button>
-                                    <button class="btn btn--more ml-30 customFilter__more">Daha çox filtr</button>
-                                    <button class="btn ml-20">Elanları göstər</button>
-                                </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </section>
-            <section>
-                <div class="container-fluid">
-                    <div class="brands">
-                        <div class="brands__heading">
-                            <h2 class="mb-0">Markalar</h2>
-                            <a href="">Bütün markalar</a>
+            <div class="main_container">
+                <div class="after_767">
+                    <div id="mark767_show_btn">
+                        <div class="mark767_show_btn_title">
+                            <i class="fa-solid fa-car"></i>
+                            <p>Bütün markalar</p>
                         </div>
-                        <div class="brands__grid">
-                            <a href="" class="brands__item">
-                                Mercedes
-                                <span>5555</span>
-                            </a>
-                            <a href="" class="brands__item">
-                                Mercedes
-                                <span>11</span>
-                            </a>
-                            <a href="" class="brands__item">
-                                Mercedes
-                                <span>2255</span>
-                            </a>
-                            <a href="" class="brands__item">
-                                Mercedes
-                                <span>5555</span>
-                            </a>
-                             <a href="" class="brands__item">
-                                Mercedes
-                                <span>5555</span>
-                            </a>
-                            <a href="" class="brands__item">
-                                Mercedes
-                                <span>11</span>
-                            </a>
-                            <a href="" class="brands__item">
-                                Mercedes
-                                <span>2255</span>
-                            </a>
-                            <a href="" class="brands__item">
-                                Mercedes
-                                <span>5555</span>
-                            </a>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <a href="/filters.html" class="filter_show">
+                        <i class="fa-solid fa-arrow-down-short-wide"></i>
+                        <p>Filtrlər</p>
+                    </a>
+                </div>
+                <div class="neqliyyat_767">
+                    <div id="afterMark767">
+                        <label id="markLabel767">Marka</label>
+                        <p id="checkedMark767"></p>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div id="afterModel767">
+                        <label id="modelLabel767">Model</label>
+                        <p id="checkedModel767"></p>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="filters_767">
+                    <a href="/filters.html">                        
+                        <i class="fa-solid fa-arrow-down-short-wide"></i>
+                        <p>Filtrlər</p>
+                    </a>
+                </div>
+            </div>
+            <div id="mark767_dropdown">
+                <div class="mark767_header">
+                  <i class="fa-solid fa-arrow-left" id="markCloseBtn767"></i>
+                  <h3>Marka</h3>
+                </div>
+                <div class="search search--live">
+                  <div class="input-group search__group">
+                    <input
+                      type="text"
+                      class="form-control search__input"
+                      id="markInput767"
+                    />
+                    <div class="input-group-append search__append">
+                      <button class="search__btn" type="button"></button>
+                    </div>
+                  </div>
+                </div>
+                <ul class="selectBox__list" id="carMarks767"></ul>
+            </div>
+            <div id="model767_dropdown">
+                <div class="model767_header">
+                  <i class="fa-solid fa-arrow-left" id="modelCloseBtn767"></i>
+                  <h3>Model</h3>
+                </div>
+                <div class="search search--live">
+                  <div class="input-group search__group">
+                    <input
+                      type="text"
+                      class="form-control search__input"
+                      id="modelInput767"
+                    />
+                    <div class="input-group-append search__append">
+                      <button class="search__btn" type="button"></button>
+                    </div>
+                  </div>
+                </div>
+                <ul class="selectBox__list" id="carModel767"></ul>
+            </div>
+            <section>
+                <div class="main_container">
+                    <div class="container-fluid">
+                        <div class="brands">
+                            <div class="brands__heading">
+                                <h2 class="mb-0">Markalar</h2>
+                                <a href="">Bütün markalar</a>
+                            </div>
+                            <div class="brands__grid">
+                                <a href="" class="brands__item">
+                                    Mercedes
+                                    <span>5555</span>
+                                </a>
+                                <a href="" class="brands__item">
+                                    Mercedes
+                                    <span>11</span>
+                                </a>
+                                <a href="" class="brands__item">
+                                    Mercedes
+                                    <span>2255</span>
+                                </a>
+                                <a href="" class="brands__item">
+                                    Mercedes
+                                    <span>5555</span>
+                                </a>
+                                 <a href="" class="brands__item">
+                                    Mercedes
+                                    <span>5555</span>
+                                </a>
+                                <a href="" class="brands__item">
+                                    Mercedes
+                                    <span>11</span>
+                                </a>
+                                <a href="" class="brands__item">
+                                    Mercedes
+                                    <span>2255</span>
+                                </a>
+                                <a href="" class="brands__item">
+                                    Mercedes
+                                    <span>5555</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -342,320 +896,308 @@
                     <img src="assets/img/vip-large.svg" alt="" class="mr-10">
                     VIP elanlar
                 </div>
-                <div class="wrapper">
-                    <div class="post">
-                        <div class="post__list">
-                            <div class="post__item">
-                                <div class="post__img">
-                                    <img src="assets/img/example/post1.png" alt="">
-                                    <div class="post__attributes">
-                                        <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
-                                        <a href="" class="post__favorites"></a>
+                <div class="main_container">
+                    <div class="wrapper">
+                        <div class="post">
+                            <div class="post__list">
+                                <div class="post__item">
+                                    <div class="post__img">
+                                        <img src="assets/img/example/post1.png" alt="">
+                                        <div class="post__attributes">
+                                            <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
+                                            <a href="" class="post__favorites"></a>
+                                        </div>
+                                    </div>
+                                    <div class="post__info">
+                                        <div class="px-5">
+                                            <a href="" class="post__title">Samsung Galaxy S12 16/256GB, Space Gray...</a>
+                                            <p>Bakı, 28.01.2021, 16:34</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="post__price">
+                                                2180 ₼
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
+                                                    <img src="assets/img/barter.svg" alt="">
+                                                </span>
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
+                                                    <img src="assets/img/percent.svg" alt="">
+                                                </span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="post__info">
-                                    <a href="" class="post__store">
-                                        <img src="assets/img/example/seller.svg" alt="">
-                                        <span>Kontakt Home</span>
+                                <div class="post__item">
+                                    <div class="post__img">
+                                        <img src="assets/img/example/post2.png" alt="">
+                                        <div class="post__attributes">
+                                            <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
+                                            <a href="" class="post__favorites"></a>
+                                        </div>
+                                    </div>
+                                    <div class="post__info">
+                                        <div class="px-5">
+                                            <a href="" class="post__title">Samsung Galaxy S12</a>
+                                            <p>Bakı, 28.01.2021, 16:34</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="post__price">
+                                                2180 ₼
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
+                                                    <img src="assets/img/barter.svg" alt="">
+                                                </span>
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
+                                                    <img src="assets/img/percent.svg" alt="">
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__item post__item--pulsed">
+                                    <div class="post__img">
+                                        <img src="assets/img/example/post3.png" alt="">
+                                        <div class="post__attributes">
+                                            <div class="post__chance">SUPER FÜRSƏT!</div>
+                                            <a href="" class="post__favorites"></a>
+                                        </div>
+                                    </div>
+                                    <div class="post__info">
+                                        <div class="px-5">
+                                            <a href="" class="post__title">Samsung Galaxy S12</a>
+                                            <p>Bakı, 28.01.2021, 16:34</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="post__price post__price--secondary">
+                                                2180 ₼
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__item">
+                                    <div class="post__img">
+                                        <img src="assets/img/example/post4.png" alt="">
+                                        <div class="post__attributes">
+                                            <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
+                                            <a href="" class="post__favorites"></a>
+                                        </div>
+                                    </div>
+                                    <div class="post__info">
+                                        <div class="px-5">
+                                            <a href="" class="post__title">Samsung Galaxy S12</a>
+                                            <p>Bakı, 28.01.2021, 16:34</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="post__price">
+                                                2180 ₼
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
+                                                    <img src="assets/img/barter.svg" alt="">
+                                                </span>
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
+                                                    <img src="assets/img/percent.svg" alt="">
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__item">
+                                    <div class="post__img">
+                                        <img src="assets/img/example/post5.png" alt="">
+                                        <div class="post__attributes">
+                                            <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
+                                            <a href="" class="post__favorites"></a>
+                                        </div>
+                                    </div>
+                                    <div class="post__info">
+                                        <div class="px-5">
+                                            <a href="" class="post__title">Samsung Galaxy S12</a>
+                                            <p>Bakı, 28.01.2021, 16:34</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="post__price">
+                                                2180 ₼
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
+                                                    <img src="assets/img/barter.svg" alt="">
+                                                </span>
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
+                                                    <img src="assets/img/percent.svg" alt="">
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__item">
+                                    <div class="post__img">
+                                        <img src="assets/img/example/post1.png" alt="">
+                                        <div class="post__attributes">
+                                            <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
+                                            <a href="" class="post__favorites"></a>
+                                        </div>
+                                    </div>
+                                    <div class="post__info">
+                                        <div class="px-5">
+                                            <a href="" class="post__title">Samsung Galaxy S12 16/256GB, Space Gray...</a>
+                                            <p>Bakı, 28.01.2021, 16:34</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="post__price">
+                                                2180 ₼
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
+                                                    <img src="assets/img/barter.svg" alt="">
+                                                </span>
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
+                                                    <img src="assets/img/percent.svg" alt="">
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__item">
+                                    <div class="post__img">
+                                        <img src="assets/img/example/post2.png" alt="">
+                                        <div class="post__attributes">
+                                            <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
+                                            <a href="" class="post__favorites"></a>
+                                        </div>
+                                    </div>
+                                    <div class="post__info">
+                                        <div class="px-5">
+                                            <a href="" class="post__title">Samsung Galaxy S12</a>
+                                            <p>Bakı, 28.01.2021, 16:34</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="post__price">
+                                                2180 ₼
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
+                                                    <img src="assets/img/barter.svg" alt="">
+                                                </span>
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
+                                                    <img src="assets/img/percent.svg" alt="">
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="post__item">
+                                    <a href="">
+                                        <img src="assets/img/example/banner.png" alt="" class="img-fluid">
                                     </a>
-                                    <div class="px-5">
-                                        <a href="" class="post__title">Samsung Galaxy S12 16/256GB, Space Gray...</a>
-                                        <p>Bakı, 28.01.2021, 16:34</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="post__price">
-                                            2180 ₼
-                                        </div>
-                                        <div class="d-flex align-items-center">
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
-                                                <img src="assets/img/barter.svg" alt="">
-                                            </span>
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
-                                                <img src="assets/img/percent.svg" alt="">
-                                            </span>
+                                </div> -->
+                                <div class="post__item">
+                                    <div class="post__img">
+                                        <img src="assets/img/example/post4.png" alt="">
+                                        <div class="post__attributes">
+                                            <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
+                                            <a href="" class="post__favorites"></a>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="post__item">
-                                <div class="post__img">
-                                    <img src="assets/img/example/post2.png" alt="">
-                                    <div class="post__attributes">
-                                        <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
-                                        <a href="" class="post__favorites"></a>
-                                    </div>
-                                </div>
-                                <div class="post__info">
-                                    <a href="" class="post__store">
-                                        <img src="assets/img/example/seller.svg" alt="">
-                                        <span>World Telecom</span>
-                                    </a>
-                                    <div class="px-5">
-                                        <a href="" class="post__title">Samsung Galaxy S12</a>
-                                        <p>Bakı, 28.01.2021, 16:34</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="post__price">
-                                            2180 ₼
+                                    <div class="post__info">
+                                        <div class="px-5">
+                                            <a href="" class="post__title">Samsung Galaxy S12</a>
+                                            <p>Bakı, 28.01.2021, 16:34</p>
                                         </div>
-                                        <div class="d-flex align-items-center">
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
-                                                <img src="assets/img/barter.svg" alt="">
-                                            </span>
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
-                                                <img src="assets/img/percent.svg" alt="">
-                                            </span>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="post__price">
+                                                2180 ₼
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
+                                                    <img src="assets/img/barter.svg" alt="">
+                                                </span>
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
+                                                    <img src="assets/img/percent.svg" alt="">
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="post__item post__item--pulsed">
-                                <div class="post__img">
-                                    <img src="assets/img/example/post3.png" alt="">
-                                    <div class="post__attributes">
-                                        <div class="post__chance">SUPER FÜRSƏT!</div>
-                                        <a href="" class="post__favorites"></a>
+                                <div class="post__item">
+                                    <div class="post__img">
+                                        <img src="assets/img/example/post5.png" alt="">
+                                        <div class="post__attributes">
+                                            <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
+                                            <a href="" class="post__favorites"></a>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="post__info">
-                                    <div class="px-5">
-                                        <a href="" class="post__title">Samsung Galaxy S12</a>
-                                        <p>Bakı, 28.01.2021, 16:34</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="post__price post__price--secondary">
-                                            2180 ₼
+                                    <div class="post__info">
+                                        <div class="px-5">
+                                            <a href="" class="post__title">Samsung Galaxy S12</a>
+                                            <p>Bakı, 28.01.2021, 16:34</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="post__price">
+                                                2180 ₼
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
+                                                    <img src="assets/img/barter.svg" alt="">
+                                                </span>
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
+                                                    <img src="assets/img/percent.svg" alt="">
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="post__item">
-                                <div class="post__img">
-                                    <img src="assets/img/example/post4.png" alt="">
-                                    <div class="post__attributes">
-                                        <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
-                                        <a href="" class="post__favorites"></a>
-                                    </div>
-                                </div>
-                                <div class="post__info">
-                                    <div class="px-5">
-                                        <a href="" class="post__title">Samsung Galaxy S12</a>
-                                        <p>Bakı, 28.01.2021, 16:34</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="post__price">
-                                            2180 ₼
-                                        </div>
-                                        <div class="d-flex align-items-center">
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
-                                                <img src="assets/img/barter.svg" alt="">
-                                            </span>
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
-                                                <img src="assets/img/percent.svg" alt="">
-                                            </span>
+                                <div class="post__item">
+                                    <div class="post__img">
+                                        <img src="assets/img/example/post5.png" alt="">
+                                        <div class="post__attributes">
+                                            <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
+                                            <a href="" class="post__favorites"></a>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="post__item">
-                                <div class="post__img">
-                                    <img src="assets/img/example/post5.png" alt="">
-                                    <div class="post__attributes">
-                                        <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
-                                        <a href="" class="post__favorites"></a>
-                                    </div>
-                                </div>
-                                <div class="post__info">
-                                    <div class="px-5">
-                                        <a href="" class="post__title">Samsung Galaxy S12</a>
-                                        <p>Bakı, 28.01.2021, 16:34</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="post__price">
-                                            2180 ₼
+                                    <div class="post__info">
+                                        <div class="px-5">
+                                            <a href="" class="post__title">Samsung Galaxy S12</a>
+                                            <p>Bakı, 28.01.2021, 16:34</p>
                                         </div>
-                                        <div class="d-flex align-items-center">
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
-                                                <img src="assets/img/barter.svg" alt="">
-                                            </span>
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
-                                                <img src="assets/img/percent.svg" alt="">
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="post__item">
-                                <div class="post__img">
-                                    <img src="assets/img/example/post1.png" alt="">
-                                    <div class="post__attributes">
-                                        <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
-                                        <a href="" class="post__favorites"></a>
-                                    </div>
-                                </div>
-                                <div class="post__info">
-                                    <a href="" class="post__store">
-                                        <img src="assets/img/example/seller.svg" alt="">
-                                        <span>Kontakt Home</span>
-                                    </a>
-                                    <div class="px-5">
-                                        <a href="" class="post__title">Samsung Galaxy S12 16/256GB, Space Gray...</a>
-                                        <p>Bakı, 28.01.2021, 16:34</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="post__price">
-                                            2180 ₼
-                                        </div>
-                                        <div class="d-flex align-items-center">
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
-                                                <img src="assets/img/barter.svg" alt="">
-                                            </span>
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
-                                                <img src="assets/img/percent.svg" alt="">
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="post__item">
-                                <div class="post__img">
-                                    <img src="assets/img/example/post2.png" alt="">
-                                    <div class="post__attributes">
-                                        <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
-                                        <a href="" class="post__favorites"></a>
-                                    </div>
-                                </div>
-                                <div class="post__info">
-                                    <a href="" class="post__store">
-                                        <img src="assets/img/example/seller.svg" alt="">
-                                        <span>World Telecom</span>
-                                    </a>
-                                    <div class="px-5">
-                                        <a href="" class="post__title">Samsung Galaxy S12</a>
-                                        <p>Bakı, 28.01.2021, 16:34</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="post__price">
-                                            2180 ₼
-                                        </div>
-                                        <div class="d-flex align-items-center">
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
-                                                <img src="assets/img/barter.svg" alt="">
-                                            </span>
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
-                                                <img src="assets/img/percent.svg" alt="">
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="post__item">
-                                <a href="">
-                                    <img src="assets/img/example/banner.png" alt="" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="post__item">
-                                <div class="post__img">
-                                    <img src="assets/img/example/post4.png" alt="">
-                                    <div class="post__attributes">
-                                        <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
-                                        <a href="" class="post__favorites"></a>
-                                    </div>
-                                </div>
-                                <div class="post__info">
-                                    <div class="px-5">
-                                        <a href="" class="post__title">Samsung Galaxy S12</a>
-                                        <p>Bakı, 28.01.2021, 16:34</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="post__price">
-                                            2180 ₼
-                                        </div>
-                                        <div class="d-flex align-items-center">
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
-                                                <img src="assets/img/barter.svg" alt="">
-                                            </span>
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
-                                                <img src="assets/img/percent.svg" alt="">
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="post__item">
-                                <div class="post__img">
-                                    <img src="assets/img/example/post5.png" alt="">
-                                    <div class="post__attributes">
-                                        <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
-                                        <a href="" class="post__favorites"></a>
-                                    </div>
-                                </div>
-                                <div class="post__info">
-                                    <div class="px-5">
-                                        <a href="" class="post__title">Samsung Galaxy S12</a>
-                                        <p>Bakı, 28.01.2021, 16:34</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="post__price">
-                                            2180 ₼
-                                        </div>
-                                        <div class="d-flex align-items-center">
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
-                                                <img src="assets/img/barter.svg" alt="">
-                                            </span>
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
-                                                <img src="assets/img/percent.svg" alt="">
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="post__item">
-                                <div class="post__img">
-                                    <img src="assets/img/example/post5.png" alt="">
-                                    <div class="post__attributes">
-                                        <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
-                                        <a href="" class="post__favorites"></a>
-                                    </div>
-                                </div>
-                                <div class="post__info">
-                                    <div class="px-5">
-                                        <a href="" class="post__title">Samsung Galaxy S12</a>
-                                        <p>Bakı, 28.01.2021, 16:34</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="post__price">
-                                            2180 ₼
-                                        </div>
-                                        <div class="d-flex align-items-center">
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
-                                                <img src="assets/img/barter.svg" alt="">
-                                            </span>
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
-                                                <img src="assets/img/percent.svg" alt="">
-                                            </span>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="post__price">
+                                                2180 ₼
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
+                                                    <img src="assets/img/barter.svg" alt="">
+                                                </span>
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
+                                                    <img src="assets/img/percent.svg" alt="">
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <div class="sticky-top">
-                            <a href="" class="d-md-block d-none">
-                                <img src="assets/img/example/banner1.png" alt="" class="w-100">
-                            </a>
-                            <a href="" class="d-md-none">
-                                <img src="assets/img/example/banner-mob.png" alt="" class="w-100">
-                            </a>
+                        <div>
+                            <div class="sticky-top">
+                                <a href="" class="d-md-block d-none">
+                                    <img src="assets/img/example/banner1.png" alt="" class="w-100">
+                                </a>
+                                <a href="" class="d-md-none">
+                                    <img src="assets/img/example/banner-mob.png" alt="" class="w-100">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="container-fluid">
-                    <button class="btn btn--icon mx-auto mt-10">
-                        <img src="assets/img/chevron.svg" alt="">
-                        Bütün VIP elanlar
-                    </button>
+                <div class="main_container">
+                    <div class="container-fluid">
+                        <button class="btn btn--icon mx-auto mt-10">
+                            <img src="assets/img/chevron.svg" alt="">
+                            Bütün VIP elanlar
+                        </button>
+                    </div>
                 </div>
             </section>
             <section>
@@ -667,315 +1209,303 @@
                 <div class="title">
                     Premium elanlar
                 </div>
-                <div class="wrapper">
-                    <div class="post">
-                        <div class="post__list">
-                            <div class="post__item">
-                                <div class="post__img">
-                                    <img src="assets/img/example/post1.png" alt="">
-                                    <div class="post__attributes">
-                                        <a href="" class="post__favorites"></a>
+                <div class="main_container">
+                    <div class="wrapper">
+                        <div class="post">
+                            <div class="post__list">
+                                <div class="post__item">
+                                    <div class="post__img">
+                                        <img src="assets/img/example/post1.png" alt="">
+                                        <div class="post__attributes">
+                                            <a href="" class="post__favorites"></a>
+                                        </div>
+                                    </div>
+                                    <div class="post__info">
+                                        <div class="px-5">
+                                            <a href="" class="post__title">Samsung Galaxy S12 16/256GB, Space Gray...</a>
+                                            <p>Bakı, 28.01.2021, 16:34</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="post__price">
+                                                2180 ₼
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
+                                                    <img src="assets/img/barter.svg" alt="">
+                                                </span>
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
+                                                    <img src="assets/img/percent.svg" alt="">
+                                                </span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="post__info">
-                                    <a href="" class="post__store">
-                                        <img src="assets/img/example/seller.svg" alt="">
-                                        <span>Kontakt Home</span>
+                                <div class="post__item">
+                                    <div class="post__img">
+                                        <img src="assets/img/example/post2.png" alt="">
+                                        <div class="post__attributes">
+                                            <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
+                                            <a href="" class="post__favorites"></a>
+                                        </div>
+                                    </div>
+                                    <div class="post__info">
+                                        <div class="px-5">
+                                            <a href="" class="post__title">Samsung Galaxy S12</a>
+                                            <p>Bakı, 28.01.2021, 16:34</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="post__price">
+                                                2180 ₼
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
+                                                    <img src="assets/img/barter.svg" alt="">
+                                                </span>
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
+                                                    <img src="assets/img/percent.svg" alt="">
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__item">
+                                    <div class="post__img">
+                                        <img src="assets/img/example/post3.png" alt="">
+                                        <div class="post__attributes">
+                                            <a href="" class="post__favorites"></a>
+                                        </div>
+                                    </div>
+                                    <div class="post__info">
+                                        <div class="px-5">
+                                            <a href="" class="post__title">Samsung Galaxy S12</a>
+                                            <p>Bakı, 28.01.2021, 16:34</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="post__price">
+                                                2180 ₼
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__item">
+                                    <div class="post__img">
+                                        <img src="assets/img/example/post4.png" alt="">
+                                        <div class="post__attributes">
+                                            <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
+                                            <a href="" class="post__favorites"></a>
+                                        </div>
+                                    </div>
+                                    <div class="post__info">
+                                        <div class="px-5">
+                                            <a href="" class="post__title">Samsung Galaxy S12</a>
+                                            <p>Bakı, 28.01.2021, 16:34</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="post__price">
+                                                2180 ₼
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
+                                                    <img src="assets/img/barter.svg" alt="">
+                                                </span>
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
+                                                    <img src="assets/img/percent.svg" alt="">
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__item">
+                                    <div class="post__img">
+                                        <img src="assets/img/example/post5.png" alt="">
+                                        <div class="post__attributes">
+                                            <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
+                                            <a href="" class="post__favorites"></a>
+                                        </div>
+                                    </div>
+                                    <div class="post__info">
+                                        <div class="px-5">
+                                            <a href="" class="post__title">Samsung Galaxy S12</a>
+                                            <p>Bakı, 28.01.2021, 16:34</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="post__price">
+                                                2180 ₼
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
+                                                    <img src="assets/img/barter.svg" alt="">
+                                                </span>
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
+                                                    <img src="assets/img/percent.svg" alt="">
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__item">
+                                    <div class="post__img">
+                                        <img src="assets/img/example/post1.png" alt="">
+                                        <div class="post__attributes">
+                                            <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
+                                            <a href="" class="post__favorites"></a>
+                                        </div>
+                                    </div>
+                                    <div class="post__info">
+                                        <div class="px-5">
+                                            <a href="" class="post__title">Samsung Galaxy S12 16/256GB, Space Gray...</a>
+                                            <p>Bakı, 28.01.2021, 16:34</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="post__price">
+                                                2180 ₼
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
+                                                    <img src="assets/img/barter.svg" alt="">
+                                                </span>
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
+                                                    <img src="assets/img/percent.svg" alt="">
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__item">
+                                    <div class="post__img">
+                                        <img src="assets/img/example/post2.png" alt="">
+                                        <div class="post__attributes">
+                                            <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
+                                            <a href="" class="post__favorites"></a>
+                                        </div>
+                                    </div>
+                                    <div class="post__info">
+                                        <div class="px-5">
+                                            <a href="" class="post__title">Samsung Galaxy S12</a>
+                                            <p>Bakı, 28.01.2021, 16:34</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="post__price">
+                                                2180 ₼
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
+                                                    <img src="assets/img/barter.svg" alt="">
+                                                </span>
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
+                                                    <img src="assets/img/percent.svg" alt="">
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__item">
+                                    <a href="">
+                                        <img src="assets/img/example/banner.png" alt="" class="img-fluid">
                                     </a>
-                                    <div class="px-5">
-                                        <a href="" class="post__title">Samsung Galaxy S12 16/256GB, Space Gray...</a>
-                                        <p>Bakı, 28.01.2021, 16:34</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="post__price">
-                                            2180 ₼
-                                        </div>
-                                        <div class="d-flex align-items-center">
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
-                                                <img src="assets/img/barter.svg" alt="">
-                                            </span>
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
-                                                <img src="assets/img/percent.svg" alt="">
-                                            </span>
-                                        </div>
-                                    </div>
                                 </div>
-                            </div>
-                            <div class="post__item">
-                                <div class="post__img">
-                                    <img src="assets/img/example/post2.png" alt="">
-                                    <div class="post__attributes">
-                                        <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
-                                        <a href="" class="post__favorites"></a>
-                                    </div>
-                                </div>
-                                <div class="post__info">
-                                    <a href="" class="post__store">
-                                        <img src="assets/img/example/seller.svg" alt="">
-                                        <span>World Telecom</span>
-                                    </a>
-                                    <div class="px-5">
-                                        <a href="" class="post__title">Samsung Galaxy S12</a>
-                                        <p>Bakı, 28.01.2021, 16:34</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="post__price">
-                                            2180 ₼
+                                <div class="post__item">
+                                    <div class="post__img">
+                                        <img src="assets/img/example/post4.png" alt="">
+                                        <div class="post__attributes">
+                                            <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
+                                            <a href="" class="post__favorites"></a>
                                         </div>
-                                        <div class="d-flex align-items-center">
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
-                                                <img src="assets/img/barter.svg" alt="">
-                                            </span>
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
-                                                <img src="assets/img/percent.svg" alt="">
-                                            </span>
+                                    </div>
+                                    <div class="post__info">
+                                        <div class="px-5">
+                                            <a href="" class="post__title">Samsung Galaxy S12</a>
+                                            <p>Bakı, 28.01.2021, 16:34</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="post__price">
+                                                2180 ₼
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
+                                                    <img src="assets/img/barter.svg" alt="">
+                                                </span>
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
+                                                    <img src="assets/img/percent.svg" alt="">
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="post__item">
-                                <div class="post__img">
-                                    <img src="assets/img/example/post3.png" alt="">
-                                    <div class="post__attributes">
-                                        <a href="" class="post__favorites"></a>
+                                <div class="post__item">
+                                    <div class="post__img">
+                                        <img src="assets/img/example/post5.png" alt="">
+                                        <div class="post__attributes">
+                                            <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
+                                            <a href="" class="post__favorites"></a>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="post__info">
-                                    <div class="px-5">
-                                        <a href="" class="post__title">Samsung Galaxy S12</a>
-                                        <p>Bakı, 28.01.2021, 16:34</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="post__price">
-                                            2180 ₼
+                                    <div class="post__info">
+                                        <div class="px-5">
+                                            <a href="" class="post__title">Samsung Galaxy S12</a>
+                                            <p>Bakı, 28.01.2021, 16:34</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="post__price">
+                                                2180 ₼
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
+                                                    <img src="assets/img/barter.svg" alt="">
+                                                </span>
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
+                                                    <img src="assets/img/percent.svg" alt="">
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="post__item">
-                                <div class="post__img">
-                                    <img src="assets/img/example/post4.png" alt="">
-                                    <div class="post__attributes">
-                                        <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
-                                        <a href="" class="post__favorites"></a>
-                                    </div>
-                                </div>
-                                <div class="post__info">
-                                    <div class="px-5">
-                                        <a href="" class="post__title">Samsung Galaxy S12</a>
-                                        <p>Bakı, 28.01.2021, 16:34</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="post__price">
-                                            2180 ₼
-                                        </div>
-                                        <div class="d-flex align-items-center">
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
-                                                <img src="assets/img/barter.svg" alt="">
-                                            </span>
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
-                                                <img src="assets/img/percent.svg" alt="">
-                                            </span>
+                                <div class="post__item">
+                                    <div class="post__img">
+                                        <img src="assets/img/example/post5.png" alt="">
+                                        <div class="post__attributes">
+                                            <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
+                                            <a href="" class="post__favorites"></a>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="post__item">
-                                <div class="post__img">
-                                    <img src="assets/img/example/post5.png" alt="">
-                                    <div class="post__attributes">
-                                        <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
-                                        <a href="" class="post__favorites"></a>
-                                    </div>
-                                </div>
-                                <div class="post__info">
-                                    <div class="px-5">
-                                        <a href="" class="post__title">Samsung Galaxy S12</a>
-                                        <p>Bakı, 28.01.2021, 16:34</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="post__price">
-                                            2180 ₼
+                                    <div class="post__info">
+                                        <div class="px-5">
+                                            <a href="" class="post__title">Samsung Galaxy S12</a>
+                                            <p>Bakı, 28.01.2021, 16:34</p>
                                         </div>
-                                        <div class="d-flex align-items-center">
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
-                                                <img src="assets/img/barter.svg" alt="">
-                                            </span>
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
-                                                <img src="assets/img/percent.svg" alt="">
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="post__item">
-                                <div class="post__img">
-                                    <img src="assets/img/example/post1.png" alt="">
-                                    <div class="post__attributes">
-                                        <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
-                                        <a href="" class="post__favorites"></a>
-                                    </div>
-                                </div>
-                                <div class="post__info">
-                                    <a href="" class="post__store">
-                                        <img src="assets/img/example/seller.svg" alt="">
-                                        <span>Kontakt Home</span>
-                                    </a>
-                                    <div class="px-5">
-                                        <a href="" class="post__title">Samsung Galaxy S12 16/256GB, Space Gray...</a>
-                                        <p>Bakı, 28.01.2021, 16:34</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="post__price">
-                                            2180 ₼
-                                        </div>
-                                        <div class="d-flex align-items-center">
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
-                                                <img src="assets/img/barter.svg" alt="">
-                                            </span>
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
-                                                <img src="assets/img/percent.svg" alt="">
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="post__item">
-                                <div class="post__img">
-                                    <img src="assets/img/example/post2.png" alt="">
-                                    <div class="post__attributes">
-                                        <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
-                                        <a href="" class="post__favorites"></a>
-                                    </div>
-                                </div>
-                                <div class="post__info">
-                                    <a href="" class="post__store">
-                                        <img src="assets/img/example/seller.svg" alt="">
-                                        <span>World Telecom</span>
-                                    </a>
-                                    <div class="px-5">
-                                        <a href="" class="post__title">Samsung Galaxy S12</a>
-                                        <p>Bakı, 28.01.2021, 16:34</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="post__price">
-                                            2180 ₼
-                                        </div>
-                                        <div class="d-flex align-items-center">
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
-                                                <img src="assets/img/barter.svg" alt="">
-                                            </span>
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
-                                                <img src="assets/img/percent.svg" alt="">
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="post__item">
-                                <a href="">
-                                    <img src="assets/img/example/banner.png" alt="" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="post__item">
-                                <div class="post__img">
-                                    <img src="assets/img/example/post4.png" alt="">
-                                    <div class="post__attributes">
-                                        <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
-                                        <a href="" class="post__favorites"></a>
-                                    </div>
-                                </div>
-                                <div class="post__info">
-                                    <div class="px-5">
-                                        <a href="" class="post__title">Samsung Galaxy S12</a>
-                                        <p>Bakı, 28.01.2021, 16:34</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="post__price">
-                                            2180 ₼
-                                        </div>
-                                        <div class="d-flex align-items-center">
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
-                                                <img src="assets/img/barter.svg" alt="">
-                                            </span>
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
-                                                <img src="assets/img/percent.svg" alt="">
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="post__item">
-                                <div class="post__img">
-                                    <img src="assets/img/example/post5.png" alt="">
-                                    <div class="post__attributes">
-                                        <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
-                                        <a href="" class="post__favorites"></a>
-                                    </div>
-                                </div>
-                                <div class="post__info">
-                                    <div class="px-5">
-                                        <a href="" class="post__title">Samsung Galaxy S12</a>
-                                        <p>Bakı, 28.01.2021, 16:34</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="post__price">
-                                            2180 ₼
-                                        </div>
-                                        <div class="d-flex align-items-center">
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
-                                                <img src="assets/img/barter.svg" alt="">
-                                            </span>
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
-                                                <img src="assets/img/percent.svg" alt="">
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="post__item">
-                                <div class="post__img">
-                                    <img src="assets/img/example/post5.png" alt="">
-                                    <div class="post__attributes">
-                                        <span class="post__vip" data-toggle="tooltip" data-placement="top" title="VIP elan"></span>
-                                        <a href="" class="post__favorites"></a>
-                                    </div>
-                                </div>
-                                <div class="post__info">
-                                    <div class="px-5">
-                                        <a href="" class="post__title">Samsung Galaxy S12</a>
-                                        <p>Bakı, 28.01.2021, 16:34</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="post__price">
-                                            2180 ₼
-                                        </div>
-                                        <div class="d-flex align-items-center">
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
-                                                <img src="assets/img/barter.svg" alt="">
-                                            </span>
-                                            <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
-                                                <img src="assets/img/percent.svg" alt="">
-                                            </span>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="post__price">
+                                                2180 ₼
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Barter mümkündür">
+                                                    <img src="assets/img/barter.svg" alt="">
+                                                </span>
+                                                <span class="post__feature" data-toggle="tooltip" data-placement="top" title="Kredit mümkündür">
+                                                    <img src="assets/img/percent.svg" alt="">
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <div class="sticky-top">
-                            <a href="" class="d-md-block d-none">
-                                <img src="assets/img/example/banner3.png" alt="" class="w-100">
-                            </a>
-                            <a href="" class="d-md-none">
-                                <img src="assets/img/example/banner-mob.png" alt="" class="w-100">
-                            </a>
+                        <div>
+                            <div class="sticky-top">
+                                <a href="" class="d-md-block d-none">
+                                    <img src="assets/img/example/banner3.png" alt="" class="w-100">
+                                </a>
+                                <a href="" class="d-md-none">
+                                    <img src="assets/img/example/banner-mob.png" alt="" class="w-100">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="more">
-                    <button class="btn btn--more mx-auto mt-10">Daha çox göstər</button>
+                <div class="main_container">
+                    <div class="more">
+                        <button class="btn btn--more mx-auto mt-10">Daha çox göstər</button>
+                    </div>
                 </div>
             </section>   
         </main>
@@ -1163,6 +1693,7 @@
         
         <script src="assets/js/all.js" type="text/javascript"></script>
 
+        <script src="assets/js/newjs.js"></script>
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. 
         <script>
             window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
