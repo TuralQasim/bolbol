@@ -2119,11 +2119,11 @@ let modelArr = [];
 let mark = "";
 let model = "";
 const selectMarks = document.getElementById("carMarks");
-marksArr.map((a) => {
-  const opt = document.createElement("option");
-  opt.textContent = a.name;
-  selectMarks.append(opt);
-});
+// marksArr.map((a) => {
+//   const opt = document.createElement("option");
+//   opt.textContent = a.name;
+//   selectMarks.append(opt);
+// });
 const mark767OpenBtn = document.getElementById("mark767_show_btn");
 const mark767Dropdown = document.getElementById("mark767_dropdown");
 const mark767CloseBtn = document.getElementById("markCloseBtn767");
@@ -2142,11 +2142,11 @@ const modelLabel767 = document.getElementById("modelLabel767");
 const checkedModel767 = document.getElementById("checkedModel767");
 const modelInput767 = document.getElementById("modelInput767");
 const filters767 = document.querySelector(".filters_767");
-const titles = document.querySelectorAll(".post__title");
-titles.forEach((a, index) => {
-  const text = a.textContent.slice(0, 18);
-  titles[index].innerHTML = `${text}...`;
-});
+// const titles = document.querySelectorAll(".post__title");
+// titles.forEach((a, index) => {
+//   const text = a.textContent.slice(0, 18);
+//   titles[index].innerHTML = `${text}...`;
+// });
 afterModel767.addEventListener("click", () => {
   model767Dropdown.setAttribute("style", "transform:translateY(0) !important");
   modelList.textContent = "";
