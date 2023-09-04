@@ -840,7 +840,11 @@
                 Model
               </button>
               <i class="fa-solid fa-angle-down drop_arrow"></i>
-              <ul class="dropdown__list" id="models"></ul>
+              <ul class="dropdown__list" id="models">
+                <!-- <p class="items_reset_btn"  id="models_reset_btn">
+                  Sıfırla<i class="fa-sharp fa-solid fa-xmark"></i>
+                </p> -->
+              </ul>
               <input
                 type="text"
                 name="select-category"
@@ -851,7 +855,7 @@
           </div>
           <div class="form-group for_width_big">
             <div class="unersal_inputs">
-              <label for="price_input_min">
+              <label for="price_input_min" data-value="price_value">
                 <input type="text" id="price_input_min" />
                 <p>Qiymət, min</p>
               </label>
@@ -911,7 +915,7 @@
                   Həcm (sm<sup>3</sup>), min
                 </button>
                 <i class="fa-solid fa-angle-down drop_arrow"></i>
-                <ul class="dropdown__list"></ul>
+                <ul class="dropdown__list" id="minLitr"></ul>
                 <input
                   type="text"
                   name="select-category"
@@ -1064,11 +1068,15 @@
               </label>
             </div>
           </div>
+          <div class="additional_chekings_hero">
+            <p class="additional_chekings_title">Avtomobilin təchizatı</p>
+            <div class="additional_chekings"></div>
+          </div>
         </div>
         <div class="desc_filters_btns">
           <button class="filter_reset_btn">Sıfırla</button>
           <button class="filter_else_btn">
-            <p>Daha çox</p>
+            <p>Daha çox filtr</p>
             <i class="fa-solid fa-chevron-down"></i>
           </button>
           <div class="filter_show_btn">Elanları göstər</div>
