@@ -2469,7 +2469,9 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
   const dropDownBtn = dropDownWrapper.querySelector(".dropdown__button");
   const type = dropDownBtn.dataset.value;
   if (type == "marks") {
-    const dropDownListHero = document.querySelector(".dropdown__list_hero");
+    const dropDownListHero = dropDownWrapper.querySelector(
+      ".dropdown__list_hero"
+    );
     const dropDownList = document.createElement("ul");
     dropDownList.classList.add("dropdown__list");
     const input = document.createElement("input");
@@ -2527,6 +2529,24 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
       }
       this.classList.toggle("dropdown__button--active");
       dropArrow.classList.toggle("rotate");
+      const dropDownListItems = dropDownList.querySelectorAll(
+        ".dropdown__list-item"
+      );
+      dropDownListItems.forEach(function (listItem) {
+        listItem.addEventListener("click", function (e) {
+          e.stopPropagation();
+          const text = e.target.textContent;
+          dropArrow.classList.remove("rotate");
+          dropDownBtn.innerText = this.innerText;
+          checkedMark = this.innerText;
+          fillModels();
+          dropDownBtn.focus();
+          dropDownInput.value = this.dataset.value;
+          dropDownListHero.classList.remove(".dropdown__list_hero_visible");
+          dropDownListHero.style.display = "none";
+          dropOpen = false;
+        });
+      });
     });
     // Выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
     dropDownListItems.forEach(function (listItem) {
@@ -2541,8 +2561,8 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
         dropDownBtn.focus();
         dropDownInput.value = this.dataset.value;
         dropDownListHero.classList.remove(".dropdown__list_hero_visible");
-        // dropDownListHero.style.display = "none";
-        // dropOpen = false;
+        dropDownListHero.style.display = "none";
+        dropOpen = false;
       });
     });
 
@@ -2582,7 +2602,6 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
 
     // Клик снаружи дропдауна. Закрыть дропдаун
     document.addEventListener("click", function (e) {
-      console.log(e.target);
       if (e.target !== dropDownBtn) {
         dropDownBtn.classList.remove("dropdown__button--active");
         dropDownListHero.classList.remove(".dropdown__list_hero_visible");
@@ -2601,8 +2620,18 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
     });
   }
   if (type == "color") {
-    const dropDownList = dropDownWrapper.querySelector(".dropdown__list");
-
+    const dropDownListHero = dropDownWrapper.querySelector(
+      ".dropdown__list_hero"
+    );
+    const dropDownList = document.createElement("ul");
+    dropDownList.classList.add("dropdown__list");
+    const input = document.createElement("input");
+    input.classList.add("universal_search_input");
+    input.setAttribute("type", "text");
+    dropDownListHero.append(input);
+    input.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
     const p = document.createElement("p");
     p.classList.add("items_reset_btn");
     p.textContent = "Sıfırla";
@@ -2611,7 +2640,7 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
     i.classList.add("fa-solid");
     i.classList.add("fa-xmark");
     p.append(i);
-    dropDownList.append(p);
+    dropDownListHero.append(p);
     colorArr.map((a) => {
       const li = document.createElement("li");
       li.classList.add("dropdown__list-item");
@@ -2619,6 +2648,9 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
       li.textContent = a;
       dropDownList.append(li);
     });
+    const dropArrow = dropDownWrapper.querySelector("i");
+    dropDownListHero.append(dropDownList);
+
     const dropDownListItems = dropDownList.querySelectorAll(
       ".dropdown__list-item"
     );
@@ -2632,12 +2664,68 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
     const dropDownInput = dropDownWrapper.querySelector(
       ".dropdown__input-hidden"
     );
-    const dropArrow = dropDownWrapper.querySelector("i");
+
+    dropOpen = false;
     // Клик по кнопке. Открыть/Закрыть select
     dropDownBtn.addEventListener("click", function (e) {
-      dropDownList.classList.toggle("dropdown__list--visible");
+      if (dropOpen) {
+        dropDownListHero.style.display = "none";
+        dropOpen = false;
+      } else {
+        dropDownListHero.style.display = "block";
+        dropDownList.innerText = "";
+        colorArr.map((a) => {
+          const li = document.createElement("li");
+          li.classList.add("dropdown__list-item");
+          li.setAttribute("data-value", a);
+          li.textContent = a;
+          dropDownList.append(li);
+        });
+        input.value = "";
+        dropOpen = true;
+      }
       this.classList.toggle("dropdown__button--active");
       dropArrow.classList.toggle("rotate");
+      const dropDownListItems = dropDownList.querySelectorAll(
+        ".dropdown__list-item"
+      );
+      dropDownListItems.forEach(function (listItem) {
+        listItem.addEventListener("click", function (e) {
+          e.stopPropagation();
+          e.target.classList.toggle("added_color");
+          let ifCheck = [];
+          dropDownListItems.forEach((a) => {
+            let gfgf = a.classList.value;
+            let b = gfgf.split(" ");
+            if (a.classList.value.split(" ").includes("added_color")) {
+              ifCheck.push(a);
+            } else {
+              ifCheck.filter((n) => n != a);
+            }
+          });
+          let name = [];
+          if (ifCheck.length) {
+            for (let i = 0; i < ifCheck.length; i++) {
+              name.push(ifCheck[i].innerText);
+            }
+          }
+          dropDownBtn.innerText = name.length ? name.join(", ") : "Rəng";
+          if (dropDownBtn.innerText.length > 20) {
+            dropDownBtn.innerText = dropDownBtn.innerText.slice(0, 20) + "...";
+          }
+          dropDownBtn.focus();
+          dropDownInput.value = dropDownInput.value.length
+            ? dropDownInput.value + this.dataset.value
+            : dropDownInput.value;
+          document
+            .querySelector(".filter_reset_btn")
+            .addEventListener("click", () => {
+              dropDownBtn.innerText = "Rəng";
+              name = "";
+              ifCheck = [];
+            });
+        });
+      });
     });
 
     // Выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
@@ -2684,13 +2772,41 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
       dropDownListItems.forEach(function (listItem) {
         listItem.classList.remove("added_color");
       });
+      dropDownListHero.style.display = "none";
+      dropOpen = false;
     });
+
+    input.addEventListener("input", (e) => {
+      const value = e.target.value;
+      const newList = [];
+      dropDownList.innerText = "";
+      dropDownListItems.forEach(function (listItem) {
+        const newItem = listItem.textContent.toLowerCase();
+        if (newItem.includes(value.toLowerCase())) {
+          newList.push(listItem);
+        }
+      });
+      const h4 = document.createElement("h4");
+      h4.classList.add("none_text");
+      h4.textContent = "Nəticə tapılmadi";
+      dropDownList.append(h4);
+      if (newList.length) {
+        newList.map((a) => {
+          dropDownList.append(a);
+        });
+        h4.classList.remove("none_text_visible");
+      } else {
+        h4.classList.add("none_text_visible");
+      }
+    });
+
     // Клик снаружи дропдауна. Закрыть дропдаун
     document.addEventListener("click", function (e) {
       if (e.target !== dropDownBtn) {
         dropDownBtn.classList.remove("dropdown__button--active");
-        dropDownList.classList.remove("dropdown__list--visible");
         dropArrow.classList.remove("rotate");
+        dropDownListHero.style.display = "none";
+        dropOpen = false;
       }
     });
 
@@ -2699,11 +2815,24 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
       if (e.key === "Tab" || e.key === "Escape") {
         dropDownBtn.classList.remove("dropdown__button--active");
         dropDownList.classList.remove("dropdown__list--visible");
+        dropDownListHero.style.display = "none";
+        dropOpen = false;
       }
     });
   }
   if (type == "ban") {
-    const dropDownList = dropDownWrapper.querySelector(".dropdown__list");
+    const dropDownListHero = dropDownWrapper.querySelector(
+      ".dropdown__list_hero"
+    );
+    const dropDownList = document.createElement("ul");
+    dropDownList.classList.add("dropdown__list");
+    const input = document.createElement("input");
+    input.classList.add("universal_search_input");
+    input.setAttribute("type", "text");
+    dropDownListHero.append(input);
+    input.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
     const p = document.createElement("p");
     p.classList.add("items_reset_btn");
     p.textContent = "Sıfırla";
@@ -2712,7 +2841,7 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
     i.classList.add("fa-solid");
     i.classList.add("fa-xmark");
     p.append(i);
-    dropDownList.append(p);
+    dropDownListHero.append(p);
     banArr.map((a) => {
       const li = document.createElement("li");
       li.classList.add("dropdown__list-item");
@@ -2720,6 +2849,9 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
       li.textContent = a;
       dropDownList.append(li);
     });
+    const dropArrow = dropDownWrapper.querySelector("i");
+    dropDownListHero.append(dropDownList);
+
     const dropDownListItems = dropDownList.querySelectorAll(
       ".dropdown__list-item"
     );
@@ -2733,12 +2865,69 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
           item.classList.remove("added_ban");
         });
       });
-    const dropArrow = dropDownWrapper.querySelector("i");
     // Клик по кнопке. Открыть/Закрыть select
+    let dropOpen = false;
+
     dropDownBtn.addEventListener("click", function (e) {
+      if (dropOpen) {
+        dropDownListHero.style.display = "none";
+        dropOpen = false;
+      } else {
+        dropDownListHero.style.display = "block";
+        dropDownList.innerText = "";
+        banArr.map((a) => {
+          const li = document.createElement("li");
+          li.classList.add("dropdown__list-item");
+          li.setAttribute("data-value", a);
+          li.textContent = a;
+          dropDownList.append(li);
+        });
+        input.value = "";
+        dropOpen = true;
+      }
       dropDownList.classList.toggle("dropdown__list--visible");
       this.classList.toggle("dropdown__button--active");
       dropArrow.classList.toggle("rotate");
+      const dropDownListItems = dropDownList.querySelectorAll(
+        ".dropdown__list-item"
+      );
+      dropDownListItems.forEach(function (listItem) {
+        listItem.addEventListener("click", function (e) {
+          e.stopPropagation();
+          e.target.classList.toggle("added_ban");
+          let ifCheck = [];
+          dropDownListItems.forEach((a) => {
+            let gfgf = a.classList.value;
+            let b = gfgf.split(" ");
+            if (a.classList.value.split(" ").includes("added_ban")) {
+              ifCheck.push(a);
+            } else {
+              ifCheck.filter((n) => n != a);
+            }
+          });
+          let name = [];
+          if (ifCheck.length) {
+            for (let i = 0; i < ifCheck.length; i++) {
+              name.push(ifCheck[i].innerText);
+            }
+          }
+          dropDownBtn.innerText = name.length ? name.join(", ") : "Ban Növü";
+          if (dropDownBtn.innerText.length > 20) {
+            dropDownBtn.innerText = dropDownBtn.innerText.slice(0, 20) + "...";
+          }
+          document
+            .querySelector(".filter_reset_btn")
+            .addEventListener("click", () => {
+              dropDownBtn.innerText = "Ban Növü";
+              ifCheck = [];
+              name = [];
+            });
+          dropDownBtn.focus();
+          dropDownInput.value = dropDownInput.value.length
+            ? dropDownInput.value + this.dataset.value
+            : dropDownInput.value;
+        });
+      });
     });
 
     // Выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
@@ -2784,15 +2973,42 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
       dropDownBtn.textContent = "Ban Növü";
       dropDownListItems.forEach(function (listItem) {
         listItem.classList.remove("added_ban");
+        dropDownListHero.style.display = "none";
+        dropOpen = false;
       });
+    });
+
+    input.addEventListener("input", (e) => {
+      const value = e.target.value;
+      const newList = [];
+      dropDownList.innerText = "";
+      dropDownListItems.forEach(function (listItem) {
+        const newItem = listItem.textContent.toLowerCase();
+        if (newItem.includes(value.toLowerCase())) {
+          newList.push(listItem);
+        }
+      });
+      const h4 = document.createElement("h4");
+      h4.classList.add("none_text");
+      h4.textContent = "Nəticə tapılmadi";
+      dropDownList.append(h4);
+      if (newList.length) {
+        newList.map((a) => {
+          dropDownList.append(a);
+        });
+        h4.classList.remove("none_text_visible");
+      } else {
+        h4.classList.add("none_text_visible");
+      }
     });
 
     // Клик снаружи дропдауна. Закрыть дропдаун
     document.addEventListener("click", function (e) {
       if (e.target !== dropDownBtn) {
         dropDownBtn.classList.remove("dropdown__button--active");
-        dropDownList.classList.remove("dropdown__list--visible");
         dropArrow.classList.remove("rotate");
+        dropDownListHero.style.display = "none";
+        dropOpen = false;
       }
     });
 
@@ -2801,6 +3017,209 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
       if (e.key === "Tab" || e.key === "Escape") {
         dropDownBtn.classList.remove("dropdown__button--active");
         dropDownList.classList.remove("dropdown__list--visible");
+        dropDownListHero.style.display = "none";
+        dropOpen = false;
+      }
+    });
+  }
+  if (type == "city") {
+    const dropDownListHero = dropDownWrapper.querySelector(
+      ".dropdown__list_hero"
+    );
+    const dropDownList = document.createElement("ul");
+    dropDownList.classList.add("dropdown__list");
+    const input = document.createElement("input");
+    input.classList.add("universal_search_input");
+    input.setAttribute("type", "text");
+    dropDownListHero.append(input);
+    input.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
+    const p = document.createElement("p");
+    p.classList.add("items_reset_btn");
+    p.textContent = "Sıfırla";
+    const i = document.createElement("i");
+    i.classList.add("fa-sharp");
+    i.classList.add("fa-solid");
+    i.classList.add("fa-xmark");
+    p.append(i);
+    dropDownListHero.append(p);
+    citiesArr.map((a) => {
+      const li = document.createElement("li");
+      li.classList.add("dropdown__list-item");
+      li.setAttribute("data-value", a);
+      li.textContent = a;
+      dropDownList.append(li);
+    });
+    const dropArrow = dropDownWrapper.querySelector("i");
+    dropDownListHero.append(dropDownList);
+
+    const dropDownListItems = dropDownList.querySelectorAll(
+      ".dropdown__list-item"
+    );
+    const dropDownInput = dropDownWrapper.querySelector(
+      ".dropdown__input-hidden"
+    );
+    // Клик по кнопке. Открыть/Закрыть select
+    let dropOpen = false;
+    dropDownBtn.addEventListener("click", function (e) {
+      if (dropOpen) {
+        dropDownListHero.style.display = "none";
+        dropOpen = false;
+      } else {
+        dropDownListHero.style.display = "block";
+        dropDownList.innerText = "";
+        citiesArr.map((a) => {
+          const li = document.createElement("li");
+          li.classList.add("dropdown__list-item");
+          li.setAttribute("data-value", a);
+          li.textContent = a;
+          dropDownList.append(li);
+        });
+        input.value = "";
+        dropOpen = true;
+      }
+      dropDownList.classList.toggle("dropdown__list--visible");
+      this.classList.toggle("dropdown__button--active");
+      dropArrow.classList.toggle("rotate");
+      const dropDownListItems = dropDownList.querySelectorAll(
+        ".dropdown__list-item"
+      );
+      dropDownListItems.forEach(function (listItem) {
+        listItem.addEventListener("click", function (e) {
+          e.stopPropagation();
+          e.target.classList.toggle("added_city");
+          let ifCheck = [];
+          dropDownListItems.forEach((a) => {
+            let gfgf = a.classList.value;
+            let b = gfgf.split(" ");
+            if (a.classList.value.split(" ").includes("added_city")) {
+              ifCheck.push(a);
+            } else {
+              ifCheck.filter((n) => n != a);
+            }
+          });
+          let name = [];
+          if (ifCheck.length) {
+            for (let i = 0; i < ifCheck.length; i++) {
+              name.push(ifCheck[i].innerText);
+            }
+          }
+          dropDownBtn.innerText = name.length ? name.join(", ") : "Şəhər";
+          if (dropDownBtn.innerText.length > 20) {
+            dropDownBtn.innerText = dropDownBtn.innerText.slice(0, 20) + "...";
+          }
+          document
+            .querySelector(".filter_reset_btn")
+            .addEventListener("click", () => {
+              dropDownBtn.innerText = "Şəhər";
+              name = [];
+              ifCheck = [];
+            });
+          dropDownBtn.focus();
+          dropDownInput.value = dropDownInput.value.length
+            ? dropDownInput.value + this.dataset.value
+            : dropDownInput.value;
+        });
+      });
+    });
+
+    // Выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
+    dropDownListItems.forEach(function (listItem) {
+      listItem.addEventListener("click", function (e) {
+        e.stopPropagation();
+        e.target.classList.toggle("added_city");
+        let ifCheck = [];
+        dropDownListItems.forEach((a) => {
+          let gfgf = a.classList.value;
+          let b = gfgf.split(" ");
+          if (a.classList.value.split(" ").includes("added_city")) {
+            ifCheck.push(a);
+          } else {
+            ifCheck.filter((n) => n != a);
+          }
+        });
+        let name = [];
+        if (ifCheck.length) {
+          for (let i = 0; i < ifCheck.length; i++) {
+            name.push(ifCheck[i].innerText);
+          }
+        }
+        dropDownBtn.innerText = name.length ? name.join(", ") : "Şəhər";
+        if (dropDownBtn.innerText.length > 20) {
+          dropDownBtn.innerText = dropDownBtn.innerText.slice(0, 20) + "...";
+        }
+        document
+          .querySelector(".filter_reset_btn")
+          .addEventListener("click", () => {
+            dropDownBtn.innerText = "Şəhər";
+            name = [];
+            ifCheck = [];
+          });
+        dropDownBtn.focus();
+        dropDownInput.value = dropDownInput.value.length
+          ? dropDownInput.value + this.dataset.value
+          : dropDownInput.value;
+      });
+    });
+
+    p.addEventListener("click", () => {
+      dropDownBtn.textContent = "Şəhər";
+      dropDownListItems.forEach(function (listItem) {
+        listItem.classList.remove("added_city");
+        dropDownListHero.style.display = "none";
+        dropOpen = false;
+      });
+    });
+
+    input.addEventListener("input", (e) => {
+      const value = e.target.value;
+      const newList = [];
+      dropDownList.innerText = "";
+      dropDownListItems.forEach(function (listItem) {
+        const newItem = listItem.textContent.toLowerCase();
+        if (newItem.includes(value.toLowerCase())) {
+          newList.push(listItem);
+        }
+      });
+      const h4 = document.createElement("h4");
+      h4.classList.add("none_text");
+      h4.textContent = "Nəticə tapılmadi";
+      dropDownList.append(h4);
+      if (newList.length) {
+        newList.map((a) => {
+          dropDownList.append(a);
+        });
+        h4.classList.remove("none_text_visible");
+      } else {
+        h4.classList.add("none_text_visible");
+      }
+    });
+
+    document
+      .querySelector(".filter_reset_btn")
+      .addEventListener("click", () => {
+        dropDownListItems.forEach(function (listItem) {
+          listItem.classList.remove("added_city");
+        });
+      });
+    // Клик снаружи дропдауна. Закрыть дропдаун
+    document.addEventListener("click", function (e) {
+      if (e.target !== dropDownBtn) {
+        dropDownBtn.classList.remove("dropdown__button--active");
+        dropArrow.classList.remove("rotate");
+        dropDownListHero.style.display = "none";
+        dropOpen = false;
+      }
+    });
+
+    // Нажатие на Tab или Escape. Закрыть дропдаун
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Tab" || e.key === "Escape") {
+        dropDownBtn.classList.remove("dropdown__button--active");
+        dropDownList.classList.remove("dropdown__list--visible");
+        dropDownListHero.style.display = "none";
+        dropOpen = false;
       }
     });
   }
@@ -3051,108 +3470,6 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
       dropDownBtn.textContent = "maks";
     });
 
-    // Клик снаружи дропдауна. Закрыть дропдаун
-    document.addEventListener("click", function (e) {
-      if (e.target !== dropDownBtn) {
-        dropDownBtn.classList.remove("dropdown__button--active");
-        dropDownList.classList.remove("dropdown__list--visible");
-        dropArrow.classList.remove("rotate");
-      }
-    });
-
-    // Нажатие на Tab или Escape. Закрыть дропдаун
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Tab" || e.key === "Escape") {
-        dropDownBtn.classList.remove("dropdown__button--active");
-        dropDownList.classList.remove("dropdown__list--visible");
-      }
-    });
-  }
-  if (type == "city") {
-    const dropDownList = dropDownWrapper.querySelector(".dropdown__list");
-    const p = document.createElement("p");
-    p.classList.add("items_reset_btn");
-    p.textContent = "Sıfırla";
-    const i = document.createElement("i");
-    i.classList.add("fa-sharp");
-    i.classList.add("fa-solid");
-    i.classList.add("fa-xmark");
-    p.append(i);
-    dropDownList.append(p);
-    citiesArr.map((a) => {
-      const li = document.createElement("li");
-      li.classList.add("dropdown__list-item");
-      li.setAttribute("data-value", a);
-      li.textContent = a;
-      dropDownList.append(li);
-    });
-    const dropDownListItems = dropDownList.querySelectorAll(
-      ".dropdown__list-item"
-    );
-    const dropDownInput = dropDownWrapper.querySelector(
-      ".dropdown__input-hidden"
-    );
-    const dropArrow = dropDownWrapper.querySelector("i");
-    // Клик по кнопке. Открыть/Закрыть select
-    dropDownBtn.addEventListener("click", function (e) {
-      dropDownList.classList.toggle("dropdown__list--visible");
-      this.classList.toggle("dropdown__button--active");
-      dropArrow.classList.toggle("rotate");
-    });
-
-    // Выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
-    dropDownListItems.forEach(function (listItem) {
-      listItem.addEventListener("click", function (e) {
-        e.stopPropagation();
-        e.target.classList.toggle("added_city");
-        let ifCheck = [];
-        dropDownListItems.forEach((a) => {
-          let gfgf = a.classList.value;
-          let b = gfgf.split(" ");
-          if (a.classList.value.split(" ").includes("added_city")) {
-            ifCheck.push(a);
-          } else {
-            ifCheck.filter((n) => n != a);
-          }
-        });
-        let name = [];
-        if (ifCheck.length) {
-          for (let i = 0; i < ifCheck.length; i++) {
-            name.push(ifCheck[i].innerText);
-          }
-        }
-        dropDownBtn.innerText = name.length ? name.join(", ") : "Şəhər";
-        if (dropDownBtn.innerText.length > 20) {
-          dropDownBtn.innerText = dropDownBtn.innerText.slice(0, 20) + "...";
-        }
-        document
-          .querySelector(".filter_reset_btn")
-          .addEventListener("click", () => {
-            dropDownBtn.innerText = "Şəhər";
-            name = [];
-            ifCheck = [];
-          });
-        dropDownBtn.focus();
-        dropDownInput.value = dropDownInput.value.length
-          ? dropDownInput.value + this.dataset.value
-          : dropDownInput.value;
-      });
-    });
-
-    p.addEventListener("click", () => {
-      dropDownBtn.textContent = "Şəhər";
-      dropDownListItems.forEach(function (listItem) {
-        listItem.classList.remove("added_city");
-      });
-    });
-
-    document
-      .querySelector(".filter_reset_btn")
-      .addEventListener("click", () => {
-        dropDownListItems.forEach(function (listItem) {
-          listItem.classList.remove("added_city");
-        });
-      });
     // Клик снаружи дропдауна. Закрыть дропдаун
     document.addEventListener("click", function (e) {
       if (e.target !== dropDownBtn) {
@@ -3581,11 +3898,20 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
   }
   function fillModels() {
     const filteredModels = marksArr.filter((mark) => mark.name == checkedMark);
-    const dropDownList = document.querySelector("#models");
     const dropDownBtn = document.querySelector("#models-btn");
-    dropDownBtn.innerText = "Model";
-    // const itemsResetBtn = document.getElementById("models_reset_btn");
-    // console.log(itemsResetBtn)
+    const dropDownListHero = dropDownWrapper.querySelector(
+      ".dropdown__list_hero"
+    );
+    const dropDownList = document.createElement("ul");
+    dropDownList.classList.add("dropdown__list");
+    dropDownList.setAttribute("id", "models");
+    const input = document.createElement("input");
+    input.classList.add("universal_search_input");
+    input.setAttribute("type", "text");
+    dropDownListHero.append(input);
+    input.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
     const p = document.createElement("p");
     p.classList.add("items_reset_btn");
     p.textContent = "Sıfırla";
@@ -3594,7 +3920,9 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
     i.classList.add("fa-solid");
     i.classList.add("fa-xmark");
     p.append(i);
-    dropDownList.append(p);
+    dropDownListHero.append(p);
+    dropDownBtn.innerText = "Model";
+    const dropArrow = dropDownWrapper.querySelector("i");
     filteredModels[0].model.map((a) => {
       const li = document.createElement("li");
       li.classList.add("dropdown__list-item");
@@ -3614,14 +3942,92 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
     const dropDownInput = dropDownWrapper.querySelector(
       ".dropdown__input-hidden"
     );
-    const dropArrow = dropDownWrapper.querySelector("i");
+
+    let dropOpen = false;
     // Клик по кнопке. Открыть/Закрыть select
     dropDownBtn.addEventListener("click", function (e) {
-      const dropDownList = document.querySelector("#models");
-      dropDownList.classList.remove("dropdown__list--visible");
-      dropDownList.classList.add("dropdown__list--visible");
-      this.classList.toggle("dropdown__button--active");
-      dropArrow.classList.toggle("rotate");
+      dropDownListHero.style.display = "block";
+      if (dropOpen) {
+        dropDownListHero.style.display = "none";
+        dropOpen = false;
+      } else {
+        dropDownListHero.style.display = "block";
+        dropDownListHero.innerText = "";
+        const dropDownList = document.createElement("ul");
+        dropDownList.classList.add("dropdown__list");
+        dropDownList.setAttribute("id", "models");
+        const input = document.createElement("input");
+        input.classList.add("universal_search_input");
+        input.setAttribute("type", "text");
+        dropDownListHero.append(input);
+        input.addEventListener("click", (e) => {
+          e.stopPropagation();
+        });
+        const p = document.createElement("p");
+        p.classList.add("items_reset_btn");
+        p.textContent = "Sıfırla";
+        const i = document.createElement("i");
+        i.classList.add("fa-sharp");
+        i.classList.add("fa-solid");
+        i.classList.add("fa-xmark");
+        p.append(i);
+        dropDownListHero.append(p);
+        dropDownBtn.innerText = "Model";
+        filteredModels[0].model.map((a) => {
+          const li = document.createElement("li");
+          li.classList.add("dropdown__list-item");
+          li.setAttribute("data-value", a);
+          li.textContent = a;
+          dropDownList.append(li);
+        });
+        dropDownListHero.append(dropDownList);
+        input.value = "";
+        dropOpen = true;
+        this.classList.toggle("dropdown__button--active");
+        dropArrow.classList.toggle("rotate");
+      }
+      dropDownListItems.forEach(function (listItem) {
+        listItem.addEventListener("click", function (e) {
+          e.stopPropagation();
+          e.target.classList.toggle("added_model");
+          let ifCheck = [];
+          dropDownListItems.forEach((a) => {
+            let gfgf = a.classList.value;
+            let b = gfgf.split(" ");
+            if (a.classList.value.split(" ").includes("added_model")) {
+              ifCheck.push(a);
+            } else {
+              ifCheck.filter((n) => n != a);
+            }
+          });
+          let name = [];
+          if (ifCheck.length) {
+            for (let i = 0; i < ifCheck.length; i++) {
+              name.push(ifCheck[i].innerText);
+            }
+          }
+          dropDownBtn.innerText = name.length ? name.join(", ") : "Model";
+          if (dropDownBtn.innerText == "Model") {
+            document.querySelector("#models-btn").style.backgroundColor =
+              "#f7f5f562";
+          }
+          if (dropDownBtn.innerText.length > 20) {
+            dropDownBtn.innerText = dropDownBtn.innerText.slice(0, 20) + "...";
+          }
+          dropDownBtn.focus();
+          dropDownInput.value = dropDownInput.value.length
+            ? dropDownInput.value + this.dataset.value
+            : dropDownInput.value;
+          document
+            .querySelector(".filter_reset_btn")
+            .addEventListener("click", () => {
+              dropDownBtn.innerText = "Model";
+              name = [];
+              ifCheck = [];
+            });
+        });
+      });
+      console.log(dropDownListHero);
     });
     // itemsResetBtn.addEventListener("click", () => {
     //   dropDownBtn.innerText = "Marka";
@@ -3682,6 +4088,31 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
         listItem.classList.remove("added_model");
       });
     });
+
+    input.addEventListener("input", (e) => {
+      const value = e.target.value;
+      const newList = [];
+      dropDownList.innerText = "";
+      dropDownListItems.forEach(function (listItem) {
+        const newItem = listItem.textContent.toLowerCase();
+        if (newItem.includes(value.toLowerCase())) {
+          newList.push(listItem);
+        }
+      });
+      const h4 = document.createElement("h4");
+      h4.classList.add("none_text");
+      h4.textContent = "Nəticə tapılmadi";
+      dropDownList.append(h4);
+      if (newList.length) {
+        newList.map((a) => {
+          dropDownList.append(a);
+        });
+        h4.classList.remove("none_text_visible");
+      } else {
+        h4.classList.add("none_text_visible");
+      }
+    });
+
     // Клик снаружи дропдауна. Закрыть дропдаун
     document.addEventListener("click", function (e) {
       if (e.target !== dropDownBtn) {

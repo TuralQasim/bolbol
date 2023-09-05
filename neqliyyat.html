@@ -817,8 +817,7 @@
                 Marka
               </button>
               <i class="fa-solid fa-angle-down drop_arrow"></i>
-              <div class="dropdown__list_hero">
-              </div>
+              <div class="dropdown__list_hero"></div>
               <input
                 type="text"
                 name="select-category"
@@ -828,7 +827,7 @@
             </div>
           </div>
           <div class="form-group for_width20">
-            <div class="dropdown">
+            <div class="dropdown" id="mark_drop_hero">
               <button
                 class="dropdown__button empty"
                 data-value="models"
@@ -837,11 +836,7 @@
                 Model
               </button>
               <i class="fa-solid fa-angle-down drop_arrow"></i>
-              <ul class="dropdown__list" id="models">
-                <!-- <p class="items_reset_btn"  id="models_reset_btn">
-                  Sıfırla<i class="fa-sharp fa-solid fa-xmark"></i>
-                </p> -->
-              </ul>
+              <div class="dropdown__list_hero"></div>
               <input
                 type="text"
                 name="select-category"
@@ -864,9 +859,9 @@
           </div>
           <div class="form-group for_width_small" id="color_group">
             <div class="dropdown">
-              <button class="dropdown__button" data-value="color">Rəng</button>
+              <button class="dropdown__button" data-value="color" id="color_dekstop_btn">Rəng</button>
               <i class="fa-solid fa-angle-down drop_arrow"></i>
-              <ul class="dropdown__list"></ul>
+              <div class="dropdown__list_hero"></div>
               <input
                 type="text"
                 name="select-category"
@@ -896,7 +891,7 @@
                 Ban Növü
               </button>
               <i class="fa-solid fa-angle-down drop_arrow"></i>
-              <ul class="dropdown__list"></ul>
+              <div class="dropdown__list_hero"></div>
               <input
                 type="text"
                 name="select-category"
@@ -988,7 +983,7 @@
             <div class="dropdown">
               <button class="dropdown__button" data-value="city">Şəhər</button>
               <i class="fa-solid fa-angle-down drop_arrow"></i>
-              <ul class="dropdown__list"></ul>
+              <div class="dropdown__list_hero"></div>
               <input
                 type="text"
                 name="select-category"
@@ -1097,12 +1092,14 @@
           <div id="afterMark767">
             <label id="markLabel767">Marka</label>
             <p id="checkedMark767"></p>
-            <i class="fa-solid fa-chevron-down"></i>
+            <i class="fa-solid fa-chevron-down" id="mark_arrow_down"></i>
+            <i class="fa-solid fa-circle-xmark" id="mark_reset_xmark"></i>
           </div>
           <div id="afterModel767">
             <label id="modelLabel767">Model</label>
             <p id="checkedModel767"></p>
-            <i class="fa-solid fa-chevron-down"></i>
+            <i class="fa-solid fa-chevron-down" id="model_arrow_down"></i>
+            <i class="fa-solid fa-circle-xmark" id="model_reset_xmark"></i>
           </div>
         </div>
         <div class="filters_767">
@@ -2340,10 +2337,10 @@
             window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
             ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
         </script>-->
-    <script
+    <!-- <script
       src="https://www.google-analytics.com/analytics.js"
       async
       defer
-    ></script>
+    ></script> -->
   </body>
 </html>

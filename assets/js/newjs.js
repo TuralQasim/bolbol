@@ -2172,7 +2172,22 @@ modelList.addEventListener("click", (e) => {
   modelLabel767.style.transform = "translateY(-10px)";
   modelLabel767.style.fontSize = "14px";
   checkedModel767.textContent = model;
+  if (checkedModel767.textContent) {
+    document.getElementById("model_arrow_down").style.display = "none";
+    document.getElementById("model_reset_xmark").style.display = "block";
+  } else {
+    document.getElementById("model_arrow_down").style.display = "block";
+    document.getElementById("model_reset_xmark").style.display = "none";
+  }
 });
+document.getElementById("model_reset_xmark").addEventListener("click", (e)=>{
+  e.stopPropagation();
+  document.getElementById("model_arrow_down").style.display = "block";
+  document.getElementById("model_reset_xmark").style.display = "none";
+  checkedModel767.textContent = "";
+  modelLabel767.style.transform = "translateY(0)";
+  modelLabel767.style.fontSize = "18px";
+})
 modelInput767.addEventListener("input", (e) => {
   const searchValue = e.target.value;
   const newModels = modelArr.filter((a) => a.includes(searchValue));
@@ -2223,6 +2238,28 @@ markList767.addEventListener("click", (e) => {
   modelLabel767.style.transform = "translateY(0)";
   modelLabel767.style.fontSize = "18px";
   checkedModel767.textContent = "";
+  document.getElementById("model_arrow_down").style.display = "block";
+  document.getElementById("model_reset_xmark").style.display = "none";
+  if (checkedMark767.textContent) {
+    document.getElementById("mark_arrow_down").style.display = "none";
+    document.getElementById("mark_reset_xmark").style.display = "block";
+  } else {
+    document.getElementById("mark_arrow_down").style.display = "block";
+    document.getElementById("mark_reset_xmark").style.display = "none";
+  }
+});
+document.getElementById("mark_reset_xmark").addEventListener("click", (e) => {
+  e.stopPropagation();
+  checkedMark767.textContent = "";
+  markLabel767.style.transform = "translateY(0)";
+  markLabel767.style.fontSize = "18px";
+  document.getElementById("mark_arrow_down").style.display = "block";
+  document.getElementById("mark_reset_xmark").style.display = "none";
+  document.getElementById("model_arrow_down").style.display = "block";
+  document.getElementById("model_reset_xmark").style.display = "none";
+  checkedModel767.textContent = "";
+  modelLabel767.style.transform = "translateY(0)";
+  modelLabel767.style.fontSize = "18px";
 });
 afterMark767.addEventListener("click", () => {
   mark767Dropdown.setAttribute("style", "transform:translateY(0) !important");

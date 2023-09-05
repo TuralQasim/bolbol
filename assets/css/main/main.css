@@ -11335,3 +11335,12 @@ display: block !important;
   padding-left: 20px !important;
   margin-bottom: 5px !important;
 }
+.mark_drop_hero .dropdown__list_hero{
+  display: block !important;
+}
+#mark_reset_xmark, #model_reset_xmark{
+  display: none;
+  font-size: 20px;
+  color: #808080;
+  pointer-events: all;
+}
