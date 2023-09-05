@@ -2468,8 +2468,26 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
   const speedArr = ["Mexaniki", "Avtomat", "Robotlaşdırılmış", "Variator"];
   const dropDownBtn = dropDownWrapper.querySelector(".dropdown__button");
   const type = dropDownBtn.dataset.value;
-  const dropDownList = dropDownWrapper.querySelector(".dropdown__list");
   if (type == "marks") {
+    const dropDownListHero = document.querySelector(".dropdown__list_hero");
+    const dropDownList = document.createElement("ul");
+    dropDownList.classList.add("dropdown__list");
+    const input = document.createElement("input");
+    input.classList.add("universal_search_input");
+    input.setAttribute("type", "text");
+    dropDownListHero.append(input);
+    input.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
+    const p = document.createElement("p");
+    p.classList.add("items_reset_btn");
+    p.textContent = "Sıfırla";
+    const i = document.createElement("i");
+    i.classList.add("fa-sharp");
+    i.classList.add("fa-solid");
+    i.classList.add("fa-xmark");
+    p.append(i);
+    dropDownListHero.append(p);
     const itemsResetBtn = dropDownWrapper.querySelector(".items_reset_btn");
     marksArr.map((a) => {
       const li = document.createElement("li");
@@ -2478,6 +2496,8 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
       li.textContent = a.name;
       dropDownList.append(li);
     });
+
+    dropDownListHero.append(dropDownList);
     const dropDownListItems = dropDownList.querySelectorAll(
       ".dropdown__list-item"
     );
@@ -2486,8 +2506,25 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
     );
     const dropArrow = dropDownWrapper.querySelector("i");
     // Клик по кнопке. Открыть/Закрыть select
+    dropOpen = false;
     dropDownBtn.addEventListener("click", function (e) {
-      dropDownList.classList.toggle("dropdown__list--visible");
+      // dropDownListHero.classList.toggle(".dropdown__list_hero_visible");
+      if (dropOpen) {
+        dropDownListHero.style.display = "none";
+        dropOpen = false;
+      } else {
+        dropDownListHero.style.display = "block";
+        dropDownList.innerText = "";
+        marksArr.map((a) => {
+          const li = document.createElement("li");
+          li.classList.add("dropdown__list-item");
+          li.setAttribute("data-value", a.name);
+          li.textContent = a.name;
+          dropDownList.append(li);
+        });
+        input.value = "";
+        dropOpen = true;
+      }
       this.classList.toggle("dropdown__button--active");
       dropArrow.classList.toggle("rotate");
     });
@@ -2503,9 +2540,40 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
         fillModels();
         dropDownBtn.focus();
         dropDownInput.value = this.dataset.value;
-        dropDownList.classList.remove("dropdown__list--visible");
+        dropDownListHero.classList.remove(".dropdown__list_hero_visible");
+        // dropDownListHero.style.display = "none";
+        // dropOpen = false;
       });
     });
+
+    p.addEventListener("click", () => {
+      dropDownBtn.textContent = "Marka";
+    });
+
+    input.addEventListener("input", (e) => {
+      const value = e.target.value;
+      const newList = [];
+      dropDownList.innerText = "";
+      dropDownListItems.forEach(function (listItem) {
+        const newItem = listItem.textContent.toLowerCase();
+        if (newItem.includes(value.toLowerCase())) {
+          newList.push(listItem);
+        }
+      });
+      const h4 = document.createElement("h4");
+      h4.classList.add("none_text");
+      h4.textContent = "Nəticə tapılmadi";
+      dropDownList.append(h4);
+      if (newList.length) {
+        newList.map((a) => {
+          dropDownList.append(a);
+        });
+        h4.classList.remove("none_text_visible");
+      } else {
+        h4.classList.add("none_text_visible");
+      }
+    });
+
     itemsResetBtn.addEventListener("click", () => {
       dropDownBtn.innerText = "Marka";
       document.querySelector("#models-btn").innerText = "Model";
@@ -2514,10 +2582,13 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
 
     // Клик снаружи дропдауна. Закрыть дропдаун
     document.addEventListener("click", function (e) {
+      console.log(e.target);
       if (e.target !== dropDownBtn) {
         dropDownBtn.classList.remove("dropdown__button--active");
-        dropDownList.classList.remove("dropdown__list--visible");
+        dropDownListHero.classList.remove(".dropdown__list_hero_visible");
         dropArrow.classList.remove("rotate");
+        dropDownListHero.style.display = "none";
+        dropOpen = false;
       }
     });
 
@@ -2525,11 +2596,13 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
     document.addEventListener("keydown", function (e) {
       if (e.key === "Tab" || e.key === "Escape") {
         dropDownBtn.classList.remove("dropdown__button--active");
-        dropDownList.classList.remove("dropdown__list--visible");
+        dropDownListHero.classList.remove(".dropdown__list_hero_visible");
       }
     });
   }
   if (type == "color") {
+    const dropDownList = dropDownWrapper.querySelector(".dropdown__list");
+
     const p = document.createElement("p");
     p.classList.add("items_reset_btn");
     p.textContent = "Sıfırla";
@@ -2630,6 +2703,7 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
     });
   }
   if (type == "ban") {
+    const dropDownList = dropDownWrapper.querySelector(".dropdown__list");
     const p = document.createElement("p");
     p.classList.add("items_reset_btn");
     p.textContent = "Sıfırla";
@@ -2731,6 +2805,7 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
     });
   }
   if (type == "minYear") {
+    const dropDownList = dropDownWrapper.querySelector(".dropdown__list");
     const p = document.createElement("p");
     p.classList.add("items_reset_btn");
     p.textContent = "Sıfırla";
@@ -2796,6 +2871,7 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
     });
   }
   if (type == "maxYear") {
+    const dropDownList = dropDownWrapper.querySelector(".dropdown__list");
     const p = document.createElement("p");
     p.classList.add("items_reset_btn");
     p.textContent = "Sıfırla";
@@ -2861,6 +2937,7 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
     });
   }
   if (type == "minLitr") {
+    const dropDownList = dropDownWrapper.querySelector(".dropdown__list");
     const p = document.createElement("p");
     p.classList.add("items_reset_btn");
     p.textContent = "Sıfırla";
@@ -2926,6 +3003,7 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
     });
   }
   if (type == "maxLitr") {
+    const dropDownList = dropDownWrapper.querySelector(".dropdown__list");
     const p = document.createElement("p");
     p.classList.add("items_reset_btn");
     p.textContent = "Sıfırla";
@@ -2991,6 +3069,7 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
     });
   }
   if (type == "city") {
+    const dropDownList = dropDownWrapper.querySelector(".dropdown__list");
     const p = document.createElement("p");
     p.classList.add("items_reset_btn");
     p.textContent = "Sıfırla";
@@ -3092,6 +3171,7 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
     });
   }
   if (type == "oil") {
+    const dropDownList = dropDownWrapper.querySelector(".dropdown__list");
     const p = document.createElement("p");
     p.classList.add("items_reset_btn");
     p.textContent = "Sıfırla";
@@ -3193,6 +3273,7 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
     });
   }
   if (type == "speed") {
+    const dropDownList = dropDownWrapper.querySelector(".dropdown__list");
     const p = document.createElement("p");
     p.classList.add("items_reset_btn");
     p.textContent = "Sıfırla";
@@ -3296,6 +3377,7 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
     });
   }
   if (type == "place") {
+    const dropDownList = dropDownWrapper.querySelector(".dropdown__list");
     const p = document.createElement("p");
     p.classList.add("items_reset_btn");
     p.textContent = "Sıfırla";
@@ -3397,6 +3479,7 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
     });
   }
   if (type == "box") {
+    const dropDownList = dropDownWrapper.querySelector(".dropdown__list");
     const p = document.createElement("p");
     p.classList.add("items_reset_btn");
     p.textContent = "Sıfırla";
