@@ -2539,6 +2539,7 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
           dropArrow.classList.remove("rotate");
           dropDownBtn.innerText = this.innerText;
           checkedMark = this.innerText;
+          document.querySelector("#models").innerText = "";
           fillModels();
           dropDownBtn.focus();
           dropDownInput.value = this.dataset.value;
@@ -2598,6 +2599,7 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
       dropDownBtn.innerText = "Marka";
       document.querySelector("#models-btn").innerText = "Model";
       document.querySelector("#models-btn").style.backgroundColor = "#f7f5f562";
+      document.querySelector("#models").innerText = "";
     });
 
     // Клик снаружи дропдауна. Закрыть дропдаун
@@ -3898,20 +3900,11 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
   }
   function fillModels() {
     const filteredModels = marksArr.filter((mark) => mark.name == checkedMark);
+    const dropDownList = document.querySelector("#models");
     const dropDownBtn = document.querySelector("#models-btn");
-    const dropDownListHero = dropDownWrapper.querySelector(
-      ".dropdown__list_hero"
-    );
-    const dropDownList = document.createElement("ul");
-    dropDownList.classList.add("dropdown__list");
-    dropDownList.setAttribute("id", "models");
-    const input = document.createElement("input");
-    input.classList.add("universal_search_input");
-    input.setAttribute("type", "text");
-    dropDownListHero.append(input);
-    input.addEventListener("click", (e) => {
-      e.stopPropagation();
-    });
+    dropDownBtn.innerText = "Model";
+    // const itemsResetBtn = document.getElementById("models_reset_btn");
+    // console.log(itemsResetBtn)
     const p = document.createElement("p");
     p.classList.add("items_reset_btn");
     p.textContent = "Sıfırla";
@@ -3920,9 +3913,7 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
     i.classList.add("fa-solid");
     i.classList.add("fa-xmark");
     p.append(i);
-    dropDownListHero.append(p);
-    dropDownBtn.innerText = "Model";
-    const dropArrow = dropDownWrapper.querySelector("i");
+    dropDownList.append(p);
     filteredModels[0].model.map((a) => {
       const li = document.createElement("li");
       li.classList.add("dropdown__list-item");
@@ -3942,92 +3933,14 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
     const dropDownInput = dropDownWrapper.querySelector(
       ".dropdown__input-hidden"
     );
-
-    let dropOpen = false;
+    const dropArrow = dropDownWrapper.querySelector("i");
     // Клик по кнопке. Открыть/Закрыть select
     dropDownBtn.addEventListener("click", function (e) {
-      dropDownListHero.style.display = "block";
-      if (dropOpen) {
-        dropDownListHero.style.display = "none";
-        dropOpen = false;
-      } else {
-        dropDownListHero.style.display = "block";
-        dropDownListHero.innerText = "";
-        const dropDownList = document.createElement("ul");
-        dropDownList.classList.add("dropdown__list");
-        dropDownList.setAttribute("id", "models");
-        const input = document.createElement("input");
-        input.classList.add("universal_search_input");
-        input.setAttribute("type", "text");
-        dropDownListHero.append(input);
-        input.addEventListener("click", (e) => {
-          e.stopPropagation();
-        });
-        const p = document.createElement("p");
-        p.classList.add("items_reset_btn");
-        p.textContent = "Sıfırla";
-        const i = document.createElement("i");
-        i.classList.add("fa-sharp");
-        i.classList.add("fa-solid");
-        i.classList.add("fa-xmark");
-        p.append(i);
-        dropDownListHero.append(p);
-        dropDownBtn.innerText = "Model";
-        filteredModels[0].model.map((a) => {
-          const li = document.createElement("li");
-          li.classList.add("dropdown__list-item");
-          li.setAttribute("data-value", a);
-          li.textContent = a;
-          dropDownList.append(li);
-        });
-        dropDownListHero.append(dropDownList);
-        input.value = "";
-        dropOpen = true;
-        this.classList.toggle("dropdown__button--active");
-        dropArrow.classList.toggle("rotate");
-      }
-      dropDownListItems.forEach(function (listItem) {
-        listItem.addEventListener("click", function (e) {
-          e.stopPropagation();
-          e.target.classList.toggle("added_model");
-          let ifCheck = [];
-          dropDownListItems.forEach((a) => {
-            let gfgf = a.classList.value;
-            let b = gfgf.split(" ");
-            if (a.classList.value.split(" ").includes("added_model")) {
-              ifCheck.push(a);
-            } else {
-              ifCheck.filter((n) => n != a);
-            }
-          });
-          let name = [];
-          if (ifCheck.length) {
-            for (let i = 0; i < ifCheck.length; i++) {
-              name.push(ifCheck[i].innerText);
-            }
-          }
-          dropDownBtn.innerText = name.length ? name.join(", ") : "Model";
-          if (dropDownBtn.innerText == "Model") {
-            document.querySelector("#models-btn").style.backgroundColor =
-              "#f7f5f562";
-          }
-          if (dropDownBtn.innerText.length > 20) {
-            dropDownBtn.innerText = dropDownBtn.innerText.slice(0, 20) + "...";
-          }
-          dropDownBtn.focus();
-          dropDownInput.value = dropDownInput.value.length
-            ? dropDownInput.value + this.dataset.value
-            : dropDownInput.value;
-          document
-            .querySelector(".filter_reset_btn")
-            .addEventListener("click", () => {
-              dropDownBtn.innerText = "Model";
-              name = [];
-              ifCheck = [];
-            });
-        });
-      });
-      console.log(dropDownListHero);
+      const dropDownList = document.querySelector("#models");
+      dropDownList.classList.remove("dropdown__list--visible");
+      dropDownList.classList.add("dropdown__list--visible");
+      this.classList.toggle("dropdown__button--active");
+      dropArrow.classList.toggle("rotate");
     });
     // itemsResetBtn.addEventListener("click", () => {
     //   dropDownBtn.innerText = "Marka";
@@ -4088,31 +4001,6 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
         listItem.classList.remove("added_model");
       });
     });
-
-    input.addEventListener("input", (e) => {
-      const value = e.target.value;
-      const newList = [];
-      dropDownList.innerText = "";
-      dropDownListItems.forEach(function (listItem) {
-        const newItem = listItem.textContent.toLowerCase();
-        if (newItem.includes(value.toLowerCase())) {
-          newList.push(listItem);
-        }
-      });
-      const h4 = document.createElement("h4");
-      h4.classList.add("none_text");
-      h4.textContent = "Nəticə tapılmadi";
-      dropDownList.append(h4);
-      if (newList.length) {
-        newList.map((a) => {
-          dropDownList.append(a);
-        });
-        h4.classList.remove("none_text_visible");
-      } else {
-        h4.classList.add("none_text_visible");
-      }
-    });
-
     // Клик снаружи дропдауна. Закрыть дропдаун
     document.addEventListener("click", function (e) {
       if (e.target !== dropDownBtn) {

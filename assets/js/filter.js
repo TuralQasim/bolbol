@@ -2516,7 +2516,27 @@ litrList2.addEventListener("click", (e) => {
     litrModal2.style.visibility = "hidden";
   }, 300);
   litrDropdown2.style.transform = "translateY(100vh)";
+  document.getElementById("mob_litr2_reset_xmark").style.display = "block";
+  document.getElementById("mob_litr2_arrow_down").style.display = "none";
 });
+if (checkedLitr2.textContent) {
+  document.getElementById("mob_litr2_reset_xmark").style.display = "block";
+  document.getElementById("mob_litr2_arrow_down").style.display = "none";
+} else {
+  document.getElementById("mob_litr2_reset_xmark").style.display = "none";
+  document.getElementById("mob_litr2_arrow_down").style.display = "block";
+}
+
+document
+  .getElementById("mob_litr2_reset_xmark")
+  .addEventListener("click", (e) => {
+    e.stopPropagation();
+    document.getElementById("mob_litr2_reset_xmark").style.display = "none";
+    document.getElementById("mob_litr2_arrow_down").style.display = "block";
+    checkedLitr2.textContent = "";
+    litrLabel2.style.transform = "translateY(20px)";
+    litrLabel2.style.fontSize = "16px";
+  });
 litrSelect2.addEventListener("click", () => {
   litrModal2.style.opacity = "1";
   litrModal2.style.visibility = "visible";
@@ -2560,7 +2580,26 @@ litrList1.addEventListener("click", (e) => {
     litrModal1.style.visibility = "hidden";
   }, 300);
   litrDropdown1.style.transform = "translateY(100vh)";
+  document.getElementById("mob_litr1_reset_xmark").style.display = "block";
+  document.getElementById("mob_litr1_arrow_down").style.display = "none";
 });
+if (checkedLitr1.textContent) {
+  document.getElementById("mob_litr1_reset_xmark").style.display = "block";
+  document.getElementById("mob_litr1_arrow_down").style.display = "none";
+} else {
+  document.getElementById("mob_litr1_reset_xmark").style.display = "none";
+  document.getElementById("mob_litr1_arrow_down").style.display = "block";
+}
+document
+  .getElementById("mob_litr1_reset_xmark")
+  .addEventListener("click", (e) => {
+    e.stopPropagation();
+    document.getElementById("mob_litr1_reset_xmark").style.display = "none";
+    document.getElementById("mob_litr1_arrow_down").style.display = "block";
+    checkedLitr1.textContent = "";
+    litrLabel1.style.transform = "translateY(20px)";
+    litrLabel1.style.fontSize = "16px";
+  });
 litrSelect1.addEventListener("click", () => {
   litrModal1.style.opacity = "1";
   litrModal1.style.visibility = "visible";
@@ -2604,7 +2643,26 @@ yearList2.addEventListener("click", (e) => {
     yearModal2.style.visibility = "hidden";
   }, 300);
   yearDropdown2.style.transform = "translateY(100vh)";
+  document.getElementById("mob_year2_reset_xmark").style.display = "block";
+  document.getElementById("mob_year2_arrow_down").style.display = "none";
 });
+if (checkedYear2.textContent) {
+  document.getElementById("mob_year2_reset_xmark").style.display = "block";
+  document.getElementById("mob_year2_arrow_down").style.display = "none";
+} else {
+  document.getElementById("mob_year2_reset_xmark").style.display = "none";
+  document.getElementById("mob_year2_arrow_down").style.display = "block";
+}
+document
+  .getElementById("mob_year2_reset_xmark")
+  .addEventListener("click", (e) => {
+    e.stopPropagation();
+    document.getElementById("mob_year2_reset_xmark").style.display = "none";
+    document.getElementById("mob_year2_arrow_down").style.display = "block";
+    checkedYear2.textContent = "";
+    yearLabel2.style.transform = "translateY(20px)";
+    yearLabel2.style.fontSize = "16px";
+  });
 yearSelect2.addEventListener("click", () => {
   yearModal2.style.opacity = "1";
   yearModal2.style.visibility = "visible";
@@ -2648,7 +2706,26 @@ yearList1.addEventListener("click", (e) => {
     yearModal1.style.visibility = "hidden";
   }, 300);
   yearDropdown1.style.transform = "translateY(100vh)";
+  document.getElementById("mob_year1_reset_xmark").style.display = "block";
+  document.getElementById("mob_year1_arrow_down").style.display = "none";
 });
+if (checkedYear1.textContent) {
+  document.getElementById("mob_year1_reset_xmark").style.display = "block";
+  document.getElementById("mob_year1_arrow_down").style.display = "none";
+} else {
+  document.getElementById("mob_year1_reset_xmark").style.display = "none";
+  document.getElementById("mob_year1_arrow_down").style.display = "block";
+}
+document
+  .getElementById("mob_year1_reset_xmark")
+  .addEventListener("click", (e) => {
+    e.stopPropagation();
+    document.getElementById("mob_year1_reset_xmark").style.display = "none";
+    document.getElementById("mob_year1_arrow_down").style.display = "block";
+    checkedYear1.textContent = "";
+    yearLabel1.style.transform = "translateY(20px)";
+    yearLabel1.style.fontSize = "16px";
+  });
 yearSelect1.addEventListener("click", () => {
   yearModal1.style.opacity = "1";
   yearModal1.style.visibility = "visible";
@@ -2716,7 +2793,26 @@ banList.addEventListener("click", (e) => {
   banDropdown.style.transform = "translateY(100vh)";
   banLabel.style.transform = "translateY(5px)";
   banLabel.style.fontSize = "12px";
+  document.getElementById("mob_ban_reset_xmark").style.display = "block";
+  document.getElementById("mob_ban_arrow_down").style.display = "none";
 });
+if (checkedBan.textContent) {
+  document.getElementById("mob_ban_reset_xmark").style.display = "block";
+  document.getElementById("mob_ban_arrow_down").style.display = "none";
+} else {
+  document.getElementById("mob_ban_reset_xmark").style.display = "none";
+  document.getElementById("mob_ban_arrow_down").style.display = "block";
+}
+document
+  .getElementById("mob_ban_reset_xmark")
+  .addEventListener("click", (e) => {
+    e.stopPropagation();
+    checkedBan.textContent = "";
+    document.getElementById("mob_ban_reset_xmark").style.display = "none";
+    document.getElementById("mob_ban_arrow_down").style.display = "block";
+    banLabel.style.transform = "translateY(10px)";
+    banLabel.style.fontSize = "16px";
+  });
 banArr.map((a) => {
   const li = document.createElement("li");
   li.textContent = a;
@@ -2759,7 +2855,26 @@ colorList.addEventListener("click", (e) => {
   colorDropdown.style.transform = "translateY(100vh)";
   colorLabel.style.transform = "translateY(5px)";
   colorLabel.style.fontSize = "12px";
+  document.getElementById("mob_color_reset_xmark").style.display = "block";
+  document.getElementById("mob_color_arrow_down").style.display = "none";
 });
+if (checkedColor.textContent) {
+  document.getElementById("mob_color_reset_xmark").style.display = "block";
+  document.getElementById("mob_color_arrow_down").style.display = "none";
+} else {
+  document.getElementById("mob_color_reset_xmark").style.display = "none";
+  document.getElementById("mob_color_arrow_down").style.display = "block";
+}
+document
+  .getElementById("mob_color_reset_xmark")
+  .addEventListener("click", (e) => {
+    e.stopPropagation();
+    document.getElementById("mob_color_reset_xmark").style.display = "none";
+    document.getElementById("mob_color_arrow_down").style.display = "block";
+    checkedColor.textContent = "";
+    colorLabel.style.transform = "translateY(10px)";
+    colorLabel.style.fontSize = "16px";
+  });
 colorArr.map((a) => {
   const li = document.createElement("li");
   li.textContent = a;
@@ -2787,7 +2902,28 @@ cityList.addEventListener("click", (e) => {
   checkedCity.textContent = city;
   cityLabel.style.transform = "translateY(5px)";
   cityLabel.style.fontSize = "12px";
+  document.getElementById("mob_city_arrow_down").style.display = "none";
+  document.getElementById("mob_city_reset_xmark").style.display = "block";
 });
+if (checkedCity.textContent) {
+  document.getElementById("mob_city_arrow_down").style.display = "none";
+  document.getElementById("mob_city_reset_xmark").style.display = "block";
+} else {
+  document.getElementById("mob_city_arrow_down").style.display = "block";
+  document.getElementById("mob_city_reset_xmark").style.display = "none";
+  cityLabel.style.transform = "translateY(10px)";
+  cityLabel.style.fontSize = "16px";
+}
+document
+  .getElementById("mob_city_reset_xmark")
+  .addEventListener("click", (e) => {
+    e.stopPropagation();
+    document.getElementById("mob_city_arrow_down").style.display = "block";
+    document.getElementById("mob_city_reset_xmark").style.display = "none";
+    cityLabel.style.transform = "translateY(10px)";
+    cityLabel.style.fontSize = "16px";
+    checkedCity.textContent = "";
+  });
 citySearch.addEventListener("input", (e) => {
   const searchValue = e.target.value;
   const newCities = citiesArr.filter((a) => {
@@ -2981,4 +3117,52 @@ respInput2.addEventListener("click", () => {
 });
 respInput3.addEventListener("click", () => {
   respDist.classList.remove("dnone");
+});
+
+document.getElementById("mobi_all_reset_btn").addEventListener("click", () => {
+  document.getElementById("mob_city_arrow_down").style.display = "block";
+  document.getElementById("mob_city_reset_xmark").style.display = "none";
+  cityLabel.style.transform = "translateY(10px)";
+  cityLabel.style.fontSize = "16px";
+  checkedCity.textContent = "";
+  // ---------------------------------------------
+  checkedBan.textContent = "";
+  document.getElementById("mob_ban_reset_xmark").style.display = "none";
+  document.getElementById("mob_ban_arrow_down").style.display = "block";
+  banLabel.style.transform = "translateY(10px)";
+  banLabel.style.fontSize = "16px";
+  // ---------------------------------------------
+  document.getElementById("mob_year1_reset_xmark").style.display = "none";
+  document.getElementById("mob_year1_arrow_down").style.display = "block";
+  checkedYear1.textContent = "";
+  yearLabel1.style.transform = "translateY(20px)";
+  yearLabel1.style.fontSize = "16px";
+  // ---------------------------------------------
+  document.getElementById("mob_year2_reset_xmark").style.display = "none";
+  document.getElementById("mob_year2_arrow_down").style.display = "block";
+  checkedYear2.textContent = "";
+  yearLabel2.style.transform = "translateY(20px)";
+  yearLabel2.style.fontSize = "16px";
+  // ---------------------------------------------
+  document.getElementById("mob_litr1_reset_xmark").style.display = "none";
+  document.getElementById("mob_litr1_arrow_down").style.display = "block";
+  checkedLitr1.textContent = "";
+  litrLabel1.style.transform = "translateY(20px)";
+  litrLabel1.style.fontSize = "16px";
+  // ---------------------------------------------
+  document.getElementById("mob_litr2_reset_xmark").style.display = "none";
+  document.getElementById("mob_litr2_arrow_down").style.display = "block";
+  checkedLitr2.textContent = "";
+  litrLabel2.style.transform = "translateY(20px)";
+  litrLabel2.style.fontSize = "16px";
+  // ---------------------------------------------
+  document.getElementById("mob_color_reset_xmark").style.display = "none";
+  document.getElementById("mob_color_arrow_down").style.display = "block";
+  checkedColor.textContent = "";
+  colorLabel.style.transform = "translateY(10px)";
+  colorLabel.style.fontSize = "16px";
+  // ---------------------------------------------
+  respInput1.checked = true;
+  respInput2.checked = false;
+  respInput3.checked = false;
 });

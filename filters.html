@@ -72,14 +72,15 @@
         <section class="filterHeading">
           <a href="/neqliyyat.html"><img src="assets/img/back-icon.svg" alt="" /></a>
           <div class="filterHeading__title">Filtrlər</div>
-          <button type="reset" class="btn btn--transparent justify-content-end">
+          <button type="reset" class="btn btn--transparent justify-content-end" id="mobi_all_reset_btn">
             Sıfırla
           </button>
         </section>
         <div id="citySelect">
           <label id="cityLabel">Şəhər</label>
           <p id="checkedCity"></p>
-          <i class="fa-solid fa-chevron-down"></i>
+          <i class="fa-solid fa-chevron-down" id="mob_city_arrow_down"></i>
+          <i class="fa-solid fa-circle-xmark" id="mob_city_reset_xmark"></i>
         </div>
         <div class="city_dropdown">
           <div class="city_header">
@@ -391,12 +392,12 @@
               <div class="customFilter mb-10">
                 <div class="form-joint five_inp" id="respDist">
                   <div class="form-group form-material">
-                    <label>Yürüş(km), min.</label>
-                    <input type="text" class="form-control" />
+                    <label id="mobi_dist1_label">Yürüş(km), min.</label>
+                    <input type="text" class="form-control" id="mobi_dist1_input"/>
                   </div>
                   <div class="form-group form-material">
-                    <label>maks.</label>
-                    <input type="text" class="form-control" />
+                    <label id="mobi_dist1_label">maks.</label>
+                    <input type="text" class="form-control" id="mobi_dist1_input"/>
                   </div>
                 </div>
                 <!-- <div class="" id="forBanClick">
@@ -438,7 +439,8 @@
                 <div id="banSelect">
                   <label id="banLabel">Ban Növü</label>
                   <p id="checkedBan"></p>
-                  <i class="fa-solid fa-chevron-down"></i>
+                  <i class="fa-solid fa-chevron-down" id="mob_ban_arrow_down"></i>
+                  <i class="fa-solid fa-circle-xmark" id="mob_ban_reset_xmark"></i>
                 </div>
                 <div class="ban_modal">
                   <div class="ban_dropdown">
@@ -652,14 +654,16 @@
                 </div> -->
                 <div class="years_container">
                   <div id="yearsSelect1">
-                    <label id="yearLabel1">il, min</label>
+                    <label id="yearLabel1">İl, min</label>
                     <p id="checkedYear1"></p>
-                    <i class="fa-solid fa-chevron-down"></i>
+                    <i class="fa-solid fa-chevron-down" id="mob_year1_arrow_down"></i>
+                    <i class="fa-solid fa-circle-xmark" id="mob_year1_reset_xmark"></i>
                   </div>
                   <div id="yearsSelect2">
-                    <label id="yearLabel2">il, max</label>
+                    <label id="yearLabel2">maks</label>
                     <p id="checkedYear2"></p>
-                    <i class="fa-solid fa-chevron-down"></i>
+                    <i class="fa-solid fa-chevron-down" id="mob_year2_arrow_down"></i>
+                    <i class="fa-solid fa-circle-xmark" id="mob_year2_reset_xmark"></i>
                   </div>
                 </div>
                 <div class="year_modal1">
@@ -684,12 +688,14 @@
                   <div id="litrSelect1">
                     <label id="litrLabel1">Həcm (sm<sup>3</sup>), min</label>
                     <p id="checkedLitr1"></p>
-                    <i class="fa-solid fa-chevron-down"></i>
+                    <i class="fa-solid fa-chevron-down" id="mob_litr1_arrow_down"></i>
+                    <i class="fa-solid fa-circle-xmark" id="mob_litr1_reset_xmark"></i>
                   </div>
                   <div id="litrSelect2">
                     <label id="litrLabel2">Həcm (sm<sup>3</sup>), max</label>
                     <p id="checkedLitr2"></p>
-                    <i class="fa-solid fa-chevron-down"></i>
+                    <i class="fa-solid fa-chevron-down" id="mob_litr2_arrow_down"></i>
+                    <i class="fa-solid fa-circle-xmark" id="mob_litr2_reset_xmark"></i>
                   </div>
                 </div>
                 <div class="litr_modal1">
@@ -905,7 +911,8 @@
                 <div id="colorSelect">
                   <label id="colorLabel">Rəng</label>
                   <p id="checkedColor"></p>
-                  <i class="fa-solid fa-chevron-down"></i>
+                  <i class="fa-solid fa-chevron-down" id="mob_color_arrow_down"></i>
+                  <i class="fa-solid fa-circle-xmark" id="mob_color_reset_xmark"></i>
                 </div>
                 <div class="color_modal">
                   <div class="color_dropdown">
@@ -950,9 +957,9 @@
               role="tabpanel"
               aria-labelledby="pills-all2-tab"
             >
-              <div class="customFilter mb-10">
+              <div class="customFilter mb-10" id="mobi_oil_check">
                 <p>Yanacaq növü</p>
-                <div class="customFilter__checkbox">
+                <div class="customFilter__checkbox" id="mobi_oil_check_hero">
                   <div class="form-group form-check">
                     <input type="checkbox" id="check1" checked />
                     <label for="check1">Vacib deyil</label>
@@ -983,7 +990,7 @@
                   </div>
                 </div>
               </div>
-              <div class="customFilter mb-10">
+              <div class="customFilter mb-10" id="mobi_box_check"> 
                 <p>Ötürücü</p>
                 <div class="customFilter__checkbox">
                   <div class="form-group form-check">
@@ -1004,7 +1011,7 @@
                   </div>
                 </div>
               </div>
-              <div class="customFilter mb-10">
+              <div class="customFilter mb-10" id="mobi_speed_check">
                 <p>Süretler qutusu</p>
                 <div class="customFilter__checkbox">
                   <div class="form-group form-check">
@@ -1029,7 +1036,7 @@
                   </div>
                 </div>
               </div>
-              <div class="customFilter mb-10">
+              <div class="customFilter mb-10" id="mobi_additional_check">
                 <p>Avtomobilin təchizatı</p>
                 <div class="customFilter__checkbox">
                   <div class="form-group form-check">

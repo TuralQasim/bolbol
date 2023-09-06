@@ -2142,6 +2142,7 @@ const modelLabel767 = document.getElementById("modelLabel767");
 const checkedModel767 = document.getElementById("checkedModel767");
 const modelInput767 = document.getElementById("modelInput767");
 const filters767 = document.querySelector(".filters_767");
+const mobileAllMarksBtn = document.querySelector(".mobile_all_marks_btn");
 // const titles = document.querySelectorAll(".post__title");
 // titles.forEach((a, index) => {
 //   const text = a.textContent.slice(0, 18);
@@ -2180,14 +2181,14 @@ modelList.addEventListener("click", (e) => {
     document.getElementById("model_reset_xmark").style.display = "none";
   }
 });
-document.getElementById("model_reset_xmark").addEventListener("click", (e)=>{
+document.getElementById("model_reset_xmark").addEventListener("click", (e) => {
   e.stopPropagation();
   document.getElementById("model_arrow_down").style.display = "block";
   document.getElementById("model_reset_xmark").style.display = "none";
   checkedModel767.textContent = "";
   modelLabel767.style.transform = "translateY(0)";
   modelLabel767.style.fontSize = "18px";
-})
+});
 modelInput767.addEventListener("input", (e) => {
   const searchValue = e.target.value;
   const newModels = modelArr.filter((a) => a.includes(searchValue));
@@ -2206,6 +2207,16 @@ modelInput767.addEventListener("input", (e) => {
   }
 });
 mark767OpenBtn.addEventListener("click", () => {
+  mark767Dropdown.setAttribute("style", "transform:translateY(0) !important");
+  markList767.textContent = "";
+  marksArr.map((a) => {
+    const li = document.createElement("li");
+    li.textContent = a.name;
+    markList767.append(li);
+  });
+  markInput767.value = "";
+});
+mobileAllMarksBtn.addEventListener("click", () => {
   mark767Dropdown.setAttribute("style", "transform:translateY(0) !important");
   markList767.textContent = "";
   marksArr.map((a) => {
@@ -2243,10 +2254,12 @@ markList767.addEventListener("click", (e) => {
   if (checkedMark767.textContent) {
     document.getElementById("mark_arrow_down").style.display = "none";
     document.getElementById("mark_reset_xmark").style.display = "block";
+    document.querySelector(".mobile_marks_section_bg").style.display = "none";
   } else {
     document.getElementById("mark_arrow_down").style.display = "block";
     document.getElementById("mark_reset_xmark").style.display = "none";
-  }
+    document.querySelector(".mobile_marks_section_bg").style.display = "block";
+  } 
 });
 document.getElementById("mark_reset_xmark").addEventListener("click", (e) => {
   e.stopPropagation();
@@ -2257,6 +2270,7 @@ document.getElementById("mark_reset_xmark").addEventListener("click", (e) => {
   document.getElementById("mark_reset_xmark").style.display = "none";
   document.getElementById("model_arrow_down").style.display = "block";
   document.getElementById("model_reset_xmark").style.display = "none";
+  document.querySelector(".mobile_marks_section_bg").style.display = "block";
   checkedModel767.textContent = "";
   modelLabel767.style.transform = "translateY(0)";
   modelLabel767.style.fontSize = "18px";

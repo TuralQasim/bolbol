@@ -9059,8 +9059,18 @@ form
     opacity: 1 !important;
     display: block !important;
   }
-  #respDist {
-    width: 100% !important;
+  #respDist,
+  #banSelect,
+  #mobi_additional_check,
+  .years_container,
+  #mobi_speed_check,
+  .litr_container,
+  #mobi_box_check,
+  #colorSelect,
+  #respPrice,
+  #mobi_oil_check {
+    width: 96% !important;
+    margin: 0 auto;
   }
   #respDist input {
     border: none !important;
@@ -9068,7 +9078,7 @@ form
     border-radius: 0 !important;
   }
   #respPrice {
-    width: 100% !important;
+    width: 96% !important;
     margin: 0 auto !important;
     margin-bottom: 0 !important;
   }
@@ -11279,7 +11289,7 @@ transform: translateY(calc(-50% - 2px)); */
   border-radius: 7px;
   border: 1px solid #ccc;
 }
-.dropdown__list_hero{
+.dropdown__list_hero {
   display: none;
   position: absolute !important;
   left: 0 !important;
@@ -11296,15 +11306,15 @@ transform: translateY(calc(-50% - 2px)); */
   z-index: 999 !important;
   max-height: 240px !important;
 }
-.dropdown__list_hero .dropdown__list{
-width: 100% !important;
-position: static !important;
-display: block !important; 
+.dropdown__list_hero .dropdown__list {
+  width: 100% !important;
+  position: static !important;
+  display: block !important;
 }
 .dropdown__list--visible {
   display: block !important;
 }
-.dropdown__list_hero_visible{
+.dropdown__list_hero_visible {
   display: block !important;
   position: absolute !important;
   left: 0 !important;
@@ -11321,26 +11331,140 @@ display: block !important;
   z-index: 999 !important;
   max-height: 240px !important;
 }
-.dropdown__list_hero_visible .dropdown__list{
+.dropdown__list_hero_visible .dropdown__list {
   display: block !important;
 }
-.none_text{
+.none_text {
   color: #014c52 !important;
   display: none;
 }
-.none_text_visible{
+.none_text_visible {
   display: block !important ;
   margin: 0 !important;
   padding: 0 !important;
   padding-left: 20px !important;
   margin-bottom: 5px !important;
 }
-.mark_drop_hero .dropdown__list_hero{
+.mark_drop_hero .dropdown__list_hero {
   display: block !important;
 }
-#mark_reset_xmark, #model_reset_xmark{
+#mark_reset_xmark,
+#mob_color_reset_xmark,
+#model_reset_xmark,
+#mob_litr2_reset_xmark,
+#mob_litr1_reset_xmark,
+#mob_city_reset_xmark,
+#mob_year2_reset_xmark,
+#mob_ban_reset_xmark,
+#mob_year1_reset_xmark {
   display: none;
   font-size: 20px;
-  color: #808080;
-  pointer-events: all;
+  color: #cccccc;
+  pointer-events: all !important;
+}
+#mob_city_reset_xmark {
+  transform: translateY(3px);
+}
+#mob_ban_reset_xmark,
+#mob_color_reset_xmark,
+#mob_year1_reset_xmark,
+#mob_litr2_reset_xmark,
+#mob_year2_reset_xmark,
+#mob_litr1_reset_xmark {
+  transform: translateY(5px) !important;
+}
+.mark_section{
+  padding-bottom: 0 !important;
+}
+#neql_search {
+  margin-bottom: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+#dekstop_search_bar_row{
+  width: 100%  !important;
+  margin: 0  !important;
+  padding: 0 !important;
+  clear: none !important;
+  display: block !important;
+}
+#dekstop_search_bar{
+  max-width: 570px !important;
+  padding: 0 20px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  margin-bottom: 20px !important;
+}
+#dekstop_search_bar .search{
+  width: calc(100% - 40px) !important;
+  margin: 0 auto !important;
+}
+.mobile_marks_section{
+  display: none;
+}
+@media screen and (max-width: 767px){
+  .mobile_marks_section_bg{
+    background-color: #ffffff;
+    margin-bottom: 30px;
+  }
+  .mobile_marks_section{
+    display: block;
+    width: 100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin: 0 auto;
+    padding: 15px 15px 0 15px;
+  }
+  .mobile_marks_section_title{
+    width: 100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+  }
+  .mobile_marks_section_title button{
+    color: #013f44;
+    word-break: break-word;
+    border: none;
+    background-color: transparent;
+    outline: none;
+  }
+  .mobile_marks_section_hero{
+    width: 100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin: 10px 0 30px;
+  }
+  .mobile_marks_section_hero_left, .mobile_marks_section_hero_right{
+    width: 50%;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:flex-start;
+    gap: 15px !important;
+  }
+  .mobile_marks_section_item{
+    display:flex;
+    justify-content:flex-start;
+    align-items:flex-start;
+    gap: 10px;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .mobile_marks_section_item h6{
+  font-family: Arimo-Regular, Helvetica, Arial, sans-serif !important;
+  font-weight: 200 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #000000;
+  }
+  .mobile_marks_section_item p{
+    font-family: Arimo-Regular, Helvetica, Arial, sans-serif !important;
+    font-weight: 200 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #808080 !important;
+  }
 }
