@@ -55,6 +55,7 @@ $(document).ready(function () {
   // }
 
   // tooltips
+  
 
   $('[data-toggle="tooltip"]').tooltip();
   $(".promotion__item").tooltip({
@@ -421,3 +422,16 @@ $(document).ready(function () {
     }
   };
 });
+
+
+// if ($('.typed').length > 0) {
+
+//   var typed4 = new Typed('.typed', {
+//       strings: ["bolbol axtar", 'iPhone 12', 'PÉ™rdÉ™', 'MaÅŸÄ±n tÉ™kÉ™ri', 'Xiaomi Mi9T', 'RÉ™qs dÉ™rslÉ™ri', 'vÉ™ sairÉ™...'],
+//       typeSpeed: 40,
+//       backSpeed: 20,
+//       attr: 'placeholder',
+//       bindInputFocusEvents: true,
+//       loop: true
+//   });
+// }

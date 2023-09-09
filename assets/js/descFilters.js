@@ -4129,8 +4129,8 @@ oldCar.addEventListener("click", (e) => {
 
 document.querySelector(".filter_reset_btn").addEventListener("click", () => {
   newCar.querySelector("input").checked = false;
-  allCar.querySelector("input").checked = false;
-  oldCar.querySelector("input").checked = true;
+  allCar.querySelector("input").checked = true;
+  oldCar.querySelector("input").checked = false;
   document.getElementById("speed_form").classList.remove("dnone");
   document.getElementById("box_group").classList.add("for_width20");
   document.getElementById("box_group").classList.remove("for_width_small");

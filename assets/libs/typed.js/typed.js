@@ -1042,4 +1042,16 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ })
 /******/ ])
 });
+
+if ($('.typed').length > 0) {
+
+	var typed4 = new Typed('.typed', {
+		strings: ["bolbol axtar", 'Toyota Land Cruiser', 'Mercedes G63 AMG', 'BMW 5-series', 'Land Rover Range Rover', 'Lexus LX 600', 'və sairə...'],
+		typeSpeed: 40,
+		backSpeed: 20,
+		attr: 'placeholder',
+		bindInputFocusEvents: true,
+		loop: true
+	});
+  }
 ;
