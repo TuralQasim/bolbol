@@ -4083,6 +4083,9 @@ document.querySelector(".filter_else_btn").addEventListener("click", () => {
   document
     .querySelector(".additional_chekings_hero")
     .classList.toggle("additional_chekings_hero_block");
+  document.getElementById("power_group").classList.toggle("dnone");
+  document.getElementById("place_group").classList.toggle("dnone");
+  document.getElementById("box_group").classList.toggle("dnone");
   const elseBtn = document.querySelector(".filter_else_btn");
   const p = elseBtn.querySelector("p");
   document

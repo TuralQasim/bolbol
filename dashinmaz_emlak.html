@@ -243,17 +243,11 @@
               </label>
             </div>
           </div>
-          <div class="form-group" id="emlak_city">
+          <div class="form-group"  id="emlak_city">
             <div class="dropdown">
-              <button class="dropdown__button" data-value="emkak-city">
-                Şəhər
-              </button>
+              <button class="dropdown__button" data-value="emlak_desc_city">Şəhər</button>
               <i class="fa-solid fa-angle-down drop_arrow"></i>
-              <ul class="dropdown__list">
-                <p class="items_reset_btn">
-                  Sıfırla<i class="fa-sharp fa-solid fa-xmark"></i>
-                </p>
-              </ul>
+              <div class="dropdown__list_hero"></div>
               <input
                 type="text"
                 name="select-category"
@@ -262,123 +256,50 @@
               />
             </div>
           </div>
-          <div class="emlak_search">
-            <p>Ətraflı axtarış</p>
-            <i class="fa-solid fa-angle-down" id="emlakSearchArrow"></i>
-            <div class="emlak_dropdown" style="z-index: 999 !important">
-              <div class="emlak_dropdown_hero">
-                <div class="emlak_repair_count">
-                  <div class="emlak_repair">
-                    <label for="hamisi_input">
-                      <input
-                        type="radio"
-                        id="hamisi_input"
-                        name="oooo"
-                        checked
-                      />
-                      <p>Hamısı</p>
-                    </label>
-                    <label for="temirli_input">
-                      <input type="radio" id="temirli_input" name="oooo" />
-                      <p>Təmirli</p>
-                    </label>
-                    <label for="temirsiz_input">
-                      <input type="radio" id="temirsiz_input" name="oooo" />
-                      <p>Təmirsiz</p>
-                    </label>
-                  </div>
-                  <div class="emlak_count">
-                    <p>775685 elan yerləşdirilib</p>
-                  </div>
-                </div>
-                <div class="emlak_place">
-                  <div class="emlak_place_title">Sahə, m<sup>2</sup></div>
-                  <div class="form-group emlak_place_inputs">
-                    <div class="unersal_inputs">
-                      <label for="price_input_min">
-                        <input type="text" id="price_input_min" />
-                        <p>min</p>
-                      </label>
-                      <label for="price_input_max">
-                        <input type="text" id="price_input_max" />
-                        <p>maks</p>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="emlak_floor">
-                  <div class="emlak_floor_title">Mərtəbə</div>
-                  <div class="emlak_floor_hero">
-                    <div class="emlak_floor_inputs">
-                      <div class="unersal_inputs">
-                        <label for="price_input_min">
-                          <input type="text" id="price_input_min" />
-                          <p>min</p>
-                        </label>
-                        <label for="price_input_max">
-                          <input type="text" id="price_input_max" />
-                          <p>maks</p>
-                        </label>
-                      </div>
-                    </div>
-                    <label
-                      for="emlak_floor_not_one_input1"
-                      class="emlak_floor_not_one"
-                    >
-                      <input
-                        type="checkbox"
-                        id="emlak_floor_not_one_input1"
-                        checked="false"
-                      />
-                      <p>1-ci olmasın</p>
-                    </label>
-                    <label
-                      for="emlak_floor_not_one_input2"
-                      class="emlak_floor_not_top"
-                    >
-                      <input
-                        type="checkbox"
-                        id="emlak_floor_not_one_input2"
-                        checked="false"
-                      />
-                      <p>Ən üst olmasın</p>
-                    </label>
-                    <label
-                      for="emlak_floor_not_one_input3"
-                      class="emlak_floor_only_top"
-                    >
-                      <input
-                        type="checkbox"
-                        id="emlak_floor_not_one_input3"
-                        checked="false"
-                      />
-                      <p>Yalnız ən üst</p>
-                    </label>
-                  </div>
-                </div>
-                <div class="emlak_ipoteka_cixarish">
-                  <label for="emlak_cixarish1" class="emlak_cixarish">
-                    <input type="checkbox" id="emlak_cixarish1" />
-                    <p>Çıxarış var</p>
-                  </label>
-                  <label for="emlak_ipoteka1" class="emlak_ipoteka">
-                    <input type="checkbox" id="emlak_ipoteka1" />
-                    <p>İpoteka var</p>
-                  </label>
-                </div>
-              </div>
-              <div class="emlak_dropdown_footer">
-                <div class="emlak_hide">
-                  Gizlət
-                  <i class="fa-solid fa-angle-up" id="emlakResetBtn"></i>
-                </div>
-                <div class="emlak_reset_show">
-                  <button class="emlak_reset">Sıfırla</button>
-                  <button class="emlak_show">0 elan göstər</button>
-                </div>
-              </div>
+          <div class="emlak_repair">
+            <label for="hamisi_input">
+              <input
+                type="radio"
+                id="hamisi_input"
+                name="oooo"
+                checked
+              />
+              <p>Hamısı</p>
+            </label>
+            <label for="temirli_input">
+              <input type="radio" id="temirli_input" name="oooo" />
+              <p>Təmirli</p>
+            </label>
+            <label for="temirsiz_input">
+              <input type="radio" id="temirsiz_input" name="oooo" />
+              <p>Təmirsiz</p>
+            </label>
+          </div>
+          <div class="form-group emlak_place">
+            <div class="unersal_inputs">
+              <label for="price_input_min">
+                <input type="text" id="price_input_min" />
+                <p>Sahə, m<sup>2</sup> , min</p>
+              </label>
+              <label for="price_input_max">
+                <input type="text" id="price_input_max" />
+                <p>maks</p>
+              </label>
             </div>
           </div>
+          <div class="form-group emlak_floor">
+            <div class="unersal_inputs">
+              <label for="price_input_min">
+                <input type="text" id="price_input_min" />
+                <p>Mərtəbə, min</p>
+              </label>
+              <label for="price_input_max">
+                <input type="text" id="price_input_max" />
+                <p>maks</p>
+              </label>
+            </div>
+          </div>
+          <div class="additional_chekings_emlak"></div>
           <button class="emlak_view_btn">Tətbiq et</button>
         </div>
         <div class="emlak_mobi">
