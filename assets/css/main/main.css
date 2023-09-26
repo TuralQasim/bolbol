@@ -9654,7 +9654,7 @@ form
   align-items: center;
   background-color: #ffff;
   border: 1px solid #ccc;
-  z-index: 999;
+  z-index: 999 !important;
   height: max-content;
   transform: translateY(50%) !important;
   visibility: hidden !important;
@@ -9672,7 +9672,7 @@ form
   align-items: center;
   background-color: #ffff;
   border: 1px solid #ccc;
-  z-index: 999;
+  z-index: 999 !important;
   height: max-content;
   transform: translateY(0) !important;
   visibility: visible !important;
@@ -9680,7 +9680,7 @@ form
   transition: 0.4s;
 }
 .emlak_room_dropdown {
-  z-index: 999;
+  z-index: 999 !important;
 }
 #emlakMobiRoom {
   background-color: transparent;

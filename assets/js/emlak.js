@@ -974,7 +974,6 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
       }
     });
 
-
     // Клик снаружи дропдауна. Закрыть дропдаун
     document.addEventListener("click", function (e) {
       if (e.target !== dropDownBtn) {
@@ -1011,6 +1010,12 @@ document
         if (e.target !== input && input.value == "") {
           p.classList.remove("active_p");
         }
+        document
+          .querySelector(".emlakMobiSearchDropdown_reset")
+          .addEventListener("click", () => {
+            p.classList.remove("active_p");
+            input.value = "";
+          });
       });
     });
   });
@@ -1030,6 +1035,11 @@ document
 
 const alqiSatqi = document.getElementById("emlak_mobi_alqi_input_mean");
 const kiraye = document.getElementById("emlak_mobi_kiraye_input_mean");
+alqiSatqi.checked = true;
+document.querySelector(".month").classList.add("dnone");
+document
+  .querySelector(".emlak_ipoteka_cixarish_mobi")
+  .classList.remove("dnone");
 document.querySelector(".floor_check").classList.remove("dnone");
 document.querySelector(".floor_floor").classList.remove("dnone");
 document.querySelector(".sand_place").classList.add("dnone");
@@ -1046,12 +1056,8 @@ alqiSatqi.addEventListener("change", () => {
   }
 });
 kiraye.addEventListener("change", () => {
-  if (kiraye.checked) {
-    document.querySelector(".month").classList.remove("dnone");
-    document
-      .querySelector(".emlak_ipoteka_cixarish_mobi")
-      .classList.add("dnone");
-  }
+  document.querySelector(".month").classList.remove("dnone");
+  document.querySelector(".emlak_ipoteka_cixarish_mobi").classList.add("dnone");
 });
 
 const checksHome = document.getElementById("checks_home");
@@ -1156,7 +1162,7 @@ checksOffice.addEventListener("change", () => {
       .querySelector(".emlak_ipoteka_cixarish_mobi")
       .classList.remove("dnone");
   }
-  if (document.getElementById("emlak_ipoteka_cixarish_mobi").checked) {
+  if (document.querySelector(".emlak_ipoteka_cixarish_mobi").checked) {
     document.querySelector(".month").classList.remove("dnone");
     document
       .querySelector(".emlak_ipoteka_cixarish_mobi")
@@ -1245,3 +1251,74 @@ additional.map((a, i) => {
   div.append(label);
   additionalChekings.append(div);
 });
+
+const emlakResetBtn = document.querySelector(".emlakMobiSearchDropdown_reset");
+
+emlakResetBtn.addEventListener("click", () => {
+  const alqiSatqi = document.getElementById("emlak_mobi_alqi_input_mean");
+  const kiraye = document.getElementById("emlak_mobi_kiraye_input_mean");
+  alqiSatqi.checked = true;
+  kiraye.checked = false;
+  document.querySelector(".month").classList.add("dnone");
+  document
+    .querySelector(".emlak_ipoteka_cixarish_mobi")
+    .classList.remove("dnone");
+
+  const checksHome = document.getElementById("checks_home");
+  const checksNewHome = document.getElementById("checks_Newhome");
+  const checksOldHome = document.getElementById("checks_Oldhome");
+  const checksGarden = document.getElementById("checks_garden");
+  const checksOffice = document.getElementById("checks_ofise");
+  const checksQarage = document.getElementById("checks_qaraje");
+  const checksLand = document.getElementById("checks_land");
+  const checksObject = document.getElementById("checks_object");
+  checksHome.checked = true;
+  checksNewHome.checked = false;
+  checksOldHome.checked = false;
+  checksGarden.checked = false;
+  checksOffice.checked = false;
+  checksQarage.checked = false;
+  checksLand.checked = false;
+  checksObject.checked = false;
+  document.querySelector(".sand_place").classList.add("dnone");
+  document.querySelector(".emlak_biznes").classList.add("dnone");
+  document.querySelector(".floor_check").classList.remove("dnone");
+  document.querySelector(".floor_all").classList.remove("dnone");
+  document.querySelector(".sand_metr").classList.remove("dnone");
+  document.querySelector(".floor_floor").classList.remove("dnone");
+  if (document.getElementById("emlak_mobi_alqi_input_mean").checked) {
+    document.querySelector(".month").classList.add("dnone");
+    document
+      .querySelector(".emlak_ipoteka_cixarish_mobi")
+      .classList.remove("dnone");
+  }
+  if (document.querySelector(".emlak_ipoteka_cixarish_mobi").checked) {
+    document.querySelector(".month").classList.remove("dnone");
+    document
+      .querySelector(".emlak_ipoteka_cixarish_mobi")
+      .classList.add("dnone");
+  }
+  document.getElementById("checks_1").checked = false;
+  document.getElementById("checks_2").checked = false;
+  document.getElementById("checks_3").checked = false;
+  document.getElementById("checks_4").checked = false;
+  document.getElementById("checks_5").checked = false;
+  document.getElementById("emlak_cixarish3").checked = false;
+  document.getElementById("emlak_ipoteka4").checked = false;
+  document.getElementById("emlak_cixarish5").checked = false;
+  document.getElementById("emlak_ipoteka5").checked = false;
+  const emlakFloorNotOneInput1 = document.querySelector(
+    "#emlak_floor_not_one_input1"
+  );
+  const emlakFloorNotOneInput2 = document.querySelector(
+    "#emlak_floor_not_one_input2"
+  );
+  const emlakFloorNotOneInput3 = document.querySelector(
+    "#emlak_floor_not_one_input3"
+  );
+  emlakFloorNotOneInput1.checked = false;
+  emlakFloorNotOneInput2.checked = false;
+  emlakFloorNotOneInput3.checked = false;
+});
+document.getElementById("emlak_mobi_alqi_input").checked = true;
+document.getElementById("emlak_mobi_kiraye_input").checked = false;
