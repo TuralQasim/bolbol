@@ -5202,6 +5202,11 @@ form .invalid-feedback {
   text-overflow: ellipsis;
   -webkit-line-clamp: 2;
 }
+@media screen and (max-width: 400px){
+  .other_post_title {
+  font-size: 1.4rem;
+  }
+}
 .post__title2 {
   display: block;
   height: 17px;
@@ -9934,6 +9939,7 @@ form
   justify-content: center;
   align-items: center;
   background-color: #ffffff;
+  color: #808080;
 }
 .emlak_repair label input:checked + p {
   background-color: #014c52;
@@ -10662,6 +10668,13 @@ form
   font-size: 18px !important;
   width: 100% !important;
   font-family: Arimo-Regular, Helvetica, Arial, sans-serif !important;
+}
+.emlak_title{
+  font-size: 18px !important;
+  width: 100% !important;
+  font-family: Arimo-Regular, Helvetica, Arial, sans-serif !important;
+  margin-bottom: 20px !important;
+  margin-top: 0 !important;
 }
 .input_label_padding {
   padding-left: 5px !important;

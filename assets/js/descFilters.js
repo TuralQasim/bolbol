@@ -4079,14 +4079,77 @@ document
     });
   });
 
+const newCar = document.querySelector(".new_car");
+const allCar = document.querySelector(".all_car");
+const oldCar = document.querySelector(".old_car");
+newCar.addEventListener("click", (e) => {
+  const elseBtn = document.querySelector(".desc_filters_btns");
+  const value = elseBtn.classList.value;
+  const incl = value.includes("desc_filters_btns_show");
+  if (e.target.checked && !incl) {
+    document.getElementById("speed_form").classList.add("dnone");
+    document.getElementById("box_group").classList.remove("dnone");
+    document.getElementById("box_group").classList.remove("for_width20");
+    document.getElementById("box_group").classList.add("for_width_small");
+    document.getElementById("power_group").classList.remove("for_width_big");
+    document.getElementById("power_group").classList.add("for_width20");
+  } else if (e.target.checked && incl) {
+    document.getElementById("speed_form").classList.add("dnone");
+    document.getElementById("box_group").classList.remove("dnone");
+    document.getElementById("box_group").classList.remove("for_width20");
+    document.getElementById("box_group").classList.add("for_width_small");
+    document.getElementById("power_group").classList.remove("for_width_big");
+    document.getElementById("power_group").classList.add("for_width20");
+  }
+});
+allCar.addEventListener("click", (e) => {
+  const elseBtn = document.querySelector(".desc_filters_btns");
+  const value = elseBtn.classList.value;
+  const incl = value.includes("desc_filters_btns_show");
+  if (e.target.checked && !incl) {
+    document.getElementById("speed_form").classList.remove("dnone");
+    document.getElementById("box_group").classList.add("for_width20");
+    document.getElementById("box_group").classList.add("dnone");
+    document.getElementById("box_group").classList.remove("for_width_small");
+    document.getElementById("power_group").classList.remove("for_width20");
+    document.getElementById("power_group").classList.add("for_width_big");
+  }
+  if (e.target.checked && incl) {
+    document.getElementById("speed_form").classList.remove("dnone");
+    document.getElementById("box_group").classList.add("for_width20");
+    document.getElementById("box_group").classList.remove("dnone");
+    document.getElementById("box_group").classList.remove("for_width_small");
+    document.getElementById("power_group").classList.remove("for_width20");
+    document.getElementById("power_group").classList.add("for_width_big");
+  }
+});
+oldCar.addEventListener("click", (e) => {
+  const elseBtn = document.querySelector(".desc_filters_btns");
+  const value = elseBtn.classList.value;
+  const incl = value.includes("desc_filters_btns_show");
+  if (e.target.checked && !incl) {
+    document.getElementById("speed_form").classList.remove("dnone");
+    document.getElementById("box_group").classList.add("for_width20");
+    document.getElementById("box_group").classList.add("dnone");
+    document.getElementById("box_group").classList.remove("for_width_small");
+    document.getElementById("power_group").classList.remove("for_width20");
+    document.getElementById("power_group").classList.add("for_width_big");
+  }
+  if (e.target.checked && incl) {
+    document.getElementById("speed_form").classList.remove("dnone");
+    document.getElementById("box_group").classList.add("for_width20");
+    document.getElementById("box_group").classList.remove("dnone");
+    document.getElementById("box_group").classList.remove("for_width_small");
+    document.getElementById("power_group").classList.remove("for_width20");
+    document.getElementById("power_group").classList.add("for_width_big");
+  }
+});
+
 document.querySelector(".filter_else_btn").addEventListener("click", () => {
   document
     .querySelector(".additional_chekings_hero")
     .classList.toggle("additional_chekings_hero_block");
-  document.getElementById("power_group").classList.toggle("dnone");
-  document.getElementById("place_group").classList.toggle("dnone");
-  document.getElementById("box_group").classList.toggle("dnone");
-  const elseBtn = document.querySelector(".filter_else_btn");
+  const elseBtn = document.querySelector(".desc_filters_btns");
   const p = elseBtn.querySelector("p");
   document
     .querySelector(".desc_filters_btns")
@@ -4097,36 +4160,25 @@ document.querySelector(".filter_else_btn").addEventListener("click", () => {
     p.textContent = "Gizlət";
   }
   elseBtn.querySelector("i").classList.toggle("rotate");
-});
-
-const newCar = document.querySelector(".new_car");
-const allCar = document.querySelector(".all_car");
-const oldCar = document.querySelector(".old_car");
-newCar.addEventListener("click", (e) => {
-  if (e.target.checked) {
-    document.getElementById("speed_form").classList.add("dnone");
-    document.getElementById("box_group").classList.remove("for_width20");
-    document.getElementById("box_group").classList.add("for_width_small");
-    document.getElementById("power_group").classList.remove("for_width_big");
-    document.getElementById("power_group").classList.add("for_width20");
-  }
-});
-allCar.addEventListener("click", (e) => {
-  if (e.target.checked) {
-    document.getElementById("speed_form").classList.remove("dnone");
-    document.getElementById("box_group").classList.add("for_width20");
-    document.getElementById("box_group").classList.remove("for_width_small");
-    document.getElementById("power_group").classList.remove("for_width20");
-    document.getElementById("power_group").classList.add("for_width_big");
-  }
-});
-oldCar.addEventListener("click", (e) => {
-  if (e.target.checked) {
-    document.getElementById("speed_form").classList.remove("dnone");
-    document.getElementById("box_group").classList.add("for_width20");
-    document.getElementById("box_group").classList.remove("for_width_small");
-    document.getElementById("power_group").classList.remove("for_width20");
-    document.getElementById("power_group").classList.add("for_width_big");
+  const value = elseBtn.classList.value;
+  const incl = value.includes("desc_filters_btns_show");
+  const newCar = document.querySelector(".new_car").querySelector("input");
+  if (incl && newCar.checked == false) {
+    document.getElementById("power_group").classList.remove("dnone");
+    document.getElementById("place_group").classList.remove("dnone");
+    document.getElementById("box_group").classList.remove("dnone");
+  } else if (!incl && newCar.checked == true) {
+    document.getElementById("power_group").classList.add("dnone");
+    document.getElementById("place_group").classList.add("dnone");
+    document.getElementById("box_group").classList.remove("dnone");
+  } else if (incl && newCar.checked == true) {
+    document.getElementById("power_group").classList.remove("dnone");
+    document.getElementById("place_group").classList.remove("dnone");
+    document.getElementById("box_group").classList.remove("dnone");
+  } else {
+    document.getElementById("power_group").classList.add("dnone");
+    document.getElementById("place_group").classList.add("dnone");
+    document.getElementById("box_group").classList.add("dnone");
   }
 });
 
