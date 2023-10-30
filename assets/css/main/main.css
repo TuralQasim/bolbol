@@ -5202,9 +5202,9 @@ form .invalid-feedback {
   text-overflow: ellipsis;
   -webkit-line-clamp: 2;
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 400px) {
   .other_post_title {
-  font-size: 1.4rem;
+    font-size: 1.4rem;
   }
 }
 .post__title2 {
@@ -8838,11 +8838,14 @@ form .form-color {
 }
 .customFilter__checkbox .form-check {
   background-color: #ffffff;
+  border-radius: 7px !important;
 }
 .customFilter__checkbox .form-check label {
+  border-radius: 7px !important;
   background-color: #ffffff;
 }
 .customFilter__checkbox .form-check input {
+  border-radius: 7px !important;
   background-color: #ffffff;
 }
 form .form-btn {
@@ -9570,7 +9573,7 @@ form
   flex-wrap: wrap;
   gap: 20px;
   margin-bottom: 20px;
-  gap: 14px;
+  gap: 13px;
   padding: 0 80px 0px;
 }
 #emlakBuy,
@@ -9589,7 +9592,7 @@ form
   background-color: #ffff;
 }
 #emlakBuy,
-#emlakHouse{
+#emlakHouse {
   border: none !important;
 }
 .emlak_mobi #emlakRoom {
@@ -9617,6 +9620,7 @@ form
   width: 17%;
   margin-left: auto !important;
   margin-right: 3.3%;
+  margin-top: 7px;
 }
 #emlakBuy i,
 #emlakHouse i,
@@ -10669,11 +10673,11 @@ form
   width: 100% !important;
   font-family: Arimo-Regular, Helvetica, Arial, sans-serif !important;
 }
-.emlak_title{
+.emlak_title {
   font-size: 18px !important;
   width: 100% !important;
   font-family: Arimo-Regular, Helvetica, Arial, sans-serif !important;
-  margin-bottom: 20px !important;
+  margin-bottom: 15px !important;
   margin-top: 0 !important;
 }
 .input_label_padding {
@@ -10853,7 +10857,7 @@ Select c dropdown на JS
   align-items: center;
   width: 100%;
   border-bottom: none;
-  padding: 8px 15px 8px 20px !important;
+  padding: 8px 15px 8px 10px !important;
   color: #014c52 !important;
   font-family: Arimo-Bold, Helvetica, Arial, sans-serif !important;
 }
@@ -11287,7 +11291,8 @@ transform: translateY(calc(-50% - 2px)); */
   display: none;
   transition: 0.4s !important;
 }
-.additional_chekings, .additional_chekings_emlak {
+.additional_chekings,
+.additional_chekings_emlak {
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -11303,7 +11308,7 @@ transform: translateY(calc(-50% - 2px)); */
   position: relative;
   cursor: pointer;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 7px;
   cursor: pointer;
   width: max-content;
   height: max-content;
@@ -11323,7 +11328,7 @@ transform: translateY(calc(-50% - 2px)); */
   height: 100%;
   border: 1px solid #cccccc;
   padding: 10px 20px;
-  border-radius: 20px;
+  border-radius: 7px;
   background-color: #ffffff;
   color: #808080;
   pointer-events: none;
@@ -11331,7 +11336,7 @@ transform: translateY(calc(-50% - 2px)); */
   margin-bottom: 0 !important;
   cursor: pointer;
 }
-.additional_chekings_emlak .additional_chekings_item label{
+.additional_chekings_emlak .additional_chekings_item label {
   padding: 10px 30px;
 }
 .additional_chekings_item input:checked + label {
@@ -11564,28 +11569,30 @@ transform: translateY(calc(-50% - 2px)); */
   width: 100%;
 }
 
-@media screen and (max-width: 1024px){
-  #emlak_city{
+@media screen and (max-width: 1024px) {
+  #emlak_city {
     width: 32% !important;
   }
-  .emlak_repair, .emlak_floor{
+  .emlak_repair,
+  .emlak_floor {
     width: 50% !important;
   }
 }
-@media screen and (max-width: 890px){
+@media screen and (max-width: 890px) {
   .emlak_price {
     width: 27% !important;
   }
-  #emlak_city{
+  #emlak_city {
     width: 30% !important;
   }
-  .emlak_repair, .emlak_floor{
+  .emlak_repair,
+  .emlak_floor {
     width: 40% !important;
   }
-  .emlak_repair{
+  .emlak_repair {
     width: 37% !important;
   }
-  #emlakBuy{
+  #emlakBuy {
     width: 22% !important;
   }
   #emlakHouse {
@@ -11594,7 +11601,16 @@ transform: translateY(calc(-50% - 2px)); */
   #emlakRoom {
     width: 32% !important;
   }
-  .additional_chekings_emlak .additional_chekings_item label{
+  .additional_chekings_emlak .additional_chekings_item label {
     padding: 10px 20px !important;
   }
+}
+.desctop_filters .items_reset_btn {
+  padding-left: 20px !important;
+}
+.emlak_filter .items_reset_btn {
+  padding-left: 10px !important;
+}
+.emlak_filter .dropdown__list_hero .items_reset_btn {
+  padding-left: 20px !important;
 }

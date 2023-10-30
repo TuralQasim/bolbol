@@ -2507,17 +2507,22 @@ let color = "";
 // ---------------------------------------------
 
 litrList2.addEventListener("click", (e) => {
-  litr2 = e.target.textContent;
-  checkedLitr2.textContent = litr2;
-  litrLabel2.style.transform = "translateY(5px)";
-  litrLabel2.style.fontSize = "12px";
-  setTimeout(() => {
-    litrModal2.style.opacity = "0";
-    litrModal2.style.visibility = "hidden";
-  }, 300);
-  litrDropdown2.style.transform = "translateY(100vh)";
-  document.getElementById("mob_litr2_reset_xmark").style.display = "block";
-  document.getElementById("mob_litr2_arrow_down").style.display = "none";
+  const listLi2 = e.target.getAttribute("data-value");
+  if (listLi2 != "listLi2") {
+    return;
+  } else {
+    litr2 = e.target.textContent;
+    checkedLitr2.textContent = litr2;
+    litrLabel2.style.transform = "translateY(5px)";
+    litrLabel2.style.fontSize = "12px";
+    setTimeout(() => {
+      litrModal2.style.opacity = "0";
+      litrModal2.style.visibility = "hidden";
+    }, 300);
+    litrDropdown2.style.transform = "translateY(100vh)";
+    document.getElementById("mob_litr2_reset_xmark").style.display = "block";
+    document.getElementById("mob_litr2_arrow_down").style.display = "none";
+  }
 });
 if (checkedLitr2.textContent) {
   document.getElementById("mob_litr2_reset_xmark").style.display = "block";
@@ -2547,6 +2552,7 @@ litrSelect2.addEventListener("click", () => {
   litrArr.map((a) => {
     const li = document.createElement("li");
     li.textContent = a;
+    li.setAttribute("data-value", "listLi2");
     litrList2.append(li);
   });
 });
@@ -2571,17 +2577,22 @@ litrDropdown2.addEventListener("click", (e) => {
 // ---------------------------------------------
 
 litrList1.addEventListener("click", (e) => {
-  litr1 = e.target.textContent;
-  checkedLitr1.textContent = litr1;
-  litrLabel1.style.transform = "translateY(5px)";
-  litrLabel1.style.fontSize = "12px";
-  setTimeout(() => {
-    litrModal1.style.opacity = "0";
-    litrModal1.style.visibility = "hidden";
-  }, 300);
-  litrDropdown1.style.transform = "translateY(100vh)";
-  document.getElementById("mob_litr1_reset_xmark").style.display = "block";
-  document.getElementById("mob_litr1_arrow_down").style.display = "none";
+  const litrLi1 = e.target.getAttribute("data-value");
+  if (litrLi1 != "litrLi1") {
+    return;
+  } else {
+    litr1 = e.target.textContent;
+    checkedLitr1.textContent = litr1;
+    litrLabel1.style.transform = "translateY(5px)";
+    litrLabel1.style.fontSize = "12px";
+    setTimeout(() => {
+      litrModal1.style.opacity = "0";
+      litrModal1.style.visibility = "hidden";
+    }, 300);
+    litrDropdown1.style.transform = "translateY(100vh)";
+    document.getElementById("mob_litr1_reset_xmark").style.display = "block";
+    document.getElementById("mob_litr1_arrow_down").style.display = "none";
+  }
 });
 if (checkedLitr1.textContent) {
   document.getElementById("mob_litr1_reset_xmark").style.display = "block";
@@ -2610,6 +2621,7 @@ litrSelect1.addEventListener("click", () => {
   litrArr.map((a) => {
     const li = document.createElement("li");
     li.textContent = a;
+    li.setAttribute("data-value", "litrLi1");
     litrList1.append(li);
   });
 });
@@ -2634,17 +2646,22 @@ litrDropdown1.addEventListener("click", (e) => {
 // ----------------------------------
 
 yearList2.addEventListener("click", (e) => {
-  year2 = e.target.textContent;
-  checkedYear2.textContent = year2;
-  yearLabel2.style.transform = "translateY(5px)";
-  yearLabel2.style.fontSize = "12px";
-  setTimeout(() => {
-    yearModal2.style.opacity = "0";
-    yearModal2.style.visibility = "hidden";
-  }, 300);
-  yearDropdown2.style.transform = "translateY(100vh)";
-  document.getElementById("mob_year2_reset_xmark").style.display = "block";
-  document.getElementById("mob_year2_arrow_down").style.display = "none";
+  const yearLi2 = e.target.getAttribute("data-value");
+  if (yearLi2 != "yearLi2") {
+    return;
+  } else {
+    year2 = e.target.textContent;
+    checkedYear2.textContent = year2;
+    yearLabel2.style.transform = "translateY(5px)";
+    yearLabel2.style.fontSize = "12px";
+    setTimeout(() => {
+      yearModal2.style.opacity = "0";
+      yearModal2.style.visibility = "hidden";
+    }, 300);
+    yearDropdown2.style.transform = "translateY(100vh)";
+    document.getElementById("mob_year2_reset_xmark").style.display = "block";
+    document.getElementById("mob_year2_arrow_down").style.display = "none";
+  }
 });
 if (checkedYear2.textContent) {
   document.getElementById("mob_year2_reset_xmark").style.display = "block";
@@ -2673,6 +2690,7 @@ yearSelect2.addEventListener("click", () => {
   yearArr.map((a) => {
     const li = document.createElement("li");
     li.textContent = a;
+    li.setAttribute("data-value", "yearLi2");
     yearList2.append(li);
   });
 });
@@ -2697,17 +2715,22 @@ yearDropdown2.addEventListener("click", (e) => {
 // ---------------------------------
 
 yearList1.addEventListener("click", (e) => {
-  year1 = e.target.textContent;
-  checkedYear1.textContent = year1;
-  yearLabel1.style.transform = "translateY(5px)";
-  yearLabel1.style.fontSize = "12px";
-  setTimeout(() => {
-    yearModal1.style.opacity = "0";
-    yearModal1.style.visibility = "hidden";
-  }, 300);
-  yearDropdown1.style.transform = "translateY(100vh)";
-  document.getElementById("mob_year1_reset_xmark").style.display = "block";
-  document.getElementById("mob_year1_arrow_down").style.display = "none";
+  const yearLi1 = e.target.getAttribute("data-value");
+  if (yearLi1 != "yearLi1") {
+    return;
+  } else {
+    year1 = e.target.textContent;
+    checkedYear1.textContent = year1;
+    yearLabel1.style.transform = "translateY(5px)";
+    yearLabel1.style.fontSize = "12px";
+    setTimeout(() => {
+      yearModal1.style.opacity = "0";
+      yearModal1.style.visibility = "hidden";
+    }, 300);
+    yearDropdown1.style.transform = "translateY(100vh)";
+    document.getElementById("mob_year1_reset_xmark").style.display = "block";
+    document.getElementById("mob_year1_arrow_down").style.display = "none";
+  }
 });
 if (checkedYear1.textContent) {
   document.getElementById("mob_year1_reset_xmark").style.display = "block";
@@ -2736,6 +2759,7 @@ yearSelect1.addEventListener("click", () => {
   yearArr.map((a) => {
     const li = document.createElement("li");
     li.textContent = a;
+    li.setAttribute("data-value", "yearLi1");
     yearList1.append(li);
   });
 });
@@ -2784,17 +2808,22 @@ banCloseBtn.addEventListener("click", () => {
   banDropdown.style.transform = "translateY(100vh)";
 });
 banList.addEventListener("click", (e) => {
-  ban = e.target.textContent;
-  checkedBan.textContent = ban;
-  setTimeout(() => {
-    banModal.style.opacity = "0";
-    banModal.style.visibility = "hidden";
-  }, 300);
-  banDropdown.style.transform = "translateY(100vh)";
-  banLabel.style.transform = "translateY(5px)";
-  banLabel.style.fontSize = "12px";
-  document.getElementById("mob_ban_reset_xmark").style.display = "block";
-  document.getElementById("mob_ban_arrow_down").style.display = "none";
+  const banLi = e.target.getAttribute("data-value");
+  if (banLi != "banLi") {
+    return;
+  } else {
+    ban = e.target.textContent;
+    checkedBan.textContent = ban;
+    setTimeout(() => {
+      banModal.style.opacity = "0";
+      banModal.style.visibility = "hidden";
+    }, 300);
+    banDropdown.style.transform = "translateY(100vh)";
+    banLabel.style.transform = "translateY(5px)";
+    banLabel.style.fontSize = "12px";
+    document.getElementById("mob_ban_reset_xmark").style.display = "block";
+    document.getElementById("mob_ban_arrow_down").style.display = "none";
+  }
 });
 if (checkedBan.textContent) {
   document.getElementById("mob_ban_reset_xmark").style.display = "block";
@@ -2816,6 +2845,7 @@ document
 banArr.map((a) => {
   const li = document.createElement("li");
   li.textContent = a;
+  li.setAttribute("data-value", "banLi");
   banList.append(li);
 });
 
@@ -2846,17 +2876,22 @@ colorCloseBtn.addEventListener("click", () => {
   colorDropdown.style.transform = "translateY(100vh)";
 });
 colorList.addEventListener("click", (e) => {
-  color = e.target.textContent;
-  checkedColor.textContent = color;
-  setTimeout(() => {
-    colorModal.style.opacity = "0";
-    colorModal.style.visibility = "hidden";
-  }, 300);
-  colorDropdown.style.transform = "translateY(100vh)";
-  colorLabel.style.transform = "translateY(5px)";
-  colorLabel.style.fontSize = "12px";
-  document.getElementById("mob_color_reset_xmark").style.display = "block";
-  document.getElementById("mob_color_arrow_down").style.display = "none";
+  const colorLi = e.target.getAttribute("data-value");
+  if (colorLi != "colorLi") {
+    return;
+  } else {
+    color = e.target.textContent;
+    checkedColor.textContent = color;
+    setTimeout(() => {
+      colorModal.style.opacity = "0";
+      colorModal.style.visibility = "hidden";
+    }, 300);
+    colorDropdown.style.transform = "translateY(100vh)";
+    colorLabel.style.transform = "translateY(5px)";
+    colorLabel.style.fontSize = "12px";
+    document.getElementById("mob_color_reset_xmark").style.display = "block";
+    document.getElementById("mob_color_arrow_down").style.display = "none";
+  }
 });
 if (checkedColor.textContent) {
   document.getElementById("mob_color_reset_xmark").style.display = "block";
@@ -2878,6 +2913,7 @@ document
 colorArr.map((a) => {
   const li = document.createElement("li");
   li.textContent = a;
+  li.setAttribute("data-value", "colorLi");
   colorList.append(li);
 });
 
@@ -2887,9 +2923,10 @@ citySelect.addEventListener("click", () => {
   cityDropdown.style.transform = "translateY(0)";
   citySearch.value = "";
   cityList.textContent = "";
-  citiesArr.map((a) => {
+  citiesArr.map((a, i) => {
     const li = document.createElement("li");
     li.textContent = a;
+    li.setAttribute("data-value", "cityLi");
     cityList.append(li);
   });
 });
@@ -2897,13 +2934,18 @@ cityCloseBtn.addEventListener("click", () => {
   cityDropdown.style.transform = "translateY(100vh)";
 });
 cityList.addEventListener("click", (e) => {
-  city = e.target.innerText;
-  cityDropdown.style.transform = "translateY(100vh)";
-  checkedCity.textContent = city;
-  cityLabel.style.transform = "translateY(5px)";
-  cityLabel.style.fontSize = "12px";
-  document.getElementById("mob_city_arrow_down").style.display = "none";
-  document.getElementById("mob_city_reset_xmark").style.display = "block";
+  const cityLi = e.target.getAttribute("data-value");
+  if (cityLi != "cityLi") {
+    return;
+  } else {
+    city = e.target.innerText;
+    cityDropdown.style.transform = "translateY(100vh)";
+    checkedCity.textContent = city;
+    cityLabel.style.transform = "translateY(5px)";
+    cityLabel.style.fontSize = "12px";
+    document.getElementById("mob_city_arrow_down").style.display = "none";
+    document.getElementById("mob_city_reset_xmark").style.display = "block";
+  }
 });
 if (checkedCity.textContent) {
   document.getElementById("mob_city_arrow_down").style.display = "none";
