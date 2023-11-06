@@ -887,8 +887,8 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
           if (dropDownBtn.innerText.length > 20) {
             dropDownBtn.innerText = dropDownBtn.innerText.slice(0, 20) + "...";
           }
-          document
-            .querySelector(".filter_reset_btn")
+          dropDownListHero
+            .querySelector(".items_reset_btn")
             .addEventListener("click", () => {
               dropDownBtn.innerText = "Şəhər";
               name = [];
@@ -1322,3 +1322,41 @@ emlakResetBtn.addEventListener("click", () => {
 });
 document.getElementById("emlak_mobi_alqi_input").checked = true;
 document.getElementById("emlak_mobi_kiraye_input").checked = false;
+
+const emlakAllResetBtn = document.getElementById("emlak_all_reset_btn");
+
+emlakAllResetBtn.addEventListener("click", () => {
+  const additionalCheckings = document.querySelectorAll(
+    ".additional_chekings_emlak div"
+  );
+  additionalCheckings.forEach((item) => {
+    item.querySelector("input").checked = false;
+  });
+  document.getElementById("emlakBuy").querySelector("button").textContent =
+    "Alış";
+  document.getElementById("emlakHouse").querySelector("button").textContent =
+    "Yeni tikili";
+  document.getElementById("checkedEmlakRoom").textContent = "Otaq sayı";
+  document
+    .getElementById("emlakRoom")
+    .querySelectorAll("input")
+    .forEach((input) => {
+      input.checked = false;
+    });
+  document
+    .querySelectorAll(".unersal_inputs")
+    .forEach(function (universalInputs) {
+      const labels = universalInputs.querySelectorAll("label");
+      labels.forEach((label) => {
+        const input = label.querySelector("input");
+        const p = label.querySelector("p");
+        p.classList.remove("active_p");
+        input.value = "";
+      });
+    });
+  document.getElementById("hamisi_input").checked = true;
+  document.getElementById("temirli_input").checked = false;
+  document.getElementById("temirsiz_input").checked = false;
+  document.getElementById("emlak_city").querySelector("button").textContent =
+    "Şəhər";
+});

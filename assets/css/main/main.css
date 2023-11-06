@@ -9616,11 +9616,19 @@ form
   width: 21%;
   height: 45px;
 }
-.emlak_view_btn {
-  width: 17%;
-  margin-left: auto !important;
-  margin-right: 3.3%;
-  margin-top: 7px;
+.emlak_view_btns {
+  width: 97.5%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 14px;
+}
+.emlak_view_btns button {
+  padding: 8px 14px;
+  border: none;
+  background-color: #014c52;
+  color: #fff;
+  border-radius: 7px;
 }
 #emlakBuy i,
 #emlakHouse i,
@@ -10119,6 +10127,9 @@ form
 }
 
 @media screen and (max-width: 1200px) {
+  .emlak_view_btns {
+    width: 98.5%;
+  }
   .emlak_filter {
     display: flex;
     flex-wrap: wrap;
@@ -10132,6 +10143,9 @@ form
   }
 }
 @media screen and (max-width: 1024px) {
+  .emlak_view_btns {
+    width: 99%;
+  }
   .emlak_filter {
     display: flex;
     flex-wrap: wrap;
@@ -11613,4 +11627,58 @@ transform: translateY(calc(-50% - 2px)); */
 }
 .emlak_filter .dropdown__list_hero .items_reset_btn {
   padding-left: 20px !important;
+}
+.kategoriya_filters {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.kategoriya_filters .form-group {
+  margin-bottom: 0;
+}
+.cat_width {
+  width: 14%;
+}
+.cat_input_width {
+  width: 20%;
+}
+.cat_input_width .unersal_inputs {
+  width: 100%;
+}
+.kategoriya_filters > button {
+  height: 45px;
+  border: none;
+  outline: none;
+  margin-left: auto;
+  background-color: #014c52;
+  color: #fff;
+  border-radius: 7px;
+  padding: 0 25px;
+}
+.categoties{
+  width: 100%;
+  border-radius: 7px;
+  background-color: #fff;
+  padding:20px 14px ;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.category_item{
+  display:flex;
+  justify-content:flex-start;
+  align-items:flex-start;
+  gap: 5px;
+}
+.category_item a{
+  font-size: 16px;
+  width: max-content;
+  color: #014c52;
+}
+.category_item span{
+  font-size: 14px;
+  color: #999999;
 }
