@@ -72,14 +72,7 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
     "Zaqatala",
     "Zərdab",
   ];
-  const typesArr = [
-    "nibnhubh",
-    "bfdbdf",
-    "bdfbd",
-    "fsdt",
-    "tsdhtht",
-    "htjuju",
-  ]
+  const typesArr = ["nibnhubh", "bfdbdf", "bdfbd", "fsdt", "tsdhtht", "htjuju"];
   const dropDownBtn = dropDownWrapper.querySelector(".dropdown__button");
   const type = dropDownBtn.dataset.value;
   if (type == "city") {
@@ -509,3 +502,22 @@ document
       });
     });
   });
+
+function disableScroll() {
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+  window.onscroll = function () {
+    window.scrollTo(scrollLeft, scrollTop);
+  };
+}
+function enableScroll() {
+  window.onscroll = null;
+}
+document.querySelector(".kat_btn_767").addEventListener("click", () => {
+  document.querySelector(".kat_burger").classList.add("kat_burger_visible");
+  disableScroll();
+});
+document.getElementById("kat_return_btn").addEventListener("click", () => {
+  document.querySelector(".kat_burger").classList.remove("kat_burger_visible");
+  enableScroll();
+});
