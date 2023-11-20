@@ -956,7 +956,7 @@ document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
       dropDownList.innerText = "";
       dropDownListItems.forEach(function (listItem) {
         const newItem = listItem.textContent.toLowerCase();
-        if (newItem.includes(value.toLowerCase())) {
+        if (newItem.startsWith(value.toLowerCase())) {
           newList.push(listItem);
         }
       });

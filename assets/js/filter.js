@@ -2971,7 +2971,7 @@ citySearch.addEventListener("input", (e) => {
   const newCities = citiesArr.filter((a) => {
     const t = a.toLowerCase();
     const b = searchValue.toLowerCase();
-    return t.includes(b);
+    return t.startsWith(b);
   });
   if (newCities.length) {
     cityList.textContent = "";
