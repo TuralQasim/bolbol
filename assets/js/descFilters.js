@@ -4188,9 +4188,11 @@ document.querySelector(".filter_reset_btn").addEventListener("click", () => {
   oldCar.querySelector("input").checked = false;
   document.getElementById("speed_form").classList.remove("dnone");
   document.getElementById("box_group").classList.add("for_width20");
+  document.getElementById("box_group").classList.add("dnone");
   document.getElementById("box_group").classList.remove("for_width_small");
   document.getElementById("power_group").classList.remove("for_width20");
   document.getElementById("power_group").classList.add("for_width_big");
+  document.getElementById("power_group").classList.add("dnone");
 });
 
 window.addEventListener("resize", function () {

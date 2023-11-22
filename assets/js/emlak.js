@@ -1035,7 +1035,8 @@ document
 
 const alqiSatqi = document.getElementById("emlak_mobi_alqi_input_mean");
 const kiraye = document.getElementById("emlak_mobi_kiraye_input_mean");
-alqiSatqi.checked = true;
+document.getElementById("emlak_mobi_alqi_input_mean").checked = true;
+console.log(document.getElementById("emlak_mobi_alqi_input_mean").checked);
 document.querySelector(".month").classList.add("dnone");
 document
   .querySelector(".emlak_ipoteka_cixarish_mobi")

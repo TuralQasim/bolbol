@@ -2216,16 +2216,16 @@ mark767OpenBtn.addEventListener("click", () => {
   });
   markInput767.value = "";
 });
-mobileAllMarksBtn.addEventListener("click", () => {
-  mark767Dropdown.setAttribute("style", "transform:translateY(0) !important");
-  markList767.textContent = "";
-  marksArr.map((a) => {
-    const li = document.createElement("li");
-    li.textContent = a.name;
-    markList767.append(li);
-  });
-  markInput767.value = "";
-});
+// mobileAllMarksBtn.addEventListener("click", () => {
+//   mark767Dropdown.setAttribute("style", "transform:translateY(0) !important");
+//   markList767.textContent = "";
+//   marksArr.map((a) => {
+//     const li = document.createElement("li");
+//     li.textContent = a.name;
+//     markList767.append(li);
+//   });
+//   markInput767.value = "";
+// });
 mark767CloseBtn.addEventListener("click", () => {
   mark767Dropdown.setAttribute(
     "style",
@@ -2254,11 +2254,9 @@ markList767.addEventListener("click", (e) => {
   if (checkedMark767.textContent) {
     document.getElementById("mark_arrow_down").style.display = "none";
     document.getElementById("mark_reset_xmark").style.display = "block";
-    document.querySelector(".mobile_marks_section_bg").style.display = "none";
   } else {
     document.getElementById("mark_arrow_down").style.display = "block";
     document.getElementById("mark_reset_xmark").style.display = "none";
-    document.querySelector(".mobile_marks_section_bg").style.display = "block";
   } 
 });
 document.getElementById("mark_reset_xmark").addEventListener("click", (e) => {
@@ -2270,7 +2268,6 @@ document.getElementById("mark_reset_xmark").addEventListener("click", (e) => {
   document.getElementById("mark_reset_xmark").style.display = "none";
   document.getElementById("model_arrow_down").style.display = "block";
   document.getElementById("model_reset_xmark").style.display = "none";
-  document.querySelector(".mobile_marks_section_bg").style.display = "block";
   checkedModel767.textContent = "";
   modelLabel767.style.transform = "translateY(0)";
   modelLabel767.style.fontSize = "18px";
