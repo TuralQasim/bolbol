@@ -11690,7 +11690,6 @@ transform: translateY(calc(-50% - 2px)); */
 }
 .categoty_hero {
   width: 100%;
-  padding: 0 50px;
 }
 .kat_title {
   font-size: 18px;
@@ -11708,13 +11707,36 @@ transform: translateY(calc(-50% - 2px)); */
   margin-bottom: 20px;
 }
 .kategoriya_filters > div{
-  width: calc((100% - 10px) / 2);
+  width: 22%;
 }
 .kategoriya_filters > .kat_btn_767{
-  width: calc((100% - 10px) / 2);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:15px;
+  width: 22%;
+}
+.kategoriya_filters > .kat_btn_767 i{
+  font-size: 18px;
 }
 .kategoriya_filters .form-group {
   margin-bottom: 0;
+}
+@media (max-width: 1024px){
+  .kategoriya_filters > div{
+    width: 30%;
+  }
+  .kategoriya_filters > .kat_btn_767{
+    width: 30%;
+  }
+}
+@media (max-width: 767px){
+  .kategoriya_filters > div{
+    width: calc((100% - 10px) / 2);
+  }
+  .kategoriya_filters > .kat_btn_767{
+    width: calc((100% - 10px) / 2);
+  }
 }
 @media (max-width: 480px){
   .kategoriya_filters > div{
