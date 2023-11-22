@@ -3419,7 +3419,9 @@ body {
   background-color: transparent;
   color: #013f44;
 }
-
+main {
+  padding: 25px 0 50px !important;
+}
 @media screen and (max-width: 767px) {
   .btn--transparent {
     width: auto;
