@@ -9615,7 +9615,7 @@ form
   width: 24%;
 }
 .emlakMobiSearchBtn {
-  width: 18% !important;
+  width: 20%;
 }
 /* #emlakBuy{
   transform: translateY(4px);
@@ -10227,7 +10227,7 @@ form
 }
 @media screen and (max-width: 767px) {
   .emlak_title {
-    padding-top: 40px !important;
+    padding-top: 15px !important;
     font-size: 20px !important;
   }
   .emlak_filter {
@@ -10240,7 +10240,7 @@ form
     gap: 0px;
     align-items: center;
     height: 45px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
   .emlak_mobi_buy {
     width: 24.5% !important;
@@ -10303,7 +10303,7 @@ form
   }
   .emlak_mobi_house {
     position: relative;
-    width: 29% !important;
+    width: 24% !important;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10367,7 +10367,7 @@ form
   .emlakMobiSearchBtn {
     display: inline-block;
     border-radius: 7px;
-    width: 12%;
+    width: 23% !important;
     height: 100%;
     background-color: #014c52;
     border: none;
@@ -10377,6 +10377,10 @@ form
     font-size: 16px;
     margin-left: auto;
   }
+  .emlakMobiSearchBtn i{
+    font-size: 18px;
+    margin-right: 5px;
+  }
   .emlak_mobi #emlakRoom {
     width: 27% !important;
   }
@@ -10384,6 +10388,10 @@ form
 @media screen and (max-width: 650px) {
   .emlak_title {
     font-size: 20px !important;
+  }
+  .emlakMobiSearchBtn i{
+    font-size: 20px;
+    margin-right: 10px;
   }
   .emlak_mobi {
     display: flex;
@@ -11086,11 +11094,11 @@ transform: translateY(calc(-50% - 2px)); */
 }
 
 .desc_filters_btns {
-  padding: 10px 10px 20px 50px;
+  padding: 10px 0 20px 50px;
   display: flex;
   /* 22% + 22% + 30% + 21% + 42px */
   /* padding-right: calc(100% - (95% + 92px)) !important; */
-
+  width: calc(96.5% + 39px);
   justify-content: flex-end;
   align-items: center;
   gap: 20px;
@@ -11140,7 +11148,7 @@ transform: translateY(calc(-50% - 2px)); */
   cursor: pointer;
 }
 .desc_filters_btns_show {
-  padding: 20px 10px 20px 50px;
+  padding: 20px 0px 20px 50px;
   transform: translateY(0);
 }
 @media (max-width: 1200px) {
@@ -11155,13 +11163,14 @@ transform: translateY(calc(-50% - 2px)); */
   }
   .desc_filters_btns {
     padding: 20px 0px 20px 50px;
+    width: calc(95.5% + 39px);
   }
   .desc_filters_btns_show {
     padding: 20px 0px 20px 50px;
     transform: translateY(0);
   }
   .for_width_small {
-    width: calc(27% - 39px) !important;
+    width: 22.5%;
   }
   .title_category {
     margin-left: 0 !important;
@@ -11193,7 +11202,7 @@ transform: translateY(calc(-50% - 2px)); */
   }
   .desc_filters_btns {
     padding: 20px 0px 20px 50px;
-    padding-right: calc(3.5% - 20px) !important;
+    width: calc(95.5% + 30px);
   }
   .desc_filters_btns_show {
     padding: 20px 0px 20px 50px;
@@ -11709,7 +11718,7 @@ transform: translateY(calc(-50% - 2px)); */
 .kategoriya_filters > div{
   width: 22%;
 }
-.kategoriya_filters > .kat_btn_767{
+.kat_btn_767{
   display:flex;
   justify-content:center;
   align-items:center;
