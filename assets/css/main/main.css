@@ -9098,6 +9098,7 @@ form
   .selectBox__list li {
     padding: 10px 0;
     border-bottom: 1px solid #ccc;
+    font-size: 20px;
   }
   .selectBox__list a {
     display: flex;
@@ -9283,9 +9284,12 @@ form
   .model767_header h3,
   .city_header h3,
   .model_header h3 {
-    margin-right: 50%;
     margin-top: 20px;
     font-size: 24px;
+  }
+  .mark767_header h3{
+    font-size: 28px;
+    margin-right: 45%;
   }
   .ban_header h3,
   .color_header h3,
@@ -9297,6 +9301,10 @@ form
     font-size: 24px;
   }
   @media screen and (max-width: 480px) {
+    .mark767_header h3{
+      font-size: 28px;
+      margin-right: 40%;
+    }
     #litrSelect1 label,
     #litrSelect2 label {
       font-size: 14px !important;
@@ -9308,6 +9316,12 @@ form
     #litrSelect1 i,
     #litrSelect2 i {
       right: 7px !important;
+    }
+  }
+  @media screen and (max-width: 320px){
+    .mark767_header h3{
+      font-size: 28px;
+      margin-right: 35%;
     }
   }
   #afterMarkMark,
@@ -10379,7 +10393,7 @@ form
   }
   .emlakMobiSearchBtn i{
     font-size: 18px;
-    margin-right: 5px;
+    margin-right: 10px;
   }
   .emlak_mobi #emlakRoom {
     width: 27% !important;
@@ -10398,7 +10412,7 @@ form
     justify-content: flex-start;
     flex-wrap: wrap;
     height: max-content;
-    gap: 14px;
+    gap: 9px;
     padding: 0;
     margin-bottom: 20px;
   }
@@ -11725,6 +11739,21 @@ transform: translateY(calc(-50% - 2px)); */
   gap:15px;
   width: 22%;
 }
+.kat_view_btn{
+  padding: 0 30px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border: none;
+  outline: none;
+  background-color: #014c52;
+  border-radius: 7px;
+  height: 45px;
+  color: #fff;
+  font-size: 18px;
+  gap: 10px;
+  margin-left: auto;
+}
 .kategoriya_filters > .kat_btn_767 i{
   font-size: 18px;
 }
@@ -11732,6 +11761,12 @@ transform: translateY(calc(-50% - 2px)); */
   margin-bottom: 0;
 }
 @media (max-width: 1024px){
+  .kat_view_btn{
+    font-size: 14px;
+    gap: 10px;
+    padding: 0;
+    width: 20%;
+  }
   .kategoriya_filters > div{
     width: 30%;
   }
@@ -11740,6 +11775,12 @@ transform: translateY(calc(-50% - 2px)); */
   }
 }
 @media (max-width: 767px){
+  .kat_view_btn{
+    /* width: 100%;
+    font-size: 20px;
+    gap: 20px; */
+    display: none;
+  }
   .kategoriya_filters > div{
     width: calc((100% - 10px) / 2);
   }
